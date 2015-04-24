@@ -1,0 +1,388 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>PHPDoc2 - PHPUnit</title>
+  <link rel="stylesheet" type="text/css" href="default.css">
+</head>
+<body>
+<nav>
+  <a href="index.html">Root</a>
+</nav>
+
+<div class="content">
+<ul class="class-hierarchy"><li><a href="class__PHPUnit_Util_Printer.html" class="">\PHPUnit_Util_Printer</a><ul><li>\PHPUnit_TextUI_ResultPrinter</li></ul></li></ul>
+<h1>
+  <small>class</small>
+
+  <a href="namespace_.html" class="">(none)</a>  \
+  <a href="class__PHPUnit_TextUI_ResultPrinter.html" class="">PHPUnit_TextUI_ResultPrinter</a></h1>
+
+
+<dl>
+  <dt>All implemented interfaces:</dt>
+  <dd>
+    <a href="interface__PHPUnit_Framework_TestListener.html" class="">PHPUnit_Framework_TestListener</a>  </dd>
+</dl>
+
+
+
+
+<hr>
+
+<p>Prints the result of a TextUI TestRunner run.</p><dl></dl>
+<hr>
+
+<h2>Method Summary</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+<tr><td><a href="class__PHPUnit_TextUI_ResultPrinter.html#__construct" class="">__construct($out = null, $verbose = false, $colors, $debug = false, $numberOfColumns = 80)</a></td><td>Constructor.</td></tr><tr><td><a href="class__PHPUnit_TextUI_ResultPrinter.html#addError" class="">addError(PHPUnit_Framework_Test $test, Exception $e, $time)</a></td><td>An error occurred.</td></tr><tr><td><a href="class__PHPUnit_TextUI_ResultPrinter.html#addFailure" class="">addFailure(PHPUnit_Framework_Test $test, PHPUnit_Framework_AssertionFailedError $e, $time)</a></td><td>A failure occurred.</td></tr><tr><td><a href="class__PHPUnit_TextUI_ResultPrinter.html#addIncompleteTest" class="">addIncompleteTest(PHPUnit_Framework_Test $test, Exception $e, $time)</a></td><td>Incomplete test.</td></tr><tr><td><a href="class__PHPUnit_TextUI_ResultPrinter.html#addRiskyTest" class="">addRiskyTest(PHPUnit_Framework_Test $test, Exception $e, $time)</a></td><td>Risky test.</td></tr><tr><td><a href="class__PHPUnit_TextUI_ResultPrinter.html#addSkippedTest" class="">addSkippedTest(PHPUnit_Framework_Test $test, Exception $e, $time)</a></td><td>Skipped test.</td></tr><tr><td><a href="class__PHPUnit_TextUI_ResultPrinter.html#endTest" class="">endTest(PHPUnit_Framework_Test $test, $time)</a></td><td>A test ended.</td></tr><tr><td><a href="class__PHPUnit_TextUI_ResultPrinter.html#endTestSuite" class="">endTestSuite(PHPUnit_Framework_TestSuite $suite)</a></td><td>A testsuite ended.</td></tr><tr><td><a href="class__PHPUnit_TextUI_ResultPrinter.html#formatWithColor" class="">formatWithColor($color, $buffer)</a></td><td>Formats a buffer with a specified ANSI color sequence if colors are enabled.</td></tr><tr><td><a href="class__PHPUnit_TextUI_ResultPrinter.html#getCountString" class="">getCountString($count, $name)</a></td><td></td></tr><tr><td><a href="class__PHPUnit_TextUI_ResultPrinter.html#printDefect" class="">printDefect(PHPUnit_Framework_TestFailure $defect, $count)</a></td><td></td></tr><tr><td><a href="class__PHPUnit_TextUI_ResultPrinter.html#printDefectHeader" class="">printDefectHeader(PHPUnit_Framework_TestFailure $defect, $count)</a></td><td></td></tr><tr><td><a href="class__PHPUnit_TextUI_ResultPrinter.html#printDefectTrace" class="">printDefectTrace(PHPUnit_Framework_TestFailure $defect)</a></td><td></td></tr><tr><td><a href="class__PHPUnit_TextUI_ResultPrinter.html#printDefects" class="">printDefects(array $defects, $type)</a></td><td></td></tr><tr><td><a href="class__PHPUnit_TextUI_ResultPrinter.html#printErrors" class="">printErrors(PHPUnit_Framework_TestResult $result)</a></td><td></td></tr><tr><td><a href="class__PHPUnit_TextUI_ResultPrinter.html#printFailures" class="">printFailures(PHPUnit_Framework_TestResult $result)</a></td><td></td></tr><tr><td><a href="class__PHPUnit_TextUI_ResultPrinter.html#printFooter" class="">printFooter(PHPUnit_Framework_TestResult $result)</a></td><td></td></tr><tr><td><a href="class__PHPUnit_TextUI_ResultPrinter.html#printHeader" class="">printHeader()</a></td><td></td></tr><tr><td><a href="class__PHPUnit_TextUI_ResultPrinter.html#printIncompletes" class="">printIncompletes(PHPUnit_Framework_TestResult $result)</a></td><td></td></tr><tr><td><a href="class__PHPUnit_TextUI_ResultPrinter.html#printResult" class="">printResult(PHPUnit_Framework_TestResult $result)</a></td><td></td></tr><tr><td><a href="class__PHPUnit_TextUI_ResultPrinter.html#printRisky" class="">printRisky(PHPUnit_Framework_TestResult $result)</a></td><td></td></tr><tr><td><a href="class__PHPUnit_TextUI_ResultPrinter.html#printSkipped" class="">printSkipped(PHPUnit_Framework_TestResult $result)</a></td><td></td></tr><tr><td><a href="class__PHPUnit_TextUI_ResultPrinter.html#printWaitPrompt" class="">printWaitPrompt()</a></td><td></td></tr><tr><td><a href="class__PHPUnit_TextUI_ResultPrinter.html#startTest" class="">startTest(PHPUnit_Framework_Test $test)</a></td><td>A test started.</td></tr><tr><td><a href="class__PHPUnit_TextUI_ResultPrinter.html#startTestSuite" class="">startTestSuite(PHPUnit_Framework_TestSuite $suite)</a></td><td>A testsuite started.</td></tr><tr><td><a href="class__PHPUnit_TextUI_ResultPrinter.html#writeNewLine" class="">writeNewLine()</a></td><td></td></tr><tr><td><a href="class__PHPUnit_TextUI_ResultPrinter.html#writeProgress" class="">writeProgress($progress)</a></td><td></td></tr><tr><td><a href="class__PHPUnit_TextUI_ResultPrinter.html#writeProgressWithColor" class="">writeProgressWithColor($color, $buffer)</a></td><td>Writes progress with a color sequence if colors are enabled.</td></tr><tr><td><a href="class__PHPUnit_TextUI_ResultPrinter.html#writeWithColor" class="">writeWithColor($color, $buffer)</a></td><td>Writes a buffer out with a color sequence if colors are enabled.</td></tr>  </tbody>
+</table>
+
+
+<h2>Inherited Method Summary</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+<tr><td><a href="class__PHPUnit_Util_Printer.html#flush" class="">flush()</a></td><td>Flush buffer, optionally tidy up HTML, and close output if it's not to a php stream <i>(from <a href="class__PHPUnit_Util_Printer.html#flush" class="">PHPUnit_Util_Printer</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Util_Printer.html#getAutoFlush" class="">getAutoFlush()</a></td><td>Check auto-flush mode. <i>(from <a href="class__PHPUnit_Util_Printer.html#getAutoFlush" class="">PHPUnit_Util_Printer</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Util_Printer.html#incrementalFlush" class="">incrementalFlush()</a></td><td>Performs a safe, incremental flush. <i>(from <a href="class__PHPUnit_Util_Printer.html#incrementalFlush" class="">PHPUnit_Util_Printer</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Util_Printer.html#setAutoFlush" class="">setAutoFlush($autoFlush)</a></td><td>Set auto-flushing mode. <i>(from <a href="class__PHPUnit_Util_Printer.html#setAutoFlush" class="">PHPUnit_Util_Printer</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Util_Printer.html#write" class="">write($buffer)</a></td><td> <i>(from <a href="class__PHPUnit_Util_Printer.html#write" class="">PHPUnit_Util_Printer</a>)</i></td></tr>  </tbody>
+</table>
+
+
+
+<hr>
+
+<h3>
+  <small>public function</small>
+  __construct($out = null, $verbose = false, $colors, $debug = false, $numberOfColumns = 80)  <a name="__construct"></a>
+</h3>
+
+<blockquote>
+<p>Constructor.</p><dl><dt>Overrides:</dt><dd><a href="class__PHPUnit_Util_Printer.html#__construct" class="">__construct($out = null)</a></dd><dt>Parameters:</dt><dd><code>mixed</code> - $out<br><code>boolean</code> - $debug<br><code>string</code> - $colors<br><code>integer|string</code> - $numberOfColumns<br></dd><dt>Defaults:</dt><dd><code>out</code> = <code>null</code><br><code>verbose</code> = <code>false</code><br><code>colors</code> = PhpParser\Node\Expr\ClassConstFetch<br><code>debug</code> = <code>false</code><br><code>numberOfColumns</code> = 80<br></dd><dt>Throws:</dt><dd><a href="class__PHPUnit_Framework_Exception.html" class="">PHPUnit_Framework_Exception</a><br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public function</small>
+  addError(<a href="interface__PHPUnit_Framework_Test.html" class="">PHPUnit_Framework_Test</a> $test, Exception $e, $time)  <a name="addError"></a>
+</h3>
+
+<blockquote>
+<p>An error occurred.</p><dl><dt>Parameters:</dt><dd><code>PHPUnit_Framework_Test</code> - $test<br><code>Exception</code> - $e<br><code>float</code> - $time<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public function</small>
+  addFailure(<a href="interface__PHPUnit_Framework_Test.html" class="">PHPUnit_Framework_Test</a> $test, <a href="class__PHPUnit_Framework_AssertionFailedError.html" class="">PHPUnit_Framework_AssertionFailedError</a> $e, $time)  <a name="addFailure"></a>
+</h3>
+
+<blockquote>
+<p>A failure occurred.</p><dl><dt>Parameters:</dt><dd><code>PHPUnit_Framework_Test</code> - $test<br><code>PHPUnit_Framework_AssertionFailedError</code> - $e<br><code>float</code> - $time<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public function</small>
+  addIncompleteTest(<a href="interface__PHPUnit_Framework_Test.html" class="">PHPUnit_Framework_Test</a> $test, Exception $e, $time)  <a name="addIncompleteTest"></a>
+</h3>
+
+<blockquote>
+<p>Incomplete test.</p><dl><dt>Parameters:</dt><dd><code>PHPUnit_Framework_Test</code> - $test<br><code>Exception</code> - $e<br><code>float</code> - $time<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public function</small>
+  addRiskyTest(<a href="interface__PHPUnit_Framework_Test.html" class="">PHPUnit_Framework_Test</a> $test, Exception $e, $time)  <a name="addRiskyTest"></a>
+</h3>
+
+<blockquote>
+<p>Risky test.</p><dl><dt>Parameters:</dt><dd><code>PHPUnit_Framework_Test</code> - $test<br><code>Exception</code> - $e<br><code>float</code> - $time<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public function</small>
+  addSkippedTest(<a href="interface__PHPUnit_Framework_Test.html" class="">PHPUnit_Framework_Test</a> $test, Exception $e, $time)  <a name="addSkippedTest"></a>
+</h3>
+
+<blockquote>
+<p>Skipped test.</p><dl><dt>Parameters:</dt><dd><code>PHPUnit_Framework_Test</code> - $test<br><code>Exception</code> - $e<br><code>float</code> - $time<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public function</small>
+  endTest(<a href="interface__PHPUnit_Framework_Test.html" class="">PHPUnit_Framework_Test</a> $test, $time)  <a name="endTest"></a>
+</h3>
+
+<blockquote>
+<p>A test ended.</p><dl><dt>Parameters:</dt><dd><code>PHPUnit_Framework_Test</code> - $test<br><code>float</code> - $time<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public function</small>
+  endTestSuite(<a href="class__PHPUnit_Framework_TestSuite.html" class="">PHPUnit_Framework_TestSuite</a> $suite)  <a name="endTestSuite"></a>
+</h3>
+
+<blockquote>
+<p>A testsuite ended.</p><dl><dt>Parameters:</dt><dd><code>PHPUnit_Framework_TestSuite</code> - $suite<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>protected function</small>
+  formatWithColor($color, $buffer)  <a name="formatWithColor"></a>
+</h3>
+
+<blockquote>
+<p>Formats a buffer with a specified ANSI color sequence if colors are enabled.</p><dl><dt>Parameters:</dt><dd><code>string</code> - $buffer<br></dd><dt>Returns:</dt><dd>string<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>protected function</small>
+  getCountString($count, $name)  <a name="getCountString"></a>
+</h3>
+
+<blockquote>
+<dl><dt>Parameters:</dt><dd><code>integer</code> - $count<br><code>string</code> - $name<br></dd><dt>Returns:</dt><dd>string<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>protected function</small>
+  printDefect(<a href="class__PHPUnit_Framework_TestFailure.html" class="">PHPUnit_Framework_TestFailure</a> $defect, $count)  <a name="printDefect"></a>
+</h3>
+
+<blockquote>
+<dl><dt>Parameters:</dt><dd><code>PHPUnit_Framework_TestFailure</code> - $defect<br><code>integer</code> - $count<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>protected function</small>
+  printDefectHeader(<a href="class__PHPUnit_Framework_TestFailure.html" class="">PHPUnit_Framework_TestFailure</a> $defect, $count)  <a name="printDefectHeader"></a>
+</h3>
+
+<blockquote>
+<dl><dt>Parameters:</dt><dd><code>PHPUnit_Framework_TestFailure</code> - $defect<br><code>integer</code> - $count<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>protected function</small>
+  printDefectTrace(<a href="class__PHPUnit_Framework_TestFailure.html" class="">PHPUnit_Framework_TestFailure</a> $defect)  <a name="printDefectTrace"></a>
+</h3>
+
+<blockquote>
+<dl><dt>Parameters:</dt><dd><code>PHPUnit_Framework_TestFailure</code> - $defect<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>protected function</small>
+  printDefects(array $defects, $type)  <a name="printDefects"></a>
+</h3>
+
+<blockquote>
+<dl><dt>Parameters:</dt><dd><code>array</code> - $defects<br><code>string</code> - $type<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>protected function</small>
+  printErrors(<a href="class__PHPUnit_Framework_TestResult.html" class="">PHPUnit_Framework_TestResult</a> $result)  <a name="printErrors"></a>
+</h3>
+
+<blockquote>
+<dl><dt>Parameters:</dt><dd><code>PHPUnit_Framework_TestResult</code> - $result<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>protected function</small>
+  printFailures(<a href="class__PHPUnit_Framework_TestResult.html" class="">PHPUnit_Framework_TestResult</a> $result)  <a name="printFailures"></a>
+</h3>
+
+<blockquote>
+<dl><dt>Parameters:</dt><dd><code>PHPUnit_Framework_TestResult</code> - $result<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>protected function</small>
+  printFooter(<a href="class__PHPUnit_Framework_TestResult.html" class="">PHPUnit_Framework_TestResult</a> $result)  <a name="printFooter"></a>
+</h3>
+
+<blockquote>
+<dl><dt>Parameters:</dt><dd><code>PHPUnit_Framework_TestResult</code> - $result<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>protected function</small>
+  printHeader()  <a name="printHeader"></a>
+</h3>
+
+<blockquote>
+<dl></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>protected function</small>
+  printIncompletes(<a href="class__PHPUnit_Framework_TestResult.html" class="">PHPUnit_Framework_TestResult</a> $result)  <a name="printIncompletes"></a>
+</h3>
+
+<blockquote>
+<dl><dt>Parameters:</dt><dd><code>PHPUnit_Framework_TestResult</code> - $result<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public function</small>
+  printResult(<a href="class__PHPUnit_Framework_TestResult.html" class="">PHPUnit_Framework_TestResult</a> $result)  <a name="printResult"></a>
+</h3>
+
+<blockquote>
+<dl><dt>Parameters:</dt><dd><code>PHPUnit_Framework_TestResult</code> - $result<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>protected function</small>
+  printRisky(<a href="class__PHPUnit_Framework_TestResult.html" class="">PHPUnit_Framework_TestResult</a> $result)  <a name="printRisky"></a>
+</h3>
+
+<blockquote>
+<dl><dt>Parameters:</dt><dd><code>PHPUnit_Framework_TestResult</code> - $result<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>protected function</small>
+  printSkipped(<a href="class__PHPUnit_Framework_TestResult.html" class="">PHPUnit_Framework_TestResult</a> $result)  <a name="printSkipped"></a>
+</h3>
+
+<blockquote>
+<dl><dt>Parameters:</dt><dd><code>PHPUnit_Framework_TestResult</code> - $result<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public function</small>
+  printWaitPrompt()  <a name="printWaitPrompt"></a>
+</h3>
+
+<blockquote>
+<dl></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public function</small>
+  startTest(<a href="interface__PHPUnit_Framework_Test.html" class="">PHPUnit_Framework_Test</a> $test)  <a name="startTest"></a>
+</h3>
+
+<blockquote>
+<p>A test started.</p><dl><dt>Parameters:</dt><dd><code>PHPUnit_Framework_Test</code> - $test<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public function</small>
+  startTestSuite(<a href="class__PHPUnit_Framework_TestSuite.html" class="">PHPUnit_Framework_TestSuite</a> $suite)  <a name="startTestSuite"></a>
+</h3>
+
+<blockquote>
+<p>A testsuite started.</p><dl><dt>Parameters:</dt><dd><code>PHPUnit_Framework_TestSuite</code> - $suite<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>protected function</small>
+  writeNewLine()  <a name="writeNewLine"></a>
+</h3>
+
+<blockquote>
+<dl></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>protected function</small>
+  writeProgress($progress)  <a name="writeProgress"></a>
+</h3>
+
+<blockquote>
+<dl><dt>Parameters:</dt><dd><code>string</code> - $progress<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>protected function</small>
+  writeProgressWithColor($color, $buffer)  <a name="writeProgressWithColor"></a>
+</h3>
+
+<blockquote>
+<p>Writes progress with a color sequence if colors are enabled.</p><dl><dt>Parameters:</dt><dd><code>string</code> - $buffer<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>protected function</small>
+  writeWithColor($color, $buffer)  <a name="writeWithColor"></a>
+</h3>
+
+<blockquote>
+<p>Writes a buffer out with a color sequence if colors are enabled.</p><dl><dt>Parameters:</dt><dd><code>string</code> - $buffer<br></dd></dl></blockquote>
+
+</div>
+
+<div class="footer">
+  Generated by <a href="https://github.com/soundasleep/phpdoc2/" class="github">PHPDoc2</a> Fri, 24 Apr 2015 15:28:58 +1200</div>
+
+</body>
+</html>

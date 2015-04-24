@@ -1,0 +1,257 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>PHPDoc2 - PHPUnit</title>
+  <link rel="stylesheet" type="text/css" href="default.css">
+</head>
+<body>
+<nav>
+  <a href="index.html">Root</a>
+</nav>
+
+<div class="content">
+<ul><li>\PHPUnit_Util_Configuration</li></ul>
+<h1>
+  <small>class</small>
+
+  <a href="namespace_.html" class="">(none)</a>  \
+  <a href="class__PHPUnit_Util_Configuration.html" class="">PHPUnit_Util_Configuration</a></h1>
+
+
+
+
+<hr>
+
+<p>Wrapper for the PHPUnit XML configuration file.</p><p>Example XML configuration file: <code> <?xml version="1.0" encoding="utf-8" ?></p><p><phpunit backupGlobals="true" backupStaticAttributes="false" bootstrap="/path/to/bootstrap.php" cacheTokens="false" columns="80" colors="false" stderr="false" convertErrorsToExceptions="true" convertNoticesToExceptions="true" convertWarningsToExceptions="true" forceCoversAnnotation="false" mapTestClassNameToCoveredClassName="false" printerClass="PHPUnit_TextUI_ResultPrinter" processIsolation="false" stopOnError="false" stopOnFailure="false" stopOnIncomplete="false" stopOnRisky="false" stopOnSkipped="false" testSuiteLoaderClass="PHPUnit_Runner_StandardTestSuiteLoader" timeoutForSmallTests="1" timeoutForMediumTests="10" timeoutForLargeTests="60" beStrictAboutTestsThatDoNotTestAnything="false" beStrictAboutOutputDuringTests="false" beStrictAboutTestSize="false" beStrictAboutTodoAnnotatedTests="false" checkForUnintentionallyCoveredCode="false" disallowChangesToGlobalState="false" verbose="false"> <testsuites> <testsuite name="My Test Suite"> <directory suffix="Test.php" phpVersion="5.3.0" phpVersionOperator=">=">/path/to/files</directory> <file phpVersion="5.3.0" phpVersionOperator=">=">/path/to/MyTest.php</file> <exclude>/path/to/files/exclude</exclude> </testsuite> </testsuites></p><p><groups> <include> <group>name</group> </include> <exclude> <group>name</group> </exclude> </groups></p><p><filter> <blacklist> <directory suffix=".php">/path/to/files</directory> <file>/path/to/file</file> <exclude> <directory suffix=".php">/path/to/files</directory> <file>/path/to/file</file> </exclude> </blacklist> <whitelist addUncoveredFilesFromWhitelist="true" processUncoveredFilesFromWhitelist="false"> <directory suffix=".php">/path/to/files</directory> <file>/path/to/file</file> <exclude> <directory suffix=".php">/path/to/files</directory> <file>/path/to/file</file> </exclude> </whitelist> </filter></p><p><listeners> <listener class="MyListener" file="/optional/path/to/MyListener.php"> <arguments> <array> <element key="0"> <string>Sebastian</string> </element> </array> <integer>22</integer> <string>April</string> <double>19.78</double> <null/> <object class="stdClass"/> <file>MyRelativeFile.php</file> <directory>MyRelativeDir</directory> </arguments> </listener> </listeners></p><p><logging> <log type="coverage-html" target="/tmp/report" lowUpperBound="50" highLowerBound="90"/> <log type="coverage-clover" target="/tmp/clover.xml"/> <log type="json" target="/tmp/logfile.json"/> <log type="plain" target="/tmp/logfile.txt"/> <log type="tap" target="/tmp/logfile.tap"/> <log type="junit" target="/tmp/logfile.xml" logIncompleteSkipped="false"/> <log type="testdox-html" target="/tmp/testdox.html"/> <log type="testdox-text" target="/tmp/testdox.txt"/> <log type="coverage-crap4j" target="/tmp/crap.xml"/> </logging></p><p><php> <includePath>.</includePath> <ini name="foo" value="bar"/> <const name="foo" value="bar"/> <var name="foo" value="bar"/> <env name="foo" value="bar"/> <post name="foo" value="bar"/> <get name="foo" value="bar"/> <cookie name="foo" value="bar"/> <server name="foo" value="bar"/> <files name="foo" value="bar"/> <request name="foo" value="bar"/> </php></p><p><selenium> <browser name="Firefox on Linux" browser="*firefox /usr/lib/firefox/firefox-bin" host="my.linux.box" port="4444" timeout="30000"/> </selenium> </phpunit> </code></p><dl></dl>
+<hr>
+
+<h2>Method Summary</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+<tr><td><a href="class__PHPUnit_Util_Configuration.html#__clone" class="">__clone()</a></td><td></td></tr><tr><td><a href="class__PHPUnit_Util_Configuration.html#__construct" class="">__construct($filename)</a></td><td>Loads a PHPUnit configuration file.</td></tr><tr><td><a href="class__PHPUnit_Util_Configuration.html#getBoolean" class="">getBoolean($value, $default)</a></td><td></td></tr><tr><td><a href="class__PHPUnit_Util_Configuration.html#getFilename" class="">getFilename()</a></td><td>Returns the realpath to the configuration file.</td></tr><tr><td><a href="class__PHPUnit_Util_Configuration.html#getFilterConfiguration" class="">getFilterConfiguration()</a></td><td>Returns the configuration for SUT filtering.</td></tr><tr><td><a href="class__PHPUnit_Util_Configuration.html#getGroupConfiguration" class="">getGroupConfiguration()</a></td><td>Returns the configuration for groups.</td></tr><tr><td><a href="class__PHPUnit_Util_Configuration.html#getInstance" class="">getInstance($filename)</a></td><td>Returns a PHPUnit configuration object.</td></tr><tr><td><a href="class__PHPUnit_Util_Configuration.html#getInteger" class="">getInteger($value, $default)</a></td><td></td></tr><tr><td><a href="class__PHPUnit_Util_Configuration.html#getListenerConfiguration" class="">getListenerConfiguration()</a></td><td>Returns the configuration for listeners.</td></tr><tr><td><a href="class__PHPUnit_Util_Configuration.html#getLoggingConfiguration" class="">getLoggingConfiguration()</a></td><td>Returns the logging configuration.</td></tr><tr><td><a href="class__PHPUnit_Util_Configuration.html#getPHPConfiguration" class="">getPHPConfiguration()</a></td><td>Returns the PHP configuration.</td></tr><tr><td><a href="class__PHPUnit_Util_Configuration.html#getPHPUnitConfiguration" class="">getPHPUnitConfiguration()</a></td><td>Returns the PHPUnit configuration.</td></tr><tr><td><a href="class__PHPUnit_Util_Configuration.html#getSeleniumBrowserConfiguration" class="">getSeleniumBrowserConfiguration()</a></td><td>Returns the SeleniumTestCase browser configuration.</td></tr><tr><td><a href="class__PHPUnit_Util_Configuration.html#getTestSuite" class="">getTestSuite(DOMElement $testSuiteNode, $testSuiteFilter = null)</a></td><td></td></tr><tr><td><a href="class__PHPUnit_Util_Configuration.html#getTestSuiteConfiguration" class="">getTestSuiteConfiguration($testSuiteFilter = null)</a></td><td>Returns the test suite configuration.</td></tr><tr><td><a href="class__PHPUnit_Util_Configuration.html#handlePHPConfiguration" class="">handlePHPConfiguration()</a></td><td>Handles the PHP configuration.</td></tr><tr><td><a href="class__PHPUnit_Util_Configuration.html#readFilterDirectories" class="">readFilterDirectories($query)</a></td><td></td></tr><tr><td><a href="class__PHPUnit_Util_Configuration.html#readFilterFiles" class="">readFilterFiles($query)</a></td><td></td></tr><tr><td><a href="class__PHPUnit_Util_Configuration.html#toAbsolutePath" class="">toAbsolutePath($path, $useIncludePath = false)</a></td><td></td></tr>  </tbody>
+</table>
+
+
+
+<hr>
+
+<h3>
+  <small>private final function</small>
+  __clone()  <a name="__clone"></a>
+</h3>
+
+<blockquote>
+<dl></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>protected function</small>
+  __construct($filename)  <a name="__construct"></a>
+</h3>
+
+<blockquote>
+<p>Loads a PHPUnit configuration file.</p><dl><dt>Parameters:</dt><dd><code>string</code> - $filename<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>protected function</small>
+  getBoolean($value, $default)  <a name="getBoolean"></a>
+</h3>
+
+<blockquote>
+<dl><dt>Parameters:</dt><dd><code>string</code> - $value<br><code>boolean</code> - $default<br></dd><dt>Returns:</dt><dd>boolean<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public function</small>
+  getFilename()  <a name="getFilename"></a>
+</h3>
+
+<blockquote>
+<p>Returns the realpath to the configuration file.</p><dl><dt>Returns:</dt><dd>string<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public function</small>
+  getFilterConfiguration()  <a name="getFilterConfiguration"></a>
+</h3>
+
+<blockquote>
+<p>Returns the configuration for SUT filtering.</p><dl><dt>Returns:</dt><dd>array<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public function</small>
+  getGroupConfiguration()  <a name="getGroupConfiguration"></a>
+</h3>
+
+<blockquote>
+<p>Returns the configuration for groups.</p><dl><dt>Returns:</dt><dd>array<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public static function</small>
+  getInstance($filename)  <a name="getInstance"></a>
+</h3>
+
+<blockquote>
+<p>Returns a PHPUnit configuration object.</p><dl><dt>Parameters:</dt><dd><code>string</code> - $filename<br></dd><dt>Returns:</dt><dd>PHPUnit_Util_Configuration<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>protected function</small>
+  getInteger($value, $default)  <a name="getInteger"></a>
+</h3>
+
+<blockquote>
+<dl><dt>Parameters:</dt><dd><code>string</code> - $value<br><code>boolean</code> - $default<br></dd><dt>Returns:</dt><dd>boolean<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public function</small>
+  getListenerConfiguration()  <a name="getListenerConfiguration"></a>
+</h3>
+
+<blockquote>
+<p>Returns the configuration for listeners.</p><dl><dt>Returns:</dt><dd>array<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public function</small>
+  getLoggingConfiguration()  <a name="getLoggingConfiguration"></a>
+</h3>
+
+<blockquote>
+<p>Returns the logging configuration.</p><dl><dt>Returns:</dt><dd>array<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public function</small>
+  getPHPConfiguration()  <a name="getPHPConfiguration"></a>
+</h3>
+
+<blockquote>
+<p>Returns the PHP configuration.</p><dl><dt>Returns:</dt><dd>array<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public function</small>
+  getPHPUnitConfiguration()  <a name="getPHPUnitConfiguration"></a>
+</h3>
+
+<blockquote>
+<p>Returns the PHPUnit configuration.</p><dl><dt>Returns:</dt><dd>array<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public function</small>
+  getSeleniumBrowserConfiguration()  <a name="getSeleniumBrowserConfiguration"></a>
+</h3>
+
+<blockquote>
+<p>Returns the SeleniumTestCase browser configuration.</p><dl><dt>Returns:</dt><dd>array<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>protected function</small>
+  getTestSuite(DOMElement $testSuiteNode, $testSuiteFilter = null)  <a name="getTestSuite"></a>
+</h3>
+
+<blockquote>
+<dl><dt>Parameters:</dt><dd><code>DOMElement</code> - $testSuiteNode<br></dd><dt>Defaults:</dt><dd><code>testSuiteFilter</code> = <code>null</code><br></dd><dt>Returns:</dt><dd>PHPUnit_Framework_TestSuite<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public function</small>
+  getTestSuiteConfiguration($testSuiteFilter = null)  <a name="getTestSuiteConfiguration"></a>
+</h3>
+
+<blockquote>
+<p>Returns the test suite configuration.</p><dl><dt>Defaults:</dt><dd><code>testSuiteFilter</code> = <code>null</code><br></dd><dt>Returns:</dt><dd>PHPUnit_Framework_TestSuite<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public function</small>
+  handlePHPConfiguration()  <a name="handlePHPConfiguration"></a>
+</h3>
+
+<blockquote>
+<p>Handles the PHP configuration.</p><dl></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>protected function</small>
+  readFilterDirectories($query)  <a name="readFilterDirectories"></a>
+</h3>
+
+<blockquote>
+<dl><dt>Parameters:</dt><dd><code>string</code> - $query<br></dd><dt>Returns:</dt><dd>array<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>protected function</small>
+  readFilterFiles($query)  <a name="readFilterFiles"></a>
+</h3>
+
+<blockquote>
+<dl><dt>Parameters:</dt><dd><code>string</code> - $query<br></dd><dt>Returns:</dt><dd>array<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>protected function</small>
+  toAbsolutePath($path, $useIncludePath = false)  <a name="toAbsolutePath"></a>
+</h3>
+
+<blockquote>
+<dl><dt>Parameters:</dt><dd><code>string</code> - $path<br><code>boolean</code> - $useIncludePath<br></dd><dt>Defaults:</dt><dd><code>useIncludePath</code> = <code>false</code><br></dd><dt>Returns:</dt><dd>string<br></dd></dl></blockquote>
+
+</div>
+
+<div class="footer">
+  Generated by <a href="https://github.com/soundasleep/phpdoc2/" class="github">PHPDoc2</a> Fri, 24 Apr 2015 15:28:58 +1200</div>
+
+</body>
+</html>

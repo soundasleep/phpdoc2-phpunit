@@ -1,0 +1,356 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>PHPDoc2 - PHPUnit</title>
+  <link rel="stylesheet" type="text/css" href="default.css">
+</head>
+<body>
+<nav>
+  <a href="index.html">Root</a>
+</nav>
+
+<div class="content">
+<ul><li>\PHPUnit_Util_Test</li></ul>
+<h1>
+  <small>class</small>
+
+  <a href="namespace_.html" class="">(none)</a>  \
+  <a href="class__PHPUnit_Util_Test.html" class="">PHPUnit_Util_Test</a></h1>
+
+
+
+
+<hr>
+
+<p>Test helpers.</p><dl></dl>
+<hr>
+
+<h2>Method Summary</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+<tr><td><a href="class__PHPUnit_Util_Test.html#describe" class="">describe(PHPUnit_Framework_Test $test, $asString = true)</a></td><td></td></tr><tr><td><a href="class__PHPUnit_Util_Test.html#emptyHookMethodsArray" class="">emptyHookMethodsArray()</a></td><td></td></tr><tr><td><a href="class__PHPUnit_Util_Test.html#getBackupSettings" class="">getBackupSettings($className, $methodName)</a></td><td>Returns the backup settings for a test.</td></tr><tr><td><a href="class__PHPUnit_Util_Test.html#getBooleanAnnotationSetting" class="">getBooleanAnnotationSetting($className, $methodName, $settingName)</a></td><td></td></tr><tr><td><a href="class__PHPUnit_Util_Test.html#getDependencies" class="">getDependencies($className, $methodName)</a></td><td>Returns the dependencies for a test class or method.</td></tr><tr><td><a href="class__PHPUnit_Util_Test.html#getErrorHandlerSettings" class="">getErrorHandlerSettings($className, $methodName)</a></td><td>Returns the error handler settings for a test.</td></tr><tr><td><a href="class__PHPUnit_Util_Test.html#getExpectedException" class="">getExpectedException($className, $methodName)</a></td><td>Returns the expected exception for a test.</td></tr><tr><td><a href="class__PHPUnit_Util_Test.html#getGroups" class="">getGroups($className, $methodName = &quot;&quot;)</a></td><td>Returns the groups for a test class or method.</td></tr><tr><td><a href="class__PHPUnit_Util_Test.html#getHookMethods" class="">getHookMethods($className)</a></td><td></td></tr><tr><td><a href="class__PHPUnit_Util_Test.html#getLinesToBeCovered" class="">getLinesToBeCovered($className, $methodName)</a></td><td></td></tr><tr><td><a href="class__PHPUnit_Util_Test.html#getLinesToBeCoveredOrUsed" class="">getLinesToBeCoveredOrUsed($className, $methodName, $mode)</a></td><td></td></tr><tr><td><a href="class__PHPUnit_Util_Test.html#getLinesToBeUsed" class="">getLinesToBeUsed($className, $methodName)</a></td><td>Returns lines of code specified with the @uses annotation.</td></tr><tr><td><a href="class__PHPUnit_Util_Test.html#getMissingRequirements" class="">getMissingRequirements($className, $methodName)</a></td><td>Returns the missing requirements for a test.</td></tr><tr><td><a href="class__PHPUnit_Util_Test.html#getPreserveGlobalStateSettings" class="">getPreserveGlobalStateSettings($className, $methodName)</a></td><td>Returns the preserve global state settings for a test.</td></tr><tr><td><a href="class__PHPUnit_Util_Test.html#getProcessIsolationSettings" class="">getProcessIsolationSettings($className, $methodName)</a></td><td>Returns the process isolation settings for a test.</td></tr><tr><td><a href="class__PHPUnit_Util_Test.html#getProvidedData" class="">getProvidedData($className, $methodName)</a></td><td>Returns the provided data for a method.</td></tr><tr><td><a href="class__PHPUnit_Util_Test.html#getRequirements" class="">getRequirements($className, $methodName)</a></td><td>Returns the requirements for a test.</td></tr><tr><td><a href="class__PHPUnit_Util_Test.html#getSize" class="">getSize($className, $methodName)</a></td><td>Returns the size of the test.</td></tr><tr><td><a href="class__PHPUnit_Util_Test.html#getTickets" class="">getTickets($className, $methodName)</a></td><td>Returns the tickets for a test class or method.</td></tr><tr><td><a href="class__PHPUnit_Util_Test.html#isAfterClassMethod" class="">isAfterClassMethod(ReflectionMethod $method)</a></td><td></td></tr><tr><td><a href="class__PHPUnit_Util_Test.html#isAfterMethod" class="">isAfterMethod(ReflectionMethod $method)</a></td><td></td></tr><tr><td><a href="class__PHPUnit_Util_Test.html#isBeforeClassMethod" class="">isBeforeClassMethod(ReflectionMethod $method)</a></td><td></td></tr><tr><td><a href="class__PHPUnit_Util_Test.html#isBeforeMethod" class="">isBeforeMethod(ReflectionMethod $method)</a></td><td></td></tr><tr><td><a href="class__PHPUnit_Util_Test.html#parseAnnotationContent" class="">parseAnnotationContent($message)</a></td><td>Parse annotation content to use constant/class constant values</td></tr><tr><td><a href="class__PHPUnit_Util_Test.html#parseAnnotations" class="">parseAnnotations($docblock)</a></td><td></td></tr><tr><td><a href="class__PHPUnit_Util_Test.html#parseTestMethodAnnotations" class="">parseTestMethodAnnotations($className, $methodName = &quot;&quot;)</a></td><td></td></tr><tr><td><a href="class__PHPUnit_Util_Test.html#resolveElementToReflectionObjects" class="">resolveElementToReflectionObjects($element)</a></td><td></td></tr><tr><td><a href="class__PHPUnit_Util_Test.html#resolveReflectionObjectsToLines" class="">resolveReflectionObjectsToLines(array $reflectors)</a></td><td></td></tr>  </tbody>
+</table>
+
+
+
+<hr>
+
+<h3>
+  <small>public static function</small>
+  describe(<a href="interface__PHPUnit_Framework_Test.html" class="">PHPUnit_Framework_Test</a> $test, $asString = true)  <a name="describe"></a>
+</h3>
+
+<blockquote>
+<dl><dt>Parameters:</dt><dd><code>PHPUnit_Framework_Test</code> - $test<br><code>boolean</code> - $asString<br></dd><dt>Defaults:</dt><dd><code>asString</code> = <code>true</code><br></dd><dt>Returns:</dt><dd>mixed<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>private static function</small>
+  emptyHookMethodsArray()  <a name="emptyHookMethodsArray"></a>
+</h3>
+
+<blockquote>
+<dl><dt>Returns:</dt><dd>array<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public static function</small>
+  getBackupSettings($className, $methodName)  <a name="getBackupSettings"></a>
+</h3>
+
+<blockquote>
+<p>Returns the backup settings for a test.</p><dl><dt>Parameters:</dt><dd><code>string</code> - $methodName<br></dd><dt>Returns:</dt><dd>array<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>private static function</small>
+  getBooleanAnnotationSetting($className, $methodName, $settingName)  <a name="getBooleanAnnotationSetting"></a>
+</h3>
+
+<blockquote>
+<dl><dt>Parameters:</dt><dd><code>string</code> - $settingName<br></dd><dt>Returns:</dt><dd>boolean<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public static function</small>
+  getDependencies($className, $methodName)  <a name="getDependencies"></a>
+</h3>
+
+<blockquote>
+<p>Returns the dependencies for a test class or method.</p><dl><dt>Parameters:</dt><dd><code>string</code> - $methodName<br></dd><dt>Returns:</dt><dd>array<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public static function</small>
+  getErrorHandlerSettings($className, $methodName)  <a name="getErrorHandlerSettings"></a>
+</h3>
+
+<blockquote>
+<p>Returns the error handler settings for a test.</p><dl><dt>Parameters:</dt><dd><code>string</code> - $methodName<br></dd><dt>Returns:</dt><dd>boolean<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public static function</small>
+  getExpectedException($className, $methodName)  <a name="getExpectedException"></a>
+</h3>
+
+<blockquote>
+<p>Returns the expected exception for a test.</p><dl><dt>Parameters:</dt><dd><code>string</code> - $methodName<br></dd><dt>Returns:</dt><dd>array<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public static function</small>
+  getGroups($className, $methodName = "")  <a name="getGroups"></a>
+</h3>
+
+<blockquote>
+<p>Returns the groups for a test class or method.</p><dl><dt>Parameters:</dt><dd><code>string</code> - $methodName<br></dd><dt>Defaults:</dt><dd><code>methodName</code> = <code>""</code><br></dd><dt>Returns:</dt><dd>array<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public static function</small>
+  getHookMethods($className)  <a name="getHookMethods"></a>
+</h3>
+
+<blockquote>
+<dl><dt>Parameters:</dt><dd><code>string</code> - $className<br></dd><dt>Returns:</dt><dd>array<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public static function</small>
+  getLinesToBeCovered($className, $methodName)  <a name="getLinesToBeCovered"></a>
+</h3>
+
+<blockquote>
+<dl><dt>Parameters:</dt><dd><code>string</code> - $methodName<br></dd><dt>Returns:</dt><dd>array|bool<br></dd><dt>Throws:</dt><dd><a href="class__PHPUnit_Framework_CodeCoverageException.html" class="">PHPUnit_Framework_CodeCoverageException</a><br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>private static function</small>
+  getLinesToBeCoveredOrUsed($className, $methodName, $mode)  <a name="getLinesToBeCoveredOrUsed"></a>
+</h3>
+
+<blockquote>
+<dl><dt>Parameters:</dt><dd><code>string</code> - $mode<br></dd><dt>Returns:</dt><dd>array<br></dd><dt>Throws:</dt><dd><a href="class__PHPUnit_Framework_CodeCoverageException.html" class="">PHPUnit_Framework_CodeCoverageException</a><br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public static function</small>
+  getLinesToBeUsed($className, $methodName)  <a name="getLinesToBeUsed"></a>
+</h3>
+
+<blockquote>
+<p>Returns lines of code specified with the @uses annotation.</p><dl><dt>Parameters:</dt><dd><code>string</code> - $methodName<br></dd><dt>Returns:</dt><dd>array<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public static function</small>
+  getMissingRequirements($className, $methodName)  <a name="getMissingRequirements"></a>
+</h3>
+
+<blockquote>
+<p>Returns the missing requirements for a test.</p><dl><dt>Parameters:</dt><dd><code>string</code> - $methodName<br></dd><dt>Returns:</dt><dd>array<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public static function</small>
+  getPreserveGlobalStateSettings($className, $methodName)  <a name="getPreserveGlobalStateSettings"></a>
+</h3>
+
+<blockquote>
+<p>Returns the preserve global state settings for a test.</p><dl><dt>Parameters:</dt><dd><code>string</code> - $methodName<br></dd><dt>Returns:</dt><dd>boolean<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public static function</small>
+  getProcessIsolationSettings($className, $methodName)  <a name="getProcessIsolationSettings"></a>
+</h3>
+
+<blockquote>
+<p>Returns the process isolation settings for a test.</p><dl><dt>Parameters:</dt><dd><code>string</code> - $methodName<br></dd><dt>Returns:</dt><dd>boolean<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public static function</small>
+  getProvidedData($className, $methodName)  <a name="getProvidedData"></a>
+</h3>
+
+<blockquote>
+<p>Returns the provided data for a method.</p><dl><dt>Parameters:</dt><dd><code>string</code> - $methodName<br></dd><dt>Returns:</dt><dd>array|Iterator when a data provider is specified and exists false when a data provider is specified but does not exist null when no data provider is specified<br></dd><dt>Throws:</dt><dd><a href="class__PHPUnit_Framework_Exception.html" class="">PHPUnit_Framework_Exception</a><br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public static function</small>
+  getRequirements($className, $methodName)  <a name="getRequirements"></a>
+</h3>
+
+<blockquote>
+<p>Returns the requirements for a test.</p><dl><dt>Parameters:</dt><dd><code>string</code> - $methodName<br></dd><dt>Returns:</dt><dd>array<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public static function</small>
+  getSize($className, $methodName)  <a name="getSize"></a>
+</h3>
+
+<blockquote>
+<p>Returns the size of the test.</p><dl><dt>Parameters:</dt><dd><code>string</code> - $methodName<br></dd><dt>Returns:</dt><dd>integer<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public static function</small>
+  getTickets($className, $methodName)  <a name="getTickets"></a>
+</h3>
+
+<blockquote>
+<p>Returns the tickets for a test class or method.</p><dl><dt>Parameters:</dt><dd><code>string</code> - $methodName<br></dd><dt>Returns:</dt><dd>array<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>private static function</small>
+  isAfterClassMethod(ReflectionMethod $method)  <a name="isAfterClassMethod"></a>
+</h3>
+
+<blockquote>
+<dl><dt>Parameters:</dt><dd><code>ReflectionMethod</code> - $method<br></dd><dt>Returns:</dt><dd>boolean<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>private static function</small>
+  isAfterMethod(ReflectionMethod $method)  <a name="isAfterMethod"></a>
+</h3>
+
+<blockquote>
+<dl><dt>Parameters:</dt><dd><code>ReflectionMethod</code> - $method<br></dd><dt>Returns:</dt><dd>boolean<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>private static function</small>
+  isBeforeClassMethod(ReflectionMethod $method)  <a name="isBeforeClassMethod"></a>
+</h3>
+
+<blockquote>
+<dl><dt>Parameters:</dt><dd><code>ReflectionMethod</code> - $method<br></dd><dt>Returns:</dt><dd>boolean<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>private static function</small>
+  isBeforeMethod(ReflectionMethod $method)  <a name="isBeforeMethod"></a>
+</h3>
+
+<blockquote>
+<dl><dt>Parameters:</dt><dd><code>ReflectionMethod</code> - $method<br></dd><dt>Returns:</dt><dd>boolean<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>private static function</small>
+  parseAnnotationContent($message)  <a name="parseAnnotationContent"></a>
+</h3>
+
+<blockquote>
+<p>Parse annotation content to use constant/class constant values</p><p>Constants are specified using a starting '@'. For example: @ClassName::CONST_NAME</p><p>If the constant is not found the string is used as is to ensure maximum BC.</p><dl><dt>Parameters:</dt><dd><code>string</code> - $message<br></dd><dt>Returns:</dt><dd>string<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>private static function</small>
+  parseAnnotations($docblock)  <a name="parseAnnotations"></a>
+</h3>
+
+<blockquote>
+<dl><dt>Parameters:</dt><dd><code>string</code> - $docblock<br></dd><dt>Returns:</dt><dd>array<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public static function</small>
+  parseTestMethodAnnotations($className, $methodName = "")  <a name="parseTestMethodAnnotations"></a>
+</h3>
+
+<blockquote>
+<dl><dt>Parameters:</dt><dd><code>string</code> - $methodName<br></dd><dt>Defaults:</dt><dd><code>methodName</code> = <code>""</code><br></dd><dt>Returns:</dt><dd>array<br></dd><dt>Throws:</dt><dd>ReflectionException<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>private static function</small>
+  resolveElementToReflectionObjects($element)  <a name="resolveElementToReflectionObjects"></a>
+</h3>
+
+<blockquote>
+<dl><dt>Parameters:</dt><dd><code>string</code> - $element<br></dd><dt>Returns:</dt><dd>array<br></dd><dt>Throws:</dt><dd><a href="class__PHPUnit_Framework_InvalidCoversTargetException.html" class="">PHPUnit_Framework_InvalidCoversTargetException</a><br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>private static function</small>
+  resolveReflectionObjectsToLines(array $reflectors)  <a name="resolveReflectionObjectsToLines"></a>
+</h3>
+
+<blockquote>
+<dl><dt>Parameters:</dt><dd><code>array</code> - $reflectors<br></dd><dt>Returns:</dt><dd>array<br></dd></dl></blockquote>
+
+</div>
+
+<div class="footer">
+  Generated by <a href="https://github.com/soundasleep/phpdoc2/" class="github">PHPDoc2</a> Fri, 24 Apr 2015 15:28:59 +1200</div>
+
+</body>
+</html>

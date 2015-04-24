@@ -1,0 +1,139 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>PHPDoc2 - PHPUnit</title>
+  <link rel="stylesheet" type="text/css" href="default.css">
+</head>
+<body>
+<nav>
+  <a href="index.html">Root</a>
+</nav>
+
+<div class="content">
+<ul><li>\PHPUnit_Framework_Constraint</li></ul>
+<h1>
+  <small>abstract class</small>
+
+  <a href="namespace_.html" class="">(none)</a>  \
+  <a href="class__PHPUnit_Framework_Constraint.html" class="">PHPUnit_Framework_Constraint</a></h1>
+
+
+<dl>
+  <dt>All implemented interfaces:</dt>
+  <dd>
+    Countable, <a href="interface__PHPUnit_Framework_SelfDescribing.html" class="">PHPUnit_Framework_SelfDescribing</a>  </dd>
+</dl>
+
+
+
+
+<dl>
+  <dt>All known direct subclasses:</dt>
+  <dd>
+    <a href="class__PHPUnit_Framework_Constraint_And.html" class="">PHPUnit_Framework_Constraint_And</a>, <a href="class__PHPUnit_Framework_Constraint_ArrayHasKey.html" class="">PHPUnit_Framework_Constraint_ArrayHasKey</a>, <a href="class__PHPUnit_Framework_Constraint_ArraySubset.html" class="">PHPUnit_Framework_Constraint_ArraySubset</a>, <a href="class__PHPUnit_Framework_Constraint_Callback.html" class="">PHPUnit_Framework_Constraint_Callback</a>, <a href="class__PHPUnit_Framework_Constraint_ClassHasAttribute.html" class="">PHPUnit_Framework_Constraint_ClassHasAttribute</a>, <a href="class__PHPUnit_Framework_Constraint_Composite.html" class="">PHPUnit_Framework_Constraint_Composite</a>, <a href="class__PHPUnit_Framework_Constraint_Count.html" class="">PHPUnit_Framework_Constraint_Count</a>, <a href="class__PHPUnit_Framework_Constraint_Exception.html" class="">PHPUnit_Framework_Constraint_Exception</a>, <a href="class__PHPUnit_Framework_Constraint_ExceptionCode.html" class="">PHPUnit_Framework_Constraint_ExceptionCode</a>, <a href="class__PHPUnit_Framework_Constraint_ExceptionMessage.html" class="">PHPUnit_Framework_Constraint_ExceptionMessage</a>, <a href="class__PHPUnit_Framework_Constraint_ExceptionMessageRegExp.html" class="">PHPUnit_Framework_Constraint_ExceptionMessageRegExp</a>, <a href="class__PHPUnit_Framework_Constraint_FileExists.html" class="">PHPUnit_Framework_Constraint_FileExists</a>, <a href="class__PHPUnit_Framework_Constraint_GreaterThan.html" class="">PHPUnit_Framework_Constraint_GreaterThan</a>, <a href="class__PHPUnit_Framework_Constraint_IsAnything.html" class="">PHPUnit_Framework_Constraint_IsAnything</a>, <a href="class__PHPUnit_Framework_Constraint_IsEmpty.html" class="">PHPUnit_Framework_Constraint_IsEmpty</a>, <a href="class__PHPUnit_Framework_Constraint_IsEqual.html" class="">PHPUnit_Framework_Constraint_IsEqual</a>, <a href="class__PHPUnit_Framework_Constraint_IsFalse.html" class="">PHPUnit_Framework_Constraint_IsFalse</a>, <a href="class__PHPUnit_Framework_Constraint_IsIdentical.html" class="">PHPUnit_Framework_Constraint_IsIdentical</a>, <a href="class__PHPUnit_Framework_Constraint_IsInstanceOf.html" class="">PHPUnit_Framework_Constraint_IsInstanceOf</a>, <a href="class__PHPUnit_Framework_Constraint_IsJson.html" class="">PHPUnit_Framework_Constraint_IsJson</a>, <a href="class__PHPUnit_Framework_Constraint_IsNull.html" class="">PHPUnit_Framework_Constraint_IsNull</a>, <a href="class__PHPUnit_Framework_Constraint_IsTrue.html" class="">PHPUnit_Framework_Constraint_IsTrue</a>, <a href="class__PHPUnit_Framework_Constraint_IsType.html" class="">PHPUnit_Framework_Constraint_IsType</a>, <a href="class__PHPUnit_Framework_Constraint_JsonMatches.html" class="">PHPUnit_Framework_Constraint_JsonMatches</a>, <a href="class__PHPUnit_Framework_Constraint_LessThan.html" class="">PHPUnit_Framework_Constraint_LessThan</a>, <a href="class__PHPUnit_Framework_Constraint_Not.html" class="">PHPUnit_Framework_Constraint_Not</a>, <a href="class__PHPUnit_Framework_Constraint_Or.html" class="">PHPUnit_Framework_Constraint_Or</a>, <a href="class__PHPUnit_Framework_Constraint_PCREMatch.html" class="">PHPUnit_Framework_Constraint_PCREMatch</a>, <a href="class__PHPUnit_Framework_Constraint_StringContains.html" class="">PHPUnit_Framework_Constraint_StringContains</a>, <a href="class__PHPUnit_Framework_Constraint_StringEndsWith.html" class="">PHPUnit_Framework_Constraint_StringEndsWith</a>, <a href="class__PHPUnit_Framework_Constraint_StringStartsWith.html" class="">PHPUnit_Framework_Constraint_StringStartsWith</a>, <a href="class__PHPUnit_Framework_Constraint_TraversableContains.html" class="">PHPUnit_Framework_Constraint_TraversableContains</a>, <a href="class__PHPUnit_Framework_Constraint_TraversableContainsOnly.html" class="">PHPUnit_Framework_Constraint_TraversableContainsOnly</a>, <a href="class__PHPUnit_Framework_Constraint_Xor.html" class="">PHPUnit_Framework_Constraint_Xor</a>  </dd>
+</dl>
+
+
+<hr>
+
+<p>Abstract base class for constraints. which are placed upon any value.</p><dl></dl>
+<hr>
+
+<h2>Method Summary</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+<tr><td><a href="class__PHPUnit_Framework_Constraint.html#__construct" class="">__construct()</a></td><td></td></tr><tr><td><a href="class__PHPUnit_Framework_Constraint.html#additionalFailureDescription" class="">additionalFailureDescription($other)</a></td><td>Return additional failure description where needed</td></tr><tr><td><a href="class__PHPUnit_Framework_Constraint.html#count" class="">count()</a></td><td>Counts the number of constraint elements.</td></tr><tr><td><a href="class__PHPUnit_Framework_Constraint.html#evaluate" class="">evaluate($other, $description = &quot;&quot;, $returnResult = false)</a></td><td>Evaluates the constraint for parameter $other</td></tr><tr><td><a href="class__PHPUnit_Framework_Constraint.html#fail" class="">fail($other, $description, ComparisonFailure $comparisonFailure = null)</a></td><td>Throws an exception for the given compared value and test description</td></tr><tr><td><a href="class__PHPUnit_Framework_Constraint.html#failureDescription" class="">failureDescription($other)</a></td><td>Returns the description of the failure</td></tr><tr><td><a href="class__PHPUnit_Framework_Constraint.html#matches" class="">matches($other)</a></td><td>Evaluates the constraint for parameter $other. Returns true if the constraint is met, false otherwise.</td></tr>  </tbody>
+</table>
+
+
+
+<hr>
+
+<h3>
+  <small>public function</small>
+  __construct()  <a name="__construct"></a>
+</h3>
+
+<blockquote>
+<dl></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>protected function</small>
+  additionalFailureDescription($other)  <a name="additionalFailureDescription"></a>
+</h3>
+
+<blockquote>
+<p>Return additional failure description where needed</p><p>The function can be overridden to provide additional failure information like a diff</p><dl><dt>Parameters:</dt><dd><code>mixed</code> - $other Evaluated value or object.<br></dd><dt>Returns:</dt><dd>string<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public function</small>
+  count()  <a name="count"></a>
+</h3>
+
+<blockquote>
+<p>Counts the number of constraint elements.</p><dl><dt>Returns:</dt><dd>integer<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public function</small>
+  evaluate($other, $description = "", $returnResult = false)  <a name="evaluate"></a>
+</h3>
+
+<blockquote>
+<p>Evaluates the constraint for parameter $other</p><p>If $returnResult is set to false (the default), an exception is thrown in case of a failure. null is returned otherwise.</p><p>If $returnResult is true, the result of the evaluation is returned as a boolean value instead: true in case of success, false in case of a failure.</p><dl><dt>Parameters:</dt><dd><code>mixed</code> - $other Value or object to evaluate.<br><code>string</code> - $description Additional information about the test<br><code>bool</code> - $returnResult Whether to return a result or throw an exception<br></dd><dt>Defaults:</dt><dd><code>description</code> = <code>""</code><br><code>returnResult</code> = <code>false</code><br></dd><dt>Returns:</dt><dd>mixed<br></dd><dt>Throws:</dt><dd><a href="class__PHPUnit_Framework_ExpectationFailedException.html" class="">PHPUnit_Framework_ExpectationFailedException</a><br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>protected function</small>
+  fail($other, $description, ComparisonFailure $comparisonFailure = null)  <a name="fail"></a>
+</h3>
+
+<blockquote>
+<p>Throws an exception for the given compared value and test description</p><dl><dt>Parameters:</dt><dd><code>mixed</code> - $other Evaluated value or object.<br><code>string</code> - $description Additional information about the test<br><code>SebastianBergmann\Comparator\ComparisonFailure</code> - $comparisonFailure<br></dd><dt>Defaults:</dt><dd><code>comparisonFailure</code> = <code>null</code><br></dd><dt>Throws:</dt><dd><a href="class__PHPUnit_Framework_ExpectationFailedException.html" class="">PHPUnit_Framework_ExpectationFailedException</a><br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>protected function</small>
+  failureDescription($other)  <a name="failureDescription"></a>
+</h3>
+
+<blockquote>
+<p>Returns the description of the failure</p><p>The beginning of failure messages is "Failed asserting that" in most cases. This method should return the second part of that sentence.</p><p>To provide additional failure information additionalFailureDescription can be used.</p><dl><dt>Parameters:</dt><dd><code>mixed</code> - $other Evaluated value or object.<br></dd><dt>Returns:</dt><dd>string<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>protected function</small>
+  matches($other)  <a name="matches"></a>
+</h3>
+
+<blockquote>
+<p>Evaluates the constraint for parameter $other. Returns true if the constraint is met, false otherwise.</p><p>This method can be overridden to implement the evaluation algorithm.</p><dl><dt>Parameters:</dt><dd><code>mixed</code> - $other Value or object to evaluate.<br></dd><dt>Returns:</dt><dd>bool<br></dd></dl></blockquote>
+
+</div>
+
+<div class="footer">
+  Generated by <a href="https://github.com/soundasleep/phpdoc2/" class="github">PHPDoc2</a> Fri, 24 Apr 2015 15:28:56 +1200</div>
+
+</body>
+</html>

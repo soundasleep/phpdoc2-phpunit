@@ -1,0 +1,425 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>PHPDoc2 - PHPUnit</title>
+  <link rel="stylesheet" type="text/css" href="default.css">
+</head>
+<body>
+<nav>
+  <a href="index.html">Root</a>
+</nav>
+
+<div class="content">
+<ul><li>\PHPUnit_Framework_TestSuite</li></ul>
+<h1>
+  <small>class</small>
+
+  <a href="namespace_.html" class="">(none)</a>  \
+  <a href="class__PHPUnit_Framework_TestSuite.html" class="">PHPUnit_Framework_TestSuite</a></h1>
+
+
+<dl>
+  <dt>All implemented interfaces:</dt>
+  <dd>
+    Countable, <a href="interface__PHPUnit_Framework_Test.html" class="">PHPUnit_Framework_Test</a>, <a href="interface__PHPUnit_Framework_SelfDescribing.html" class="">PHPUnit_Framework_SelfDescribing</a>, IteratorAggregate  </dd>
+</dl>
+
+
+
+
+<dl>
+  <dt>All known direct subclasses:</dt>
+  <dd>
+    <a href="class__PHPUnit_Extensions_GroupTestSuite.html" class="">PHPUnit_Extensions_GroupTestSuite</a>, <a href="class__PHPUnit_Extensions_PhptTestSuite.html" class="">PHPUnit_Extensions_PhptTestSuite</a>, <a href="class__PHPUnit_Framework_TestSuite_DataProvider.html" class="">PHPUnit_Framework_TestSuite_DataProvider</a>  </dd>
+</dl>
+
+
+<hr>
+
+<p>A TestSuite is a composite of Tests. It runs a collection of test cases.</p><p>Here is an example using the dynamic test definition.</p><p><code> <?php $suite = new PHPUnit_Framework_TestSuite; $suite->addTest(new MathTest('testPass')); ?> </code></p><p>Alternatively, a TestSuite can extract the tests to be run automatically. To do so you pass a ReflectionClass instance for your PHPUnit_Framework_TestCase class to the PHPUnit_Framework_TestSuite constructor.</p><p><code> <?php $suite = new PHPUnit_Framework_TestSuite( new ReflectionClass('MathTest') ); ?> </code></p><p>This constructor creates a suite with all the methods starting with "test" that take no arguments.</p><dl></dl>
+<hr>
+
+<h2>Method Summary</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+<tr><td><a href="class__PHPUnit_Framework_TestSuite.html#__construct" class="">__construct($theClass = &quot;&quot;, $name = &quot;&quot;)</a></td><td>Constructs a new TestSuite:</td></tr><tr><td><a href="class__PHPUnit_Framework_TestSuite.html#addTest" class="">addTest(PHPUnit_Framework_Test $test, $groups = array())</a></td><td>Adds a test to the suite.</td></tr><tr><td><a href="class__PHPUnit_Framework_TestSuite.html#addTestFile" class="">addTestFile($filename)</a></td><td>Wraps both <code>addTest()</code> and <code>addTestSuite</code> as well as the separate import statements for the user's convenience.</td></tr><tr><td><a href="class__PHPUnit_Framework_TestSuite.html#addTestFiles" class="">addTestFiles($filenames)</a></td><td>Wrapper for addTestFile() that adds multiple test files.</td></tr><tr><td><a href="class__PHPUnit_Framework_TestSuite.html#addTestMethod" class="">addTestMethod(ReflectionClass $class, ReflectionMethod $method)</a></td><td></td></tr><tr><td><a href="class__PHPUnit_Framework_TestSuite.html#addTestSuite" class="">addTestSuite($testClass)</a></td><td>Adds the tests from the given class to the suite.</td></tr><tr><td><a href="class__PHPUnit_Framework_TestSuite.html#count" class="">count($preferCache = false)</a></td><td>Counts the number of test cases that will be run by this test.</td></tr><tr><td><a href="class__PHPUnit_Framework_TestSuite.html#createResult" class="">createResult()</a></td><td>Creates a default TestResult object.</td></tr><tr><td><a href="class__PHPUnit_Framework_TestSuite.html#createTest" class="">createTest(ReflectionClass $theClass, $name)</a></td><td></td></tr><tr><td><a href="class__PHPUnit_Framework_TestSuite.html#getGroupDetails" class="">getGroupDetails()</a></td><td></td></tr><tr><td><a href="class__PHPUnit_Framework_TestSuite.html#getGroups" class="">getGroups()</a></td><td>Returns the test groups of the suite.</td></tr><tr><td><a href="class__PHPUnit_Framework_TestSuite.html#getIterator" class="">getIterator()</a></td><td>Returns an iterator for this test suite.</td></tr><tr><td><a href="class__PHPUnit_Framework_TestSuite.html#getName" class="">getName()</a></td><td>Returns the name of the suite.</td></tr><tr><td><a href="class__PHPUnit_Framework_TestSuite.html#incompleteTest" class="">incompleteTest($class, $methodName, $message)</a></td><td></td></tr><tr><td><a href="class__PHPUnit_Framework_TestSuite.html#injectFilter" class="">injectFilter(PHPUnit_Runner_Filter_Factory $filter)</a></td><td></td></tr><tr><td><a href="class__PHPUnit_Framework_TestSuite.html#isTestMethod" class="">isTestMethod(ReflectionMethod $method)</a></td><td></td></tr><tr><td><a href="class__PHPUnit_Framework_TestSuite.html#markTestSuiteSkipped" class="">markTestSuiteSkipped($message = &quot;&quot;)</a></td><td>Mark the test suite as skipped.</td></tr><tr><td><a href="class__PHPUnit_Framework_TestSuite.html#run" class="">run(PHPUnit_Framework_TestResult $result = null)</a></td><td>Runs the tests and collects their result in a TestResult.</td></tr><tr><td><a href="class__PHPUnit_Framework_TestSuite.html#runTest" class="">runTest(PHPUnit_Framework_Test $test, PHPUnit_Framework_TestResult $result)</a></td><td>Runs a test.</td></tr><tr><td><a href="class__PHPUnit_Framework_TestSuite.html#setBackupGlobals" class="">setBackupGlobals($backupGlobals)</a></td><td></td></tr><tr><td><a href="class__PHPUnit_Framework_TestSuite.html#setBackupStaticAttributes" class="">setBackupStaticAttributes($backupStaticAttributes)</a></td><td></td></tr><tr><td><a href="class__PHPUnit_Framework_TestSuite.html#setDisallowChangesToGlobalState" class="">setDisallowChangesToGlobalState($disallowChangesToGlobalState)</a></td><td></td></tr><tr><td><a href="class__PHPUnit_Framework_TestSuite.html#setGroupDetails" class="">setGroupDetails(array $groups)</a></td><td>Set tests groups of the test case</td></tr><tr><td><a href="class__PHPUnit_Framework_TestSuite.html#setName" class="">setName($name)</a></td><td>Sets the name of the suite.</td></tr><tr><td><a href="class__PHPUnit_Framework_TestSuite.html#setRunTestInSeparateProcess" class="">setRunTestInSeparateProcess($runTestInSeparateProcess)</a></td><td></td></tr><tr><td><a href="class__PHPUnit_Framework_TestSuite.html#setTests" class="">setTests(array $tests)</a></td><td>Set tests of the test suite</td></tr><tr><td><a href="class__PHPUnit_Framework_TestSuite.html#setUp" class="">setUp()</a></td><td>Template Method that is called before the tests of this test suite are run.</td></tr><tr><td><a href="class__PHPUnit_Framework_TestSuite.html#skipTest" class="">skipTest($class, $methodName, $message)</a></td><td></td></tr><tr><td><a href="class__PHPUnit_Framework_TestSuite.html#tearDown" class="">tearDown()</a></td><td>Template Method that is called after the tests of this test suite have finished running.</td></tr><tr><td><a href="class__PHPUnit_Framework_TestSuite.html#testAt" class="">testAt($index)</a></td><td>Returns the test at the given index.</td></tr><tr><td><a href="class__PHPUnit_Framework_TestSuite.html#tests" class="">tests()</a></td><td>Returns the tests as an enumeration.</td></tr><tr><td><a href="class__PHPUnit_Framework_TestSuite.html#toString" class="">toString()</a></td><td>Returns a string representation of the test suite.</td></tr><tr><td><a href="class__PHPUnit_Framework_TestSuite.html#warning" class="">warning($message)</a></td><td></td></tr>  </tbody>
+</table>
+
+
+
+<hr>
+
+<h3>
+  <small>public function</small>
+  __construct($theClass = "", $name = "")  <a name="__construct"></a>
+</h3>
+
+<blockquote>
+<p>Constructs a new TestSuite:</p><p>- PHPUnit_Framework_TestSuite() constructs an empty TestSuite.</p><p>- PHPUnit_Framework_TestSuite(ReflectionClass) constructs a TestSuite from the given class.</p><p>- PHPUnit_Framework_TestSuite(ReflectionClass, String) constructs a TestSuite from the given class with the given name.</p><p>- PHPUnit_Framework_TestSuite(String) either constructs a TestSuite from the given class (if the passed string is the name of an existing class) or constructs an empty TestSuite with the given name.</p><dl><dt>Parameters:</dt><dd><code>mixed</code> - $theClass<br><code>string</code> - $name<br></dd><dt>Defaults:</dt><dd><code>theClass</code> = <code>""</code><br><code>name</code> = <code>""</code><br></dd><dt>Throws:</dt><dd><a href="class__PHPUnit_Framework_Exception.html" class="">PHPUnit_Framework_Exception</a><br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public function</small>
+  addTest(<a href="interface__PHPUnit_Framework_Test.html" class="">PHPUnit_Framework_Test</a> $test, $groups = array())  <a name="addTest"></a>
+</h3>
+
+<blockquote>
+<p>Adds a test to the suite.</p><dl><dt>Parameters:</dt><dd><code>PHPUnit_Framework_Test</code> - $test<br><code>array</code> - $groups<br></dd><dt>Defaults:</dt><dd><code>groups</code> = array()<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public function</small>
+  addTestFile($filename)  <a name="addTestFile"></a>
+</h3>
+
+<blockquote>
+<p>Wraps both <code>addTest()</code> and <code>addTestSuite</code> as well as the separate import statements for the user's convenience.</p><p>If the named file cannot be read or there are no new tests that can be added, a <code>PHPUnit_Framework_Warning</code> will be created instead, leaving the current test run untouched.</p><dl><dt>Parameters:</dt><dd><code>string</code> - $filename<br></dd><dt>Throws:</dt><dd><a href="class__PHPUnit_Framework_Exception.html" class="">PHPUnit_Framework_Exception</a><br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public function</small>
+  addTestFiles($filenames)  <a name="addTestFiles"></a>
+</h3>
+
+<blockquote>
+<p>Wrapper for addTestFile() that adds multiple test files.</p><dl><dt>Parameters:</dt><dd><code>array|Iterator</code> - $filenames<br></dd><dt>Throws:</dt><dd><a href="class__PHPUnit_Framework_Exception.html" class="">PHPUnit_Framework_Exception</a><br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>protected function</small>
+  addTestMethod(ReflectionClass $class, ReflectionMethod $method)  <a name="addTestMethod"></a>
+</h3>
+
+<blockquote>
+<dl><dt>Parameters:</dt><dd><code>ReflectionClass</code> - $class<br><code>ReflectionMethod</code> - $method<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public function</small>
+  addTestSuite($testClass)  <a name="addTestSuite"></a>
+</h3>
+
+<blockquote>
+<p>Adds the tests from the given class to the suite.</p><dl><dt>Parameters:</dt><dd><code>mixed</code> - $testClass<br></dd><dt>Throws:</dt><dd><a href="class__PHPUnit_Framework_Exception.html" class="">PHPUnit_Framework_Exception</a><br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public function</small>
+  count($preferCache = false)  <a name="count"></a>
+</h3>
+
+<blockquote>
+<p>Counts the number of test cases that will be run by this test.</p><dl><dt>Parameters:</dt><dd><code>boolean</code> - $preferCache Indicates if cache is preferred.<br></dd><dt>Defaults:</dt><dd><code>preferCache</code> = <code>false</code><br></dd><dt>Returns:</dt><dd>integer<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>protected function</small>
+  createResult()  <a name="createResult"></a>
+</h3>
+
+<blockquote>
+<p>Creates a default TestResult object.</p><dl><dt>Returns:</dt><dd>PHPUnit_Framework_TestResult<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public static function</small>
+  createTest(ReflectionClass $theClass, $name)  <a name="createTest"></a>
+</h3>
+
+<blockquote>
+<dl><dt>Parameters:</dt><dd><code>ReflectionClass</code> - $theClass<br><code>string</code> - $name<br></dd><dt>Returns:</dt><dd>PHPUnit_Framework_Test<br></dd><dt>Throws:</dt><dd><a href="class__PHPUnit_Framework_Exception.html" class="">PHPUnit_Framework_Exception</a><br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public function</small>
+  getGroupDetails()  <a name="getGroupDetails"></a>
+</h3>
+
+<blockquote>
+<dl></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public function</small>
+  getGroups()  <a name="getGroups"></a>
+</h3>
+
+<blockquote>
+<p>Returns the test groups of the suite.</p><dl><dt>Returns:</dt><dd>array<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public function</small>
+  getIterator()  <a name="getIterator"></a>
+</h3>
+
+<blockquote>
+<p>Returns an iterator for this test suite.</p><dl><dt>Returns:</dt><dd>RecursiveIteratorIterator<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public function</small>
+  getName()  <a name="getName"></a>
+</h3>
+
+<blockquote>
+<p>Returns the name of the suite.</p><dl><dt>Returns:</dt><dd>string<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>protected static function</small>
+  incompleteTest($class, $methodName, $message)  <a name="incompleteTest"></a>
+</h3>
+
+<blockquote>
+<dl><dt>Parameters:</dt><dd><code>string</code> - $message<br></dd><dt>Returns:</dt><dd>PHPUnit_Framework_IncompleteTestCase<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public function</small>
+  injectFilter(<a href="class__PHPUnit_Runner_Filter_Factory.html" class="">PHPUnit_Runner_Filter_Factory</a> $filter)  <a name="injectFilter"></a>
+</h3>
+
+<blockquote>
+<dl></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public static function</small>
+  isTestMethod(ReflectionMethod $method)  <a name="isTestMethod"></a>
+</h3>
+
+<blockquote>
+<dl><dt>Parameters:</dt><dd><code>ReflectionMethod</code> - $method<br></dd><dt>Returns:</dt><dd>boolean<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public function</small>
+  markTestSuiteSkipped($message = "")  <a name="markTestSuiteSkipped"></a>
+</h3>
+
+<blockquote>
+<p>Mark the test suite as skipped.</p><dl><dt>Parameters:</dt><dd><code>string</code> - $message<br></dd><dt>Defaults:</dt><dd><code>message</code> = <code>""</code><br></dd><dt>Throws:</dt><dd><a href="class__PHPUnit_Framework_SkippedTestSuiteError.html" class="">PHPUnit_Framework_SkippedTestSuiteError</a><br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public function</small>
+  run(<a href="class__PHPUnit_Framework_TestResult.html" class="">PHPUnit_Framework_TestResult</a> $result = null)  <a name="run"></a>
+</h3>
+
+<blockquote>
+<p>Runs the tests and collects their result in a TestResult.</p><dl><dt>Parameters:</dt><dd><code>PHPUnit_Framework_TestResult</code> - $result<br></dd><dt>Defaults:</dt><dd><code>result</code> = <code>null</code><br></dd><dt>Returns:</dt><dd>PHPUnit_Framework_TestResult<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public function</small>
+  runTest(<a href="interface__PHPUnit_Framework_Test.html" class="">PHPUnit_Framework_Test</a> $test, <a href="class__PHPUnit_Framework_TestResult.html" class="">PHPUnit_Framework_TestResult</a> $result)  <a name="runTest"></a>
+</h3>
+
+<blockquote>
+<p>Runs a test.</p><dl><dt>Parameters:</dt><dd><code>PHPUnit_Framework_Test</code> - $test<br><code>PHPUnit_Framework_TestResult</code> - $result<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public function</small>
+  setBackupGlobals($backupGlobals)  <a name="setBackupGlobals"></a>
+</h3>
+
+<blockquote>
+<dl><dt>Parameters:</dt><dd><code>boolean</code> - $backupGlobals<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public function</small>
+  setBackupStaticAttributes($backupStaticAttributes)  <a name="setBackupStaticAttributes"></a>
+</h3>
+
+<blockquote>
+<dl><dt>Parameters:</dt><dd><code>boolean</code> - $backupStaticAttributes<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public function</small>
+  setDisallowChangesToGlobalState($disallowChangesToGlobalState)  <a name="setDisallowChangesToGlobalState"></a>
+</h3>
+
+<blockquote>
+<dl><dt>Parameters:</dt><dd><code>boolean</code> - $disallowChangesToGlobalState<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public function</small>
+  setGroupDetails(array $groups)  <a name="setGroupDetails"></a>
+</h3>
+
+<blockquote>
+<p>Set tests groups of the test case</p><dl><dt>Parameters:</dt><dd><code>array</code> - $groups<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public function</small>
+  setName($name)  <a name="setName"></a>
+</h3>
+
+<blockquote>
+<p>Sets the name of the suite.</p><dl><dt>Parameters:</dt><dd><code>string</code> - <br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public function</small>
+  setRunTestInSeparateProcess($runTestInSeparateProcess)  <a name="setRunTestInSeparateProcess"></a>
+</h3>
+
+<blockquote>
+<dl><dt>Parameters:</dt><dd><code>boolean</code> - $runTestInSeparateProcess<br></dd><dt>Throws:</dt><dd><a href="class__PHPUnit_Framework_Exception.html" class="">PHPUnit_Framework_Exception</a><br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public function</small>
+  setTests(array $tests)  <a name="setTests"></a>
+</h3>
+
+<blockquote>
+<p>Set tests of the test suite</p><dl><dt>Parameters:</dt><dd><code>array</code> - $tests<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>protected function</small>
+  setUp()  <a name="setUp"></a>
+</h3>
+
+<blockquote>
+<p>Template Method that is called before the tests of this test suite are run.</p><dl></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>protected static function</small>
+  skipTest($class, $methodName, $message)  <a name="skipTest"></a>
+</h3>
+
+<blockquote>
+<dl><dt>Parameters:</dt><dd><code>string</code> - $message<br></dd><dt>Returns:</dt><dd>PHPUnit_Framework_SkippedTestCase<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>protected function</small>
+  tearDown()  <a name="tearDown"></a>
+</h3>
+
+<blockquote>
+<p>Template Method that is called after the tests of this test suite have finished running.</p><dl></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public function</small>
+  testAt($index)  <a name="testAt"></a>
+</h3>
+
+<blockquote>
+<p>Returns the test at the given index.</p><dl><dt>Parameters:</dt><dd><code>integer</code> - <br></dd><dt>Returns:</dt><dd>PHPUnit_Framework_Test<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public function</small>
+  tests()  <a name="tests"></a>
+</h3>
+
+<blockquote>
+<p>Returns the tests as an enumeration.</p><dl><dt>Returns:</dt><dd>array<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public function</small>
+  toString()  <a name="toString"></a>
+</h3>
+
+<blockquote>
+<p>Returns a string representation of the test suite.</p><dl><dt>Returns:</dt><dd>string<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>protected static function</small>
+  warning($message)  <a name="warning"></a>
+</h3>
+
+<blockquote>
+<dl><dt>Parameters:</dt><dd><code>string</code> - $message<br></dd><dt>Returns:</dt><dd>PHPUnit_Framework_Warning<br></dd></dl></blockquote>
+
+</div>
+
+<div class="footer">
+  Generated by <a href="https://github.com/soundasleep/phpdoc2/" class="github">PHPDoc2</a> Fri, 24 Apr 2015 15:28:58 +1200</div>
+
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>PHPDoc2 - PHPUnit</title>
+  <link rel="stylesheet" type="text/css" href="default.css">
+</head>
+<body>
+<nav>
+  <a href="index.html">Root</a>
+</nav>
+
+<div class="content">
+<ul class="class-hierarchy"><li><a href="class__PHPUnit_Framework_Constraint.html" class="">\PHPUnit_Framework_Constraint</a><ul><li>\PHPUnit_Framework_Constraint_IsIdentical</li></ul></li></ul>
+<h1>
+  <small>class</small>
+
+  <a href="namespace_.html" class="">(none)</a>  \
+  <a href="class__PHPUnit_Framework_Constraint_IsIdentical.html" class="">PHPUnit_Framework_Constraint_IsIdentical</a></h1>
+
+
+<dl>
+  <dt>All implemented interfaces:</dt>
+  <dd>
+    Countable, <a href="interface__PHPUnit_Framework_SelfDescribing.html" class="">PHPUnit_Framework_SelfDescribing</a>  </dd>
+</dl>
+
+
+
+
+<hr>
+
+<p>Constraint that asserts that one value is identical to another.</p><p>Identical check is performed with PHP's === operator, the operator is explained in detail at {@url http://www.php.net/manual/en/types.comparisons.php}. Two values are identical if they have the same value and are of the same type.</p><p>The expected value is passed in the constructor.</p><dl></dl>
+<hr>
+
+<h2>Method Summary</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+<tr><td><a href="class__PHPUnit_Framework_Constraint_IsIdentical.html#__construct" class="">__construct($value)</a></td><td></td></tr><tr><td><a href="class__PHPUnit_Framework_Constraint_IsIdentical.html#evaluate" class="">evaluate($other, $description = &quot;&quot;, $returnResult = false)</a></td><td>Evaluates the constraint for parameter $other</td></tr><tr><td><a href="class__PHPUnit_Framework_Constraint_IsIdentical.html#failureDescription" class="">failureDescription($other)</a></td><td>Returns the description of the failure</td></tr><tr><td><a href="class__PHPUnit_Framework_Constraint_IsIdentical.html#toString" class="">toString()</a></td><td>Returns a string representation of the constraint.</td></tr>  </tbody>
+</table>
+
+
+<h2>Inherited Method Summary</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+<tr><td><a href="class__PHPUnit_Framework_Constraint.html#additionalFailureDescription" class="">additionalFailureDescription($other)</a></td><td>Return additional failure description where needed <i>(from <a href="class__PHPUnit_Framework_Constraint.html#additionalFailureDescription" class="">PHPUnit_Framework_Constraint</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Framework_Constraint.html#count" class="">count()</a></td><td>Counts the number of constraint elements. <i>(from <a href="class__PHPUnit_Framework_Constraint.html#count" class="">PHPUnit_Framework_Constraint</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Framework_Constraint.html#fail" class="">fail($other, $description, ComparisonFailure $comparisonFailure = null)</a></td><td>Throws an exception for the given compared value and test description <i>(from <a href="class__PHPUnit_Framework_Constraint.html#fail" class="">PHPUnit_Framework_Constraint</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Framework_Constraint.html#matches" class="">matches($other)</a></td><td>Evaluates the constraint for parameter $other. Returns true if the constraint is met, false otherwise. <i>(from <a href="class__PHPUnit_Framework_Constraint.html#matches" class="">PHPUnit_Framework_Constraint</a>)</i></td></tr>  </tbody>
+</table>
+
+
+
+<hr>
+
+<h3>
+  <small>public function</small>
+  __construct($value)  <a name="__construct"></a>
+</h3>
+
+<blockquote>
+<dl><dt>Overrides:</dt><dd><a href="class__PHPUnit_Framework_Constraint.html#__construct" class="">__construct()</a></dd><dt>Parameters:</dt><dd><code>mixed</code> - $value<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public function</small>
+  evaluate($other, $description = "", $returnResult = false)  <a name="evaluate"></a>
+</h3>
+
+<blockquote>
+<p>Evaluates the constraint for parameter $other</p><p>If $returnResult is set to false (the default), an exception is thrown in case of a failure. null is returned otherwise.</p><p>If $returnResult is true, the result of the evaluation is returned as a boolean value instead: true in case of success, false in case of a failure.</p><dl><dt>Overrides:</dt><dd><a href="class__PHPUnit_Framework_Constraint.html#evaluate" class="">evaluate($other, $description = &quot;&quot;, $returnResult = false)</a></dd><dt>Parameters:</dt><dd><code>mixed</code> - $other Value or object to evaluate.<br><code>string</code> - $description Additional information about the test<br><code>bool</code> - $returnResult Whether to return a result or throw an exception<br></dd><dt>Defaults:</dt><dd><code>description</code> = <code>""</code><br><code>returnResult</code> = <code>false</code><br></dd><dt>Returns:</dt><dd>mixed<br></dd><dt>Throws:</dt><dd><a href="class__PHPUnit_Framework_ExpectationFailedException.html" class="">PHPUnit_Framework_ExpectationFailedException</a><br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>protected function</small>
+  failureDescription($other)  <a name="failureDescription"></a>
+</h3>
+
+<blockquote>
+<p>Returns the description of the failure</p><p>The beginning of failure messages is "Failed asserting that" in most cases. This method should return the second part of that sentence.</p><dl><dt>Overrides:</dt><dd><a href="class__PHPUnit_Framework_Constraint.html#failureDescription" class="">failureDescription($other)</a></dd><dt>Parameters:</dt><dd><code>mixed</code> - $other Evaluated value or object.<br></dd><dt>Returns:</dt><dd>string<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public function</small>
+  toString()  <a name="toString"></a>
+</h3>
+
+<blockquote>
+<p>Returns a string representation of the constraint.</p><dl><dt>Returns:</dt><dd>string<br></dd></dl></blockquote>
+
+</div>
+
+<div class="footer">
+  Generated by <a href="https://github.com/soundasleep/phpdoc2/" class="github">PHPDoc2</a> Fri, 24 Apr 2015 15:28:56 +1200</div>
+
+</body>
+</html>

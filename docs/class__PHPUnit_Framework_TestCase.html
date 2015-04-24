@@ -1,0 +1,1055 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>PHPDoc2 - PHPUnit</title>
+  <link rel="stylesheet" type="text/css" href="default.css">
+</head>
+<body>
+<nav>
+  <a href="index.html">Root</a>
+</nav>
+
+<div class="content">
+<ul class="class-hierarchy"><li><a href="class__PHPUnit_Framework_Assert.html" class="">\PHPUnit_Framework_Assert</a><ul><li>\PHPUnit_Framework_TestCase</li></ul></li></ul>
+<h1>
+  <small>abstract class</small>
+
+  <a href="namespace_.html" class="">(none)</a>  \
+  <a href="class__PHPUnit_Framework_TestCase.html" class="">PHPUnit_Framework_TestCase</a></h1>
+
+
+<dl>
+  <dt>All implemented interfaces:</dt>
+  <dd>
+    Countable, <a href="interface__PHPUnit_Framework_Test.html" class="">PHPUnit_Framework_Test</a>, <a href="interface__PHPUnit_Framework_SelfDescribing.html" class="">PHPUnit_Framework_SelfDescribing</a>  </dd>
+</dl>
+
+
+
+
+<dl>
+  <dt>All known direct subclasses:</dt>
+  <dd>
+    <a href="class__PHPUnit_Framework_IncompleteTestCase.html" class="">PHPUnit_Framework_IncompleteTestCase</a>, <a href="class__PHPUnit_Framework_SkippedTestCase.html" class="">PHPUnit_Framework_SkippedTestCase</a>, <a href="class__PHPUnit_Framework_Warning.html" class="">PHPUnit_Framework_Warning</a>  </dd>
+</dl>
+
+
+<hr>
+
+<p>A TestCase defines the fixture to run multiple tests.</p><p>To define a TestCase</p><p>1) Implement a subclass of PHPUnit_Framework_TestCase. 2) Define instance variables that store the state of the fixture. 3) Initialize the fixture state by overriding setUp(). 4) Clean-up after a test by overriding tearDown().</p><p>Each test runs in its own fixture so there can be no side effects among test runs.</p><p>Here is an example:</p><p><code> <?php class MathTest extends PHPUnit_Framework_TestCase { public $value1; public $value2;</p><p>protected function setUp() { $this->value1 = 2; $this->value2 = 3; } } ?> </code></p><p>For each test implement a method which interacts with the fixture. Verify the expected results with assertions specified by calling assert with a boolean.</p><p><code> <?php public function testPass() { $this->assertTrue($this->value1 + $this->value2 == 5); } ?> </code></p><dl></dl>
+<hr>
+
+<h2>Method Summary</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+<tr><td><a href="class__PHPUnit_Framework_TestCase.html#__construct" class="">__construct($name = null, array $data = array(), $dataName = &quot;&quot;)</a></td><td>Constructs a test case with the given name.</td></tr><tr><td><a href="class__PHPUnit_Framework_TestCase.html#addToAssertionCount" class="">addToAssertionCount($count)</a></td><td>Adds a value to the assertion counter.</td></tr><tr><td><a href="class__PHPUnit_Framework_TestCase.html#any" class="">any()</a></td><td>Returns a matcher that matches when the method it is evaluated for is executed zero or more times.</td></tr><tr><td><a href="class__PHPUnit_Framework_TestCase.html#assertPostConditions" class="">assertPostConditions()</a></td><td>Performs assertions shared by all tests of a test case.</td></tr><tr><td><a href="class__PHPUnit_Framework_TestCase.html#assertPreConditions" class="">assertPreConditions()</a></td><td>Performs assertions shared by all tests of a test case.</td></tr><tr><td><a href="class__PHPUnit_Framework_TestCase.html#at" class="">at($index)</a></td><td>Returns a matcher that matches when the method it is evaluated for is invoked at the given $index.</td></tr><tr><td><a href="class__PHPUnit_Framework_TestCase.html#atLeast" class="">atLeast($requiredInvocations)</a></td><td>Returns a matcher that matches when the method it is evaluated for is executed at least N times.</td></tr><tr><td><a href="class__PHPUnit_Framework_TestCase.html#atLeastOnce" class="">atLeastOnce()</a></td><td>Returns a matcher that matches when the method it is evaluated for is executed at least once.</td></tr><tr><td><a href="class__PHPUnit_Framework_TestCase.html#atMost" class="">atMost($allowedInvocations)</a></td><td>Returns a matcher that matches when the method it is evaluated for is executed at most N times.</td></tr><tr><td><a href="class__PHPUnit_Framework_TestCase.html#checkRequirements" class="">checkRequirements()</a></td><td></td></tr><tr><td><a href="class__PHPUnit_Framework_TestCase.html#compareGlobalStateSnapshotPart" class="">compareGlobalStateSnapshotPart(array $before, array $after, $header)</a></td><td></td></tr><tr><td><a href="class__PHPUnit_Framework_TestCase.html#compareGlobalStateSnapshots" class="">compareGlobalStateSnapshots(Snapshot $before, Snapshot $after)</a></td><td></td></tr><tr><td><a href="class__PHPUnit_Framework_TestCase.html#count" class="">count()</a></td><td>Counts the number of test cases executed by run(TestResult result).</td></tr><tr><td><a href="class__PHPUnit_Framework_TestCase.html#createGlobalStateSnapshot" class="">createGlobalStateSnapshot($backupGlobals)</a></td><td></td></tr><tr><td><a href="class__PHPUnit_Framework_TestCase.html#createResult" class="">createResult()</a></td><td>Creates a default TestResult object.</td></tr><tr><td><a href="class__PHPUnit_Framework_TestCase.html#exactly" class="">exactly($count)</a></td><td>Returns a matcher that matches when the method it is evaluated for is executed exactly $count times.</td></tr><tr><td><a href="class__PHPUnit_Framework_TestCase.html#expectOutputRegex" class="">expectOutputRegex($expectedRegex)</a></td><td></td></tr><tr><td><a href="class__PHPUnit_Framework_TestCase.html#expectOutputString" class="">expectOutputString($expectedString)</a></td><td></td></tr><tr><td><a href="class__PHPUnit_Framework_TestCase.html#getActualOutput" class="">getActualOutput()</a></td><td></td></tr><tr><td><a href="class__PHPUnit_Framework_TestCase.html#getAnnotations" class="">getAnnotations()</a></td><td>Returns the annotations for this test.</td></tr><tr><td><a href="class__PHPUnit_Framework_TestCase.html#getDataSetAsString" class="">getDataSetAsString($includeData = true)</a></td><td>Gets the data set description of a TestCase.</td></tr><tr><td><a href="class__PHPUnit_Framework_TestCase.html#getExpectedException" class="">getExpectedException()</a></td><td></td></tr><tr><td><a href="class__PHPUnit_Framework_TestCase.html#getMock" class="">getMock($originalClassName, $methods = array(), array $arguments = array(), $mockClassName = &quot;&quot;, $callOriginalConstructor = true, $callOriginalClone = true, $callAutoload = true, $cloneArguments = false, $callOriginalMethods = false)</a></td><td>Returns a mock object for the specified class.</td></tr><tr><td><a href="class__PHPUnit_Framework_TestCase.html#getMockBuilder" class="">getMockBuilder($className)</a></td><td>Returns a builder object to create mock objects using a fluent interface.</td></tr><tr><td><a href="class__PHPUnit_Framework_TestCase.html#getMockClass" class="">getMockClass($originalClassName, $methods = array(), array $arguments = array(), $mockClassName = &quot;&quot;, $callOriginalConstructor = false, $callOriginalClone = true, $callAutoload = true, $cloneArguments = false)</a></td><td>Mocks the specified class and returns the name of the mocked class.</td></tr><tr><td><a href="class__PHPUnit_Framework_TestCase.html#getMockForAbstractClass" class="">getMockForAbstractClass($originalClassName, array $arguments = array(), $mockClassName = &quot;&quot;, $callOriginalConstructor = true, $callOriginalClone = true, $callAutoload = true, $mockedMethods = array(), $cloneArguments = false)</a></td><td>Returns a mock object for the specified abstract class with all abstract methods of the class mocked. Concrete methods are not mocked by default. To mock concrete methods, use the 7th parameter ($mockedMethods).</td></tr><tr><td><a href="class__PHPUnit_Framework_TestCase.html#getMockForTrait" class="">getMockForTrait($traitName, array $arguments = array(), $mockClassName = &quot;&quot;, $callOriginalConstructor = true, $callOriginalClone = true, $callAutoload = true, $mockedMethods = array(), $cloneArguments = false)</a></td><td>Returns a mock object for the specified trait with all abstract methods of the trait mocked. Concrete methods to mock can be specified with the <code>$mockedMethods</code> parameter.</td></tr><tr><td><a href="class__PHPUnit_Framework_TestCase.html#getMockFromWsdl" class="">getMockFromWsdl($wsdlFile, $originalClassName = &quot;&quot;, $mockClassName = &quot;&quot;, array $methods = array(), $callOriginalConstructor = true, array $options = array())</a></td><td>Returns a mock object based on the given WSDL file.</td></tr><tr><td><a href="class__PHPUnit_Framework_TestCase.html#getMockObjectGenerator" class="">getMockObjectGenerator()</a></td><td>Get the mock object generator, creating it if it doesn't exist.</td></tr><tr><td><a href="class__PHPUnit_Framework_TestCase.html#getName" class="">getName($withDataSet = true)</a></td><td>Gets the name of a TestCase.</td></tr><tr><td><a href="class__PHPUnit_Framework_TestCase.html#getNumAssertions" class="">getNumAssertions()</a></td><td>Returns the number of assertions performed by this test.</td></tr><tr><td><a href="class__PHPUnit_Framework_TestCase.html#getObjectForTrait" class="">getObjectForTrait($traitName, array $arguments = array(), $traitClassName = &quot;&quot;, $callOriginalConstructor = true, $callOriginalClone = true, $callAutoload = true, $cloneArguments = false)</a></td><td>Returns an object for the specified trait.</td></tr><tr><td><a href="class__PHPUnit_Framework_TestCase.html#getProphet" class="">getProphet()</a></td><td></td></tr><tr><td><a href="class__PHPUnit_Framework_TestCase.html#getResult" class="">getResult()</a></td><td></td></tr><tr><td><a href="class__PHPUnit_Framework_TestCase.html#getSize" class="">getSize()</a></td><td>Returns the size of the test.</td></tr><tr><td><a href="class__PHPUnit_Framework_TestCase.html#getStatus" class="">getStatus()</a></td><td>Returns the status of this test.</td></tr><tr><td><a href="class__PHPUnit_Framework_TestCase.html#getStatusMessage" class="">getStatusMessage()</a></td><td>Returns the status message of this test.</td></tr><tr><td><a href="class__PHPUnit_Framework_TestCase.html#getTestResultObject" class="">getTestResultObject()</a></td><td></td></tr><tr><td><a href="class__PHPUnit_Framework_TestCase.html#handleDependencies" class="">handleDependencies()</a></td><td></td></tr><tr><td><a href="class__PHPUnit_Framework_TestCase.html#hasDependencies" class="">hasDependencies()</a></td><td>Returns true if the tests has dependencies</td></tr><tr><td><a href="class__PHPUnit_Framework_TestCase.html#hasExpectationOnOutput" class="">hasExpectationOnOutput()</a></td><td></td></tr><tr><td><a href="class__PHPUnit_Framework_TestCase.html#hasFailed" class="">hasFailed()</a></td><td>Returns whether or not this test has failed.</td></tr><tr><td><a href="class__PHPUnit_Framework_TestCase.html#hasOutput" class="">hasOutput()</a></td><td></td></tr><tr><td><a href="class__PHPUnit_Framework_TestCase.html#hasPerformedExpectationsOnOutput" class="">hasPerformedExpectationsOnOutput()</a></td><td></td></tr><tr><td><a href="class__PHPUnit_Framework_TestCase.html#iniSet" class="">iniSet($varName, $newValue)</a></td><td>This method is a wrapper for the ini_set() function that automatically resets the modified php.ini setting to its original value after the test is run.</td></tr><tr><td><a href="class__PHPUnit_Framework_TestCase.html#isInIsolation" class="">isInIsolation()</a></td><td></td></tr><tr><td><a href="class__PHPUnit_Framework_TestCase.html#never" class="">never()</a></td><td>Returns a matcher that matches when the method it is evaluated for is never executed.</td></tr><tr><td><a href="class__PHPUnit_Framework_TestCase.html#onConsecutiveCalls" class="">onConsecutiveCalls()</a></td><td></td></tr><tr><td><a href="class__PHPUnit_Framework_TestCase.html#onNotSuccessfulTest" class="">onNotSuccessfulTest(Exception $e)</a></td><td>This method is called when a test method did not execute successfully.</td></tr><tr><td><a href="class__PHPUnit_Framework_TestCase.html#once" class="">once()</a></td><td>Returns a matcher that matches when the method it is evaluated for is executed exactly once.</td></tr><tr><td><a href="class__PHPUnit_Framework_TestCase.html#prepareTemplate" class="">prepareTemplate(Text_Template $template)</a></td><td>Performs custom preparations on the process isolation template.</td></tr><tr><td><a href="class__PHPUnit_Framework_TestCase.html#prophesize" class="">prophesize($classOrInterface = null)</a></td><td></td></tr><tr><td><a href="class__PHPUnit_Framework_TestCase.html#restoreGlobalState" class="">restoreGlobalState()</a></td><td></td></tr><tr><td><a href="class__PHPUnit_Framework_TestCase.html#returnArgument" class="">returnArgument($argumentIndex)</a></td><td></td></tr><tr><td><a href="class__PHPUnit_Framework_TestCase.html#returnCallback" class="">returnCallback($callback)</a></td><td></td></tr><tr><td><a href="class__PHPUnit_Framework_TestCase.html#returnSelf" class="">returnSelf()</a></td><td>Returns the current object.</td></tr><tr><td><a href="class__PHPUnit_Framework_TestCase.html#returnValue" class="">returnValue($value)</a></td><td></td></tr><tr><td><a href="class__PHPUnit_Framework_TestCase.html#returnValueMap" class="">returnValueMap(array $valueMap)</a></td><td></td></tr><tr><td><a href="class__PHPUnit_Framework_TestCase.html#run" class="">run(PHPUnit_Framework_TestResult $result = null)</a></td><td>Runs the test case and collects the results in a TestResult object. If no TestResult object is passed a new one will be created.</td></tr><tr><td><a href="class__PHPUnit_Framework_TestCase.html#runBare" class="">runBare()</a></td><td>Runs the bare test sequence.</td></tr><tr><td><a href="class__PHPUnit_Framework_TestCase.html#runTest" class="">runTest()</a></td><td>Override to run the test and assert its state.</td></tr><tr><td><a href="class__PHPUnit_Framework_TestCase.html#setBackupGlobals" class="">setBackupGlobals($backupGlobals)</a></td><td>Calling this method in setUp() has no effect!</td></tr><tr><td><a href="class__PHPUnit_Framework_TestCase.html#setBackupStaticAttributes" class="">setBackupStaticAttributes($backupStaticAttributes)</a></td><td>Calling this method in setUp() has no effect!</td></tr><tr><td><a href="class__PHPUnit_Framework_TestCase.html#setDependencies" class="">setDependencies(array $dependencies)</a></td><td>Sets the dependencies of a TestCase.</td></tr><tr><td><a href="class__PHPUnit_Framework_TestCase.html#setDependencyInput" class="">setDependencyInput(array $dependencyInput)</a></td><td>Sets</td></tr><tr><td><a href="class__PHPUnit_Framework_TestCase.html#setDisallowChangesToGlobalState" class="">setDisallowChangesToGlobalState($disallowChangesToGlobalState)</a></td><td></td></tr><tr><td><a href="class__PHPUnit_Framework_TestCase.html#setExpectedException" class="">setExpectedException($exceptionName, $exceptionMessage = &quot;&quot;, $exceptionCode = null)</a></td><td></td></tr><tr><td><a href="class__PHPUnit_Framework_TestCase.html#setExpectedExceptionFromAnnotation" class="">setExpectedExceptionFromAnnotation()</a></td><td></td></tr><tr><td><a href="class__PHPUnit_Framework_TestCase.html#setExpectedExceptionRegExp" class="">setExpectedExceptionRegExp($exceptionName, $exceptionMessageRegExp = &quot;&quot;, $exceptionCode = null)</a></td><td></td></tr><tr><td><a href="class__PHPUnit_Framework_TestCase.html#setInIsolation" class="">setInIsolation($inIsolation)</a></td><td></td></tr><tr><td><a href="class__PHPUnit_Framework_TestCase.html#setLocale" class="">setLocale()</a></td><td>This method is a wrapper for the setlocale() function that automatically resets the locale to its original value after the test is run.</td></tr><tr><td><a href="class__PHPUnit_Framework_TestCase.html#setName" class="">setName($name)</a></td><td>Sets the name of a TestCase.</td></tr><tr><td><a href="class__PHPUnit_Framework_TestCase.html#setOutputCallback" class="">setOutputCallback($callback)</a></td><td></td></tr><tr><td><a href="class__PHPUnit_Framework_TestCase.html#setPreserveGlobalState" class="">setPreserveGlobalState($preserveGlobalState)</a></td><td></td></tr><tr><td><a href="class__PHPUnit_Framework_TestCase.html#setResult" class="">setResult($result)</a></td><td></td></tr><tr><td><a href="class__PHPUnit_Framework_TestCase.html#setRunTestInSeparateProcess" class="">setRunTestInSeparateProcess($runTestInSeparateProcess)</a></td><td></td></tr><tr><td><a href="class__PHPUnit_Framework_TestCase.html#setTestResultObject" class="">setTestResultObject(PHPUnit_Framework_TestResult $result)</a></td><td></td></tr><tr><td><a href="class__PHPUnit_Framework_TestCase.html#setUp" class="">setUp()</a></td><td>Sets up the fixture, for example, open a network connection. This method is called before a test is executed.</td></tr><tr><td><a href="class__PHPUnit_Framework_TestCase.html#setUpBeforeClass" class="">setUpBeforeClass()</a></td><td>This method is called before the first test of this test class is run.</td></tr><tr><td><a href="class__PHPUnit_Framework_TestCase.html#setUseErrorHandler" class="">setUseErrorHandler($useErrorHandler)</a></td><td></td></tr><tr><td><a href="class__PHPUnit_Framework_TestCase.html#setUseErrorHandlerFromAnnotation" class="">setUseErrorHandlerFromAnnotation()</a></td><td></td></tr><tr><td><a href="class__PHPUnit_Framework_TestCase.html#snapshotGlobalState" class="">snapshotGlobalState()</a></td><td></td></tr><tr><td><a href="class__PHPUnit_Framework_TestCase.html#startOutputBuffering" class="">startOutputBuffering()</a></td><td></td></tr><tr><td><a href="class__PHPUnit_Framework_TestCase.html#stopOutputBuffering" class="">stopOutputBuffering()</a></td><td></td></tr><tr><td><a href="class__PHPUnit_Framework_TestCase.html#tearDown" class="">tearDown()</a></td><td>Tears down the fixture, for example, close a network connection. This method is called after a test is executed.</td></tr><tr><td><a href="class__PHPUnit_Framework_TestCase.html#tearDownAfterClass" class="">tearDownAfterClass()</a></td><td>This method is called after the last test of this test class is run.</td></tr><tr><td><a href="class__PHPUnit_Framework_TestCase.html#throwException" class="">throwException(Exception $exception)</a></td><td></td></tr><tr><td><a href="class__PHPUnit_Framework_TestCase.html#toString" class="">toString()</a></td><td>Returns a string representation of the test case.</td></tr><tr><td><a href="class__PHPUnit_Framework_TestCase.html#verifyMockObjects" class="">verifyMockObjects()</a></td><td>Verifies the mock object expectations.</td></tr>  </tbody>
+</table>
+
+
+<h2>Inherited Method Summary</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+<tr><td><a href="class__PHPUnit_Framework_Assert.html#anything" class="">anything()</a></td><td>Returns a PHPUnit_Framework_Constraint_IsAnything matcher object. <i>(from <a href="class__PHPUnit_Framework_Assert.html#anything" class="">PHPUnit_Framework_Assert</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Framework_Assert.html#arrayHasKey" class="">arrayHasKey($key)</a></td><td>Returns a PHPUnit_Framework_Constraint_ArrayHasKey matcher object. <i>(from <a href="class__PHPUnit_Framework_Assert.html#arrayHasKey" class="">PHPUnit_Framework_Assert</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Framework_Assert.html#assertArrayHasKey" class="">assertArrayHasKey($key, $array, $message = &quot;&quot;)</a></td><td>Asserts that an array has a specified key. <i>(from <a href="class__PHPUnit_Framework_Assert.html#assertArrayHasKey" class="">PHPUnit_Framework_Assert</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Framework_Assert.html#assertArrayNotHasKey" class="">assertArrayNotHasKey($key, $array, $message = &quot;&quot;)</a></td><td>Asserts that an array does not have a specified key. <i>(from <a href="class__PHPUnit_Framework_Assert.html#assertArrayNotHasKey" class="">PHPUnit_Framework_Assert</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Framework_Assert.html#assertArraySubset" class="">assertArraySubset($subset, $array, $strict = false, $message = &quot;&quot;)</a></td><td>Asserts that an array has a specified subset. <i>(from <a href="class__PHPUnit_Framework_Assert.html#assertArraySubset" class="">PHPUnit_Framework_Assert</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Framework_Assert.html#assertAttributeContains" class="">assertAttributeContains($needle, $haystackAttributeName, $haystackClassOrObject, $message = &quot;&quot;, $ignoreCase = false, $checkForObjectIdentity = true, $checkForNonObjectIdentity = false)</a></td><td>Asserts that a haystack that is stored in a static attribute of a class or an attribute of an object contains a needle. <i>(from <a href="class__PHPUnit_Framework_Assert.html#assertAttributeContains" class="">PHPUnit_Framework_Assert</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Framework_Assert.html#assertAttributeContainsOnly" class="">assertAttributeContainsOnly($type, $haystackAttributeName, $haystackClassOrObject, $isNativeType = null, $message = &quot;&quot;)</a></td><td>Asserts that a haystack that is stored in a static attribute of a class or an attribute of an object contains only values of a given type. <i>(from <a href="class__PHPUnit_Framework_Assert.html#assertAttributeContainsOnly" class="">PHPUnit_Framework_Assert</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Framework_Assert.html#assertAttributeCount" class="">assertAttributeCount($expectedCount, $haystackAttributeName, $haystackClassOrObject, $message = &quot;&quot;)</a></td><td>Asserts the number of elements of an array, Countable or Traversable that is stored in an attribute. <i>(from <a href="class__PHPUnit_Framework_Assert.html#assertAttributeCount" class="">PHPUnit_Framework_Assert</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Framework_Assert.html#assertAttributeEmpty" class="">assertAttributeEmpty($haystackAttributeName, $haystackClassOrObject, $message = &quot;&quot;)</a></td><td>Asserts that a static attribute of a class or an attribute of an object is empty. <i>(from <a href="class__PHPUnit_Framework_Assert.html#assertAttributeEmpty" class="">PHPUnit_Framework_Assert</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Framework_Assert.html#assertAttributeEquals" class="">assertAttributeEquals($expected, $actualAttributeName, $actualClassOrObject, $message = &quot;&quot;, $delta = 0, $maxDepth = 10, $canonicalize = false, $ignoreCase = false)</a></td><td>Asserts that a variable is equal to an attribute of an object. <i>(from <a href="class__PHPUnit_Framework_Assert.html#assertAttributeEquals" class="">PHPUnit_Framework_Assert</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Framework_Assert.html#assertAttributeGreaterThan" class="">assertAttributeGreaterThan($expected, $actualAttributeName, $actualClassOrObject, $message = &quot;&quot;)</a></td><td>Asserts that an attribute is greater than another value. <i>(from <a href="class__PHPUnit_Framework_Assert.html#assertAttributeGreaterThan" class="">PHPUnit_Framework_Assert</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Framework_Assert.html#assertAttributeGreaterThanOrEqual" class="">assertAttributeGreaterThanOrEqual($expected, $actualAttributeName, $actualClassOrObject, $message = &quot;&quot;)</a></td><td>Asserts that an attribute is greater than or equal to another value. <i>(from <a href="class__PHPUnit_Framework_Assert.html#assertAttributeGreaterThanOrEqual" class="">PHPUnit_Framework_Assert</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Framework_Assert.html#assertAttributeInstanceOf" class="">assertAttributeInstanceOf($expected, $attributeName, $classOrObject, $message = &quot;&quot;)</a></td><td>Asserts that an attribute is of a given type. <i>(from <a href="class__PHPUnit_Framework_Assert.html#assertAttributeInstanceOf" class="">PHPUnit_Framework_Assert</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Framework_Assert.html#assertAttributeInternalType" class="">assertAttributeInternalType($expected, $attributeName, $classOrObject, $message = &quot;&quot;)</a></td><td>Asserts that an attribute is of a given type. <i>(from <a href="class__PHPUnit_Framework_Assert.html#assertAttributeInternalType" class="">PHPUnit_Framework_Assert</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Framework_Assert.html#assertAttributeLessThan" class="">assertAttributeLessThan($expected, $actualAttributeName, $actualClassOrObject, $message = &quot;&quot;)</a></td><td>Asserts that an attribute is smaller than another value. <i>(from <a href="class__PHPUnit_Framework_Assert.html#assertAttributeLessThan" class="">PHPUnit_Framework_Assert</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Framework_Assert.html#assertAttributeLessThanOrEqual" class="">assertAttributeLessThanOrEqual($expected, $actualAttributeName, $actualClassOrObject, $message = &quot;&quot;)</a></td><td>Asserts that an attribute is smaller than or equal to another value. <i>(from <a href="class__PHPUnit_Framework_Assert.html#assertAttributeLessThanOrEqual" class="">PHPUnit_Framework_Assert</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Framework_Assert.html#assertAttributeNotContains" class="">assertAttributeNotContains($needle, $haystackAttributeName, $haystackClassOrObject, $message = &quot;&quot;, $ignoreCase = false, $checkForObjectIdentity = true, $checkForNonObjectIdentity = false)</a></td><td>Asserts that a haystack that is stored in a static attribute of a class or an attribute of an object does not contain a needle. <i>(from <a href="class__PHPUnit_Framework_Assert.html#assertAttributeNotContains" class="">PHPUnit_Framework_Assert</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Framework_Assert.html#assertAttributeNotContainsOnly" class="">assertAttributeNotContainsOnly($type, $haystackAttributeName, $haystackClassOrObject, $isNativeType = null, $message = &quot;&quot;)</a></td><td>Asserts that a haystack that is stored in a static attribute of a class or an attribute of an object does not contain only values of a given type. <i>(from <a href="class__PHPUnit_Framework_Assert.html#assertAttributeNotContainsOnly" class="">PHPUnit_Framework_Assert</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Framework_Assert.html#assertAttributeNotCount" class="">assertAttributeNotCount($expectedCount, $haystackAttributeName, $haystackClassOrObject, $message = &quot;&quot;)</a></td><td>Asserts the number of elements of an array, Countable or Traversable that is stored in an attribute. <i>(from <a href="class__PHPUnit_Framework_Assert.html#assertAttributeNotCount" class="">PHPUnit_Framework_Assert</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Framework_Assert.html#assertAttributeNotEmpty" class="">assertAttributeNotEmpty($haystackAttributeName, $haystackClassOrObject, $message = &quot;&quot;)</a></td><td>Asserts that a static attribute of a class or an attribute of an object is not empty. <i>(from <a href="class__PHPUnit_Framework_Assert.html#assertAttributeNotEmpty" class="">PHPUnit_Framework_Assert</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Framework_Assert.html#assertAttributeNotEquals" class="">assertAttributeNotEquals($expected, $actualAttributeName, $actualClassOrObject, $message = &quot;&quot;, $delta = 0, $maxDepth = 10, $canonicalize = false, $ignoreCase = false)</a></td><td>Asserts that a variable is not equal to an attribute of an object. <i>(from <a href="class__PHPUnit_Framework_Assert.html#assertAttributeNotEquals" class="">PHPUnit_Framework_Assert</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Framework_Assert.html#assertAttributeNotInstanceOf" class="">assertAttributeNotInstanceOf($expected, $attributeName, $classOrObject, $message = &quot;&quot;)</a></td><td>Asserts that an attribute is of a given type. <i>(from <a href="class__PHPUnit_Framework_Assert.html#assertAttributeNotInstanceOf" class="">PHPUnit_Framework_Assert</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Framework_Assert.html#assertAttributeNotInternalType" class="">assertAttributeNotInternalType($expected, $attributeName, $classOrObject, $message = &quot;&quot;)</a></td><td>Asserts that an attribute is of a given type. <i>(from <a href="class__PHPUnit_Framework_Assert.html#assertAttributeNotInternalType" class="">PHPUnit_Framework_Assert</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Framework_Assert.html#assertAttributeNotSame" class="">assertAttributeNotSame($expected, $actualAttributeName, $actualClassOrObject, $message = &quot;&quot;)</a></td><td>Asserts that a variable and an attribute of an object do not have the same type and value. <i>(from <a href="class__PHPUnit_Framework_Assert.html#assertAttributeNotSame" class="">PHPUnit_Framework_Assert</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Framework_Assert.html#assertAttributeSame" class="">assertAttributeSame($expected, $actualAttributeName, $actualClassOrObject, $message = &quot;&quot;)</a></td><td>Asserts that a variable and an attribute of an object have the same type and value. <i>(from <a href="class__PHPUnit_Framework_Assert.html#assertAttributeSame" class="">PHPUnit_Framework_Assert</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Framework_Assert.html#assertClassHasAttribute" class="">assertClassHasAttribute($attributeName, $className, $message = &quot;&quot;)</a></td><td>Asserts that a class has a specified attribute. <i>(from <a href="class__PHPUnit_Framework_Assert.html#assertClassHasAttribute" class="">PHPUnit_Framework_Assert</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Framework_Assert.html#assertClassHasStaticAttribute" class="">assertClassHasStaticAttribute($attributeName, $className, $message = &quot;&quot;)</a></td><td>Asserts that a class has a specified static attribute. <i>(from <a href="class__PHPUnit_Framework_Assert.html#assertClassHasStaticAttribute" class="">PHPUnit_Framework_Assert</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Framework_Assert.html#assertClassNotHasAttribute" class="">assertClassNotHasAttribute($attributeName, $className, $message = &quot;&quot;)</a></td><td>Asserts that a class does not have a specified attribute. <i>(from <a href="class__PHPUnit_Framework_Assert.html#assertClassNotHasAttribute" class="">PHPUnit_Framework_Assert</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Framework_Assert.html#assertClassNotHasStaticAttribute" class="">assertClassNotHasStaticAttribute($attributeName, $className, $message = &quot;&quot;)</a></td><td>Asserts that a class does not have a specified static attribute. <i>(from <a href="class__PHPUnit_Framework_Assert.html#assertClassNotHasStaticAttribute" class="">PHPUnit_Framework_Assert</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Framework_Assert.html#assertContains" class="">assertContains($needle, $haystack, $message = &quot;&quot;, $ignoreCase = false, $checkForObjectIdentity = true, $checkForNonObjectIdentity = false)</a></td><td>Asserts that a haystack contains a needle. <i>(from <a href="class__PHPUnit_Framework_Assert.html#assertContains" class="">PHPUnit_Framework_Assert</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Framework_Assert.html#assertContainsOnly" class="">assertContainsOnly($type, $haystack, $isNativeType = null, $message = &quot;&quot;)</a></td><td>Asserts that a haystack contains only values of a given type. <i>(from <a href="class__PHPUnit_Framework_Assert.html#assertContainsOnly" class="">PHPUnit_Framework_Assert</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Framework_Assert.html#assertContainsOnlyInstancesOf" class="">assertContainsOnlyInstancesOf($classname, $haystack, $message = &quot;&quot;)</a></td><td>Asserts that a haystack contains only instances of a given classname <i>(from <a href="class__PHPUnit_Framework_Assert.html#assertContainsOnlyInstancesOf" class="">PHPUnit_Framework_Assert</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Framework_Assert.html#assertCount" class="">assertCount($expectedCount, $haystack, $message = &quot;&quot;)</a></td><td>Asserts the number of elements of an array, Countable or Traversable. <i>(from <a href="class__PHPUnit_Framework_Assert.html#assertCount" class="">PHPUnit_Framework_Assert</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Framework_Assert.html#assertEmpty" class="">assertEmpty($actual, $message = &quot;&quot;)</a></td><td>Asserts that a variable is empty. <i>(from <a href="class__PHPUnit_Framework_Assert.html#assertEmpty" class="">PHPUnit_Framework_Assert</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Framework_Assert.html#assertEqualXMLStructure" class="">assertEqualXMLStructure(DOMElement $expectedElement, DOMElement $actualElement, $checkAttributes = false, $message = &quot;&quot;)</a></td><td>Asserts that a hierarchy of DOMElements matches. <i>(from <a href="class__PHPUnit_Framework_Assert.html#assertEqualXMLStructure" class="">PHPUnit_Framework_Assert</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Framework_Assert.html#assertEquals" class="">assertEquals($expected, $actual, $message = &quot;&quot;, $delta = 0, $maxDepth = 10, $canonicalize = false, $ignoreCase = false)</a></td><td>Asserts that two variables are equal. <i>(from <a href="class__PHPUnit_Framework_Assert.html#assertEquals" class="">PHPUnit_Framework_Assert</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Framework_Assert.html#assertFalse" class="">assertFalse($condition, $message = &quot;&quot;)</a></td><td>Asserts that a condition is false. <i>(from <a href="class__PHPUnit_Framework_Assert.html#assertFalse" class="">PHPUnit_Framework_Assert</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Framework_Assert.html#assertFileEquals" class="">assertFileEquals($expected, $actual, $message = &quot;&quot;, $canonicalize = false, $ignoreCase = false)</a></td><td>Asserts that the contents of one file is equal to the contents of another file. <i>(from <a href="class__PHPUnit_Framework_Assert.html#assertFileEquals" class="">PHPUnit_Framework_Assert</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Framework_Assert.html#assertFileExists" class="">assertFileExists($filename, $message = &quot;&quot;)</a></td><td>Asserts that a file exists. <i>(from <a href="class__PHPUnit_Framework_Assert.html#assertFileExists" class="">PHPUnit_Framework_Assert</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Framework_Assert.html#assertFileNotEquals" class="">assertFileNotEquals($expected, $actual, $message = &quot;&quot;, $canonicalize = false, $ignoreCase = false)</a></td><td>Asserts that the contents of one file is not equal to the contents of another file. <i>(from <a href="class__PHPUnit_Framework_Assert.html#assertFileNotEquals" class="">PHPUnit_Framework_Assert</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Framework_Assert.html#assertFileNotExists" class="">assertFileNotExists($filename, $message = &quot;&quot;)</a></td><td>Asserts that a file does not exist. <i>(from <a href="class__PHPUnit_Framework_Assert.html#assertFileNotExists" class="">PHPUnit_Framework_Assert</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Framework_Assert.html#assertGreaterThan" class="">assertGreaterThan($expected, $actual, $message = &quot;&quot;)</a></td><td>Asserts that a value is greater than another value. <i>(from <a href="class__PHPUnit_Framework_Assert.html#assertGreaterThan" class="">PHPUnit_Framework_Assert</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Framework_Assert.html#assertGreaterThanOrEqual" class="">assertGreaterThanOrEqual($expected, $actual, $message = &quot;&quot;)</a></td><td>Asserts that a value is greater than or equal to another value. <i>(from <a href="class__PHPUnit_Framework_Assert.html#assertGreaterThanOrEqual" class="">PHPUnit_Framework_Assert</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Framework_Assert.html#assertInstanceOf" class="">assertInstanceOf($expected, $actual, $message = &quot;&quot;)</a></td><td>Asserts that a variable is of a given type. <i>(from <a href="class__PHPUnit_Framework_Assert.html#assertInstanceOf" class="">PHPUnit_Framework_Assert</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Framework_Assert.html#assertInternalType" class="">assertInternalType($expected, $actual, $message = &quot;&quot;)</a></td><td>Asserts that a variable is of a given type. <i>(from <a href="class__PHPUnit_Framework_Assert.html#assertInternalType" class="">PHPUnit_Framework_Assert</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Framework_Assert.html#assertJson" class="">assertJson($actualJson, $message = &quot;&quot;)</a></td><td>Asserts that a string is a valid JSON string. <i>(from <a href="class__PHPUnit_Framework_Assert.html#assertJson" class="">PHPUnit_Framework_Assert</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Framework_Assert.html#assertJsonFileEqualsJsonFile" class="">assertJsonFileEqualsJsonFile($expectedFile, $actualFile, $message = &quot;&quot;)</a></td><td>Asserts that two JSON files are equal. <i>(from <a href="class__PHPUnit_Framework_Assert.html#assertJsonFileEqualsJsonFile" class="">PHPUnit_Framework_Assert</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Framework_Assert.html#assertJsonFileNotEqualsJsonFile" class="">assertJsonFileNotEqualsJsonFile($expectedFile, $actualFile, $message = &quot;&quot;)</a></td><td>Asserts that two JSON files are not equal. <i>(from <a href="class__PHPUnit_Framework_Assert.html#assertJsonFileNotEqualsJsonFile" class="">PHPUnit_Framework_Assert</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Framework_Assert.html#assertJsonStringEqualsJsonFile" class="">assertJsonStringEqualsJsonFile($expectedFile, $actualJson, $message = &quot;&quot;)</a></td><td>Asserts that the generated JSON encoded object and the content of the given file are equal. <i>(from <a href="class__PHPUnit_Framework_Assert.html#assertJsonStringEqualsJsonFile" class="">PHPUnit_Framework_Assert</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Framework_Assert.html#assertJsonStringEqualsJsonString" class="">assertJsonStringEqualsJsonString($expectedJson, $actualJson, $message = &quot;&quot;)</a></td><td>Asserts that two given JSON encoded objects or arrays are equal. <i>(from <a href="class__PHPUnit_Framework_Assert.html#assertJsonStringEqualsJsonString" class="">PHPUnit_Framework_Assert</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Framework_Assert.html#assertJsonStringNotEqualsJsonFile" class="">assertJsonStringNotEqualsJsonFile($expectedFile, $actualJson, $message = &quot;&quot;)</a></td><td>Asserts that the generated JSON encoded object and the content of the given file are not equal. <i>(from <a href="class__PHPUnit_Framework_Assert.html#assertJsonStringNotEqualsJsonFile" class="">PHPUnit_Framework_Assert</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Framework_Assert.html#assertJsonStringNotEqualsJsonString" class="">assertJsonStringNotEqualsJsonString($expectedJson, $actualJson, $message = &quot;&quot;)</a></td><td>Asserts that two given JSON encoded objects or arrays are not equal. <i>(from <a href="class__PHPUnit_Framework_Assert.html#assertJsonStringNotEqualsJsonString" class="">PHPUnit_Framework_Assert</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Framework_Assert.html#assertLessThan" class="">assertLessThan($expected, $actual, $message = &quot;&quot;)</a></td><td>Asserts that a value is smaller than another value. <i>(from <a href="class__PHPUnit_Framework_Assert.html#assertLessThan" class="">PHPUnit_Framework_Assert</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Framework_Assert.html#assertLessThanOrEqual" class="">assertLessThanOrEqual($expected, $actual, $message = &quot;&quot;)</a></td><td>Asserts that a value is smaller than or equal to another value. <i>(from <a href="class__PHPUnit_Framework_Assert.html#assertLessThanOrEqual" class="">PHPUnit_Framework_Assert</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Framework_Assert.html#assertNotContains" class="">assertNotContains($needle, $haystack, $message = &quot;&quot;, $ignoreCase = false, $checkForObjectIdentity = true, $checkForNonObjectIdentity = false)</a></td><td>Asserts that a haystack does not contain a needle. <i>(from <a href="class__PHPUnit_Framework_Assert.html#assertNotContains" class="">PHPUnit_Framework_Assert</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Framework_Assert.html#assertNotContainsOnly" class="">assertNotContainsOnly($type, $haystack, $isNativeType = null, $message = &quot;&quot;)</a></td><td>Asserts that a haystack does not contain only values of a given type. <i>(from <a href="class__PHPUnit_Framework_Assert.html#assertNotContainsOnly" class="">PHPUnit_Framework_Assert</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Framework_Assert.html#assertNotCount" class="">assertNotCount($expectedCount, $haystack, $message = &quot;&quot;)</a></td><td>Asserts the number of elements of an array, Countable or Traversable. <i>(from <a href="class__PHPUnit_Framework_Assert.html#assertNotCount" class="">PHPUnit_Framework_Assert</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Framework_Assert.html#assertNotEmpty" class="">assertNotEmpty($actual, $message = &quot;&quot;)</a></td><td>Asserts that a variable is not empty. <i>(from <a href="class__PHPUnit_Framework_Assert.html#assertNotEmpty" class="">PHPUnit_Framework_Assert</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Framework_Assert.html#assertNotEquals" class="">assertNotEquals($expected, $actual, $message = &quot;&quot;, $delta = 0, $maxDepth = 10, $canonicalize = false, $ignoreCase = false)</a></td><td>Asserts that two variables are not equal. <i>(from <a href="class__PHPUnit_Framework_Assert.html#assertNotEquals" class="">PHPUnit_Framework_Assert</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Framework_Assert.html#assertNotFalse" class="">assertNotFalse($condition, $message = &quot;&quot;)</a></td><td>Asserts that a condition is not false. <i>(from <a href="class__PHPUnit_Framework_Assert.html#assertNotFalse" class="">PHPUnit_Framework_Assert</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Framework_Assert.html#assertNotInstanceOf" class="">assertNotInstanceOf($expected, $actual, $message = &quot;&quot;)</a></td><td>Asserts that a variable is not of a given type. <i>(from <a href="class__PHPUnit_Framework_Assert.html#assertNotInstanceOf" class="">PHPUnit_Framework_Assert</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Framework_Assert.html#assertNotInternalType" class="">assertNotInternalType($expected, $actual, $message = &quot;&quot;)</a></td><td>Asserts that a variable is not of a given type. <i>(from <a href="class__PHPUnit_Framework_Assert.html#assertNotInternalType" class="">PHPUnit_Framework_Assert</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Framework_Assert.html#assertNotNull" class="">assertNotNull($actual, $message = &quot;&quot;)</a></td><td>Asserts that a variable is not null. <i>(from <a href="class__PHPUnit_Framework_Assert.html#assertNotNull" class="">PHPUnit_Framework_Assert</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Framework_Assert.html#assertNotRegExp" class="">assertNotRegExp($pattern, $string, $message = &quot;&quot;)</a></td><td>Asserts that a string does not match a given regular expression. <i>(from <a href="class__PHPUnit_Framework_Assert.html#assertNotRegExp" class="">PHPUnit_Framework_Assert</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Framework_Assert.html#assertNotSame" class="">assertNotSame($expected, $actual, $message = &quot;&quot;)</a></td><td>Asserts that two variables do not have the same type and value. Used on objects, it asserts that two variables do not reference the same object. <i>(from <a href="class__PHPUnit_Framework_Assert.html#assertNotSame" class="">PHPUnit_Framework_Assert</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Framework_Assert.html#assertNotSameSize" class="">assertNotSameSize($expected, $actual, $message = &quot;&quot;)</a></td><td>Assert that the size of two arrays (or <code>Countable</code> or <code>Traversable</code> objects) is not the same. <i>(from <a href="class__PHPUnit_Framework_Assert.html#assertNotSameSize" class="">PHPUnit_Framework_Assert</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Framework_Assert.html#assertNotTag" class="">assertNotTag($matcher, $actual, $message = &quot;&quot;, $isHtml = true)</a></td><td>This assertion is the exact opposite of assertTag(). <i>(from <a href="class__PHPUnit_Framework_Assert.html#assertNotTag" class="">PHPUnit_Framework_Assert</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Framework_Assert.html#assertNotTrue" class="">assertNotTrue($condition, $message = &quot;&quot;)</a></td><td>Asserts that a condition is not true. <i>(from <a href="class__PHPUnit_Framework_Assert.html#assertNotTrue" class="">PHPUnit_Framework_Assert</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Framework_Assert.html#assertNull" class="">assertNull($actual, $message = &quot;&quot;)</a></td><td>Asserts that a variable is null. <i>(from <a href="class__PHPUnit_Framework_Assert.html#assertNull" class="">PHPUnit_Framework_Assert</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Framework_Assert.html#assertObjectHasAttribute" class="">assertObjectHasAttribute($attributeName, $object, $message = &quot;&quot;)</a></td><td>Asserts that an object has a specified attribute. <i>(from <a href="class__PHPUnit_Framework_Assert.html#assertObjectHasAttribute" class="">PHPUnit_Framework_Assert</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Framework_Assert.html#assertObjectNotHasAttribute" class="">assertObjectNotHasAttribute($attributeName, $object, $message = &quot;&quot;)</a></td><td>Asserts that an object does not have a specified attribute. <i>(from <a href="class__PHPUnit_Framework_Assert.html#assertObjectNotHasAttribute" class="">PHPUnit_Framework_Assert</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Framework_Assert.html#assertRegExp" class="">assertRegExp($pattern, $string, $message = &quot;&quot;)</a></td><td>Asserts that a string matches a given regular expression. <i>(from <a href="class__PHPUnit_Framework_Assert.html#assertRegExp" class="">PHPUnit_Framework_Assert</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Framework_Assert.html#assertSame" class="">assertSame($expected, $actual, $message = &quot;&quot;)</a></td><td>Asserts that two variables have the same type and value. Used on objects, it asserts that two variables reference the same object. <i>(from <a href="class__PHPUnit_Framework_Assert.html#assertSame" class="">PHPUnit_Framework_Assert</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Framework_Assert.html#assertSameSize" class="">assertSameSize($expected, $actual, $message = &quot;&quot;)</a></td><td>Assert that the size of two arrays (or <code>Countable</code> or <code>Traversable</code> objects) is the same. <i>(from <a href="class__PHPUnit_Framework_Assert.html#assertSameSize" class="">PHPUnit_Framework_Assert</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Framework_Assert.html#assertSelectCount" class="">assertSelectCount($selector, $count, $actual, $message = &quot;&quot;, $isHtml = true)</a></td><td>Assert the presence, absence, or count of elements in a document matching the CSS $selector, regardless of the contents of those elements. <i>(from <a href="class__PHPUnit_Framework_Assert.html#assertSelectCount" class="">PHPUnit_Framework_Assert</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Framework_Assert.html#assertSelectEquals" class="">assertSelectEquals($selector, $content, $count, $actual, $message = &quot;&quot;, $isHtml = true)</a></td><td>assertSelectEquals("#binder .name", "Chuck", true, $xml); // any? assertSelectEquals("#binder .name", "Chuck", false, $xml); // none? <i>(from <a href="class__PHPUnit_Framework_Assert.html#assertSelectEquals" class="">PHPUnit_Framework_Assert</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Framework_Assert.html#assertSelectRegExp" class="">assertSelectRegExp($selector, $pattern, $count, $actual, $message = &quot;&quot;, $isHtml = true)</a></td><td>assertSelectRegExp("#binder .name", "/Mike|Derek/", true, $xml); // any? assertSelectRegExp("#binder .name", "/Mike|Derek/", 3, $xml); // 3? <i>(from <a href="class__PHPUnit_Framework_Assert.html#assertSelectRegExp" class="">PHPUnit_Framework_Assert</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Framework_Assert.html#assertStringEndsNotWith" class="">assertStringEndsNotWith($suffix, $string, $message = &quot;&quot;)</a></td><td>Asserts that a string ends not with a given suffix. <i>(from <a href="class__PHPUnit_Framework_Assert.html#assertStringEndsNotWith" class="">PHPUnit_Framework_Assert</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Framework_Assert.html#assertStringEndsWith" class="">assertStringEndsWith($suffix, $string, $message = &quot;&quot;)</a></td><td>Asserts that a string ends with a given suffix. <i>(from <a href="class__PHPUnit_Framework_Assert.html#assertStringEndsWith" class="">PHPUnit_Framework_Assert</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Framework_Assert.html#assertStringEqualsFile" class="">assertStringEqualsFile($expectedFile, $actualString, $message = &quot;&quot;, $canonicalize = false, $ignoreCase = false)</a></td><td>Asserts that the contents of a string is equal to the contents of a file. <i>(from <a href="class__PHPUnit_Framework_Assert.html#assertStringEqualsFile" class="">PHPUnit_Framework_Assert</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Framework_Assert.html#assertStringMatchesFormat" class="">assertStringMatchesFormat($format, $string, $message = &quot;&quot;)</a></td><td>Asserts that a string matches a given format string. <i>(from <a href="class__PHPUnit_Framework_Assert.html#assertStringMatchesFormat" class="">PHPUnit_Framework_Assert</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Framework_Assert.html#assertStringMatchesFormatFile" class="">assertStringMatchesFormatFile($formatFile, $string, $message = &quot;&quot;)</a></td><td>Asserts that a string matches a given format file. <i>(from <a href="class__PHPUnit_Framework_Assert.html#assertStringMatchesFormatFile" class="">PHPUnit_Framework_Assert</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Framework_Assert.html#assertStringNotEqualsFile" class="">assertStringNotEqualsFile($expectedFile, $actualString, $message = &quot;&quot;, $canonicalize = false, $ignoreCase = false)</a></td><td>Asserts that the contents of a string is not equal to the contents of a file. <i>(from <a href="class__PHPUnit_Framework_Assert.html#assertStringNotEqualsFile" class="">PHPUnit_Framework_Assert</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Framework_Assert.html#assertStringNotMatchesFormat" class="">assertStringNotMatchesFormat($format, $string, $message = &quot;&quot;)</a></td><td>Asserts that a string does not match a given format string. <i>(from <a href="class__PHPUnit_Framework_Assert.html#assertStringNotMatchesFormat" class="">PHPUnit_Framework_Assert</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Framework_Assert.html#assertStringNotMatchesFormatFile" class="">assertStringNotMatchesFormatFile($formatFile, $string, $message = &quot;&quot;)</a></td><td>Asserts that a string does not match a given format string. <i>(from <a href="class__PHPUnit_Framework_Assert.html#assertStringNotMatchesFormatFile" class="">PHPUnit_Framework_Assert</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Framework_Assert.html#assertStringStartsNotWith" class="">assertStringStartsNotWith($prefix, $string, $message = &quot;&quot;)</a></td><td>Asserts that a string starts not with a given prefix. <i>(from <a href="class__PHPUnit_Framework_Assert.html#assertStringStartsNotWith" class="">PHPUnit_Framework_Assert</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Framework_Assert.html#assertStringStartsWith" class="">assertStringStartsWith($prefix, $string, $message = &quot;&quot;)</a></td><td>Asserts that a string starts with a given prefix. <i>(from <a href="class__PHPUnit_Framework_Assert.html#assertStringStartsWith" class="">PHPUnit_Framework_Assert</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Framework_Assert.html#assertTag" class="">assertTag($matcher, $actual, $message = &quot;&quot;, $isHtml = true)</a></td><td>Evaluate an HTML or XML string and assert its structure and/or contents. <i>(from <a href="class__PHPUnit_Framework_Assert.html#assertTag" class="">PHPUnit_Framework_Assert</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Framework_Assert.html#assertThat" class="">assertThat($value, PHPUnit_Framework_Constraint $constraint, $message = &quot;&quot;)</a></td><td>Evaluates a PHPUnit_Framework_Constraint matcher object. <i>(from <a href="class__PHPUnit_Framework_Assert.html#assertThat" class="">PHPUnit_Framework_Assert</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Framework_Assert.html#assertTrue" class="">assertTrue($condition, $message = &quot;&quot;)</a></td><td>Asserts that a condition is true. <i>(from <a href="class__PHPUnit_Framework_Assert.html#assertTrue" class="">PHPUnit_Framework_Assert</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Framework_Assert.html#assertXmlFileEqualsXmlFile" class="">assertXmlFileEqualsXmlFile($expectedFile, $actualFile, $message = &quot;&quot;)</a></td><td>Asserts that two XML files are equal. <i>(from <a href="class__PHPUnit_Framework_Assert.html#assertXmlFileEqualsXmlFile" class="">PHPUnit_Framework_Assert</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Framework_Assert.html#assertXmlFileNotEqualsXmlFile" class="">assertXmlFileNotEqualsXmlFile($expectedFile, $actualFile, $message = &quot;&quot;)</a></td><td>Asserts that two XML files are not equal. <i>(from <a href="class__PHPUnit_Framework_Assert.html#assertXmlFileNotEqualsXmlFile" class="">PHPUnit_Framework_Assert</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Framework_Assert.html#assertXmlStringEqualsXmlFile" class="">assertXmlStringEqualsXmlFile($expectedFile, $actualXml, $message = &quot;&quot;)</a></td><td>Asserts that two XML documents are equal. <i>(from <a href="class__PHPUnit_Framework_Assert.html#assertXmlStringEqualsXmlFile" class="">PHPUnit_Framework_Assert</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Framework_Assert.html#assertXmlStringEqualsXmlString" class="">assertXmlStringEqualsXmlString($expectedXml, $actualXml, $message = &quot;&quot;)</a></td><td>Asserts that two XML documents are equal. <i>(from <a href="class__PHPUnit_Framework_Assert.html#assertXmlStringEqualsXmlString" class="">PHPUnit_Framework_Assert</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Framework_Assert.html#assertXmlStringNotEqualsXmlFile" class="">assertXmlStringNotEqualsXmlFile($expectedFile, $actualXml, $message = &quot;&quot;)</a></td><td>Asserts that two XML documents are not equal. <i>(from <a href="class__PHPUnit_Framework_Assert.html#assertXmlStringNotEqualsXmlFile" class="">PHPUnit_Framework_Assert</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Framework_Assert.html#assertXmlStringNotEqualsXmlString" class="">assertXmlStringNotEqualsXmlString($expectedXml, $actualXml, $message = &quot;&quot;)</a></td><td>Asserts that two XML documents are not equal. <i>(from <a href="class__PHPUnit_Framework_Assert.html#assertXmlStringNotEqualsXmlString" class="">PHPUnit_Framework_Assert</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Framework_Assert.html#attribute" class="">attribute(PHPUnit_Framework_Constraint $constraint, $attributeName)</a></td><td>Returns a PHPUnit_Framework_Constraint_Attribute matcher object. <i>(from <a href="class__PHPUnit_Framework_Assert.html#attribute" class="">PHPUnit_Framework_Assert</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Framework_Assert.html#attributeEqualTo" class="">attributeEqualTo($attributeName, $value, $delta = 0, $maxDepth = 10, $canonicalize = false, $ignoreCase = false)</a></td><td>Returns a PHPUnit_Framework_Constraint_IsEqual matcher object that is wrapped in a PHPUnit_Framework_Constraint_Attribute matcher object. <i>(from <a href="class__PHPUnit_Framework_Assert.html#attributeEqualTo" class="">PHPUnit_Framework_Assert</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Framework_Assert.html#callback" class="">callback($callback)</a></td><td>Returns a PHPUnit_Framework_Constraint_Callback matcher object. <i>(from <a href="class__PHPUnit_Framework_Assert.html#callback" class="">PHPUnit_Framework_Assert</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Framework_Assert.html#classHasAttribute" class="">classHasAttribute($attributeName)</a></td><td>Returns a PHPUnit_Framework_Constraint_ClassHasAttribute matcher object. <i>(from <a href="class__PHPUnit_Framework_Assert.html#classHasAttribute" class="">PHPUnit_Framework_Assert</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Framework_Assert.html#classHasStaticAttribute" class="">classHasStaticAttribute($attributeName)</a></td><td>Returns a PHPUnit_Framework_Constraint_ClassHasStaticAttribute matcher object. <i>(from <a href="class__PHPUnit_Framework_Assert.html#classHasStaticAttribute" class="">PHPUnit_Framework_Assert</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Framework_Assert.html#contains" class="">contains($value, $checkForObjectIdentity = true, $checkForNonObjectIdentity = false)</a></td><td>Returns a PHPUnit_Framework_Constraint_TraversableContains matcher object. <i>(from <a href="class__PHPUnit_Framework_Assert.html#contains" class="">PHPUnit_Framework_Assert</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Framework_Assert.html#containsOnly" class="">containsOnly($type)</a></td><td>Returns a PHPUnit_Framework_Constraint_TraversableContainsOnly matcher object. <i>(from <a href="class__PHPUnit_Framework_Assert.html#containsOnly" class="">PHPUnit_Framework_Assert</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Framework_Assert.html#containsOnlyInstancesOf" class="">containsOnlyInstancesOf($classname)</a></td><td>Returns a PHPUnit_Framework_Constraint_TraversableContainsOnly matcher object. <i>(from <a href="class__PHPUnit_Framework_Assert.html#containsOnlyInstancesOf" class="">PHPUnit_Framework_Assert</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Framework_Assert.html#countOf" class="">countOf($count)</a></td><td>Returns a PHPUnit_Framework_Constraint_Count matcher object. <i>(from <a href="class__PHPUnit_Framework_Assert.html#countOf" class="">PHPUnit_Framework_Assert</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Framework_Assert.html#equalTo" class="">equalTo($value, $delta = 0, $maxDepth = 10, $canonicalize = false, $ignoreCase = false)</a></td><td>Returns a PHPUnit_Framework_Constraint_IsEqual matcher object. <i>(from <a href="class__PHPUnit_Framework_Assert.html#equalTo" class="">PHPUnit_Framework_Assert</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Framework_Assert.html#fail" class="">fail($message = &quot;&quot;)</a></td><td>Fails a test with the given message. <i>(from <a href="class__PHPUnit_Framework_Assert.html#fail" class="">PHPUnit_Framework_Assert</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Framework_Assert.html#fileExists" class="">fileExists()</a></td><td>Returns a PHPUnit_Framework_Constraint_FileExists matcher object. <i>(from <a href="class__PHPUnit_Framework_Assert.html#fileExists" class="">PHPUnit_Framework_Assert</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Framework_Assert.html#getCount" class="">getCount()</a></td><td>Return the current assertion count. <i>(from <a href="class__PHPUnit_Framework_Assert.html#getCount" class="">PHPUnit_Framework_Assert</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Framework_Assert.html#getObjectAttribute" class="">getObjectAttribute($object, $attributeName)</a></td><td>Returns the value of an object's attribute. This also works for attributes that are declared protected or private. <i>(from <a href="class__PHPUnit_Framework_Assert.html#getObjectAttribute" class="">PHPUnit_Framework_Assert</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Framework_Assert.html#getStaticAttribute" class="">getStaticAttribute($className, $attributeName)</a></td><td>Returns the value of a static attribute. This also works for attributes that are declared protected or private. <i>(from <a href="class__PHPUnit_Framework_Assert.html#getStaticAttribute" class="">PHPUnit_Framework_Assert</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Framework_Assert.html#greaterThan" class="">greaterThan($value)</a></td><td>Returns a PHPUnit_Framework_Constraint_GreaterThan matcher object. <i>(from <a href="class__PHPUnit_Framework_Assert.html#greaterThan" class="">PHPUnit_Framework_Assert</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Framework_Assert.html#greaterThanOrEqual" class="">greaterThanOrEqual($value)</a></td><td>Returns a PHPUnit_Framework_Constraint_Or matcher object that wraps a PHPUnit_Framework_Constraint_IsEqual and a PHPUnit_Framework_Constraint_GreaterThan matcher object. <i>(from <a href="class__PHPUnit_Framework_Assert.html#greaterThanOrEqual" class="">PHPUnit_Framework_Assert</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Framework_Assert.html#identicalTo" class="">identicalTo($value)</a></td><td>Returns a PHPUnit_Framework_Constraint_IsIdentical matcher object. <i>(from <a href="class__PHPUnit_Framework_Assert.html#identicalTo" class="">PHPUnit_Framework_Assert</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Framework_Assert.html#isEmpty" class="">isEmpty()</a></td><td>Returns a PHPUnit_Framework_Constraint_IsEmpty matcher object. <i>(from <a href="class__PHPUnit_Framework_Assert.html#isEmpty" class="">PHPUnit_Framework_Assert</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Framework_Assert.html#isFalse" class="">isFalse()</a></td><td>Returns a PHPUnit_Framework_Constraint_IsFalse matcher object. <i>(from <a href="class__PHPUnit_Framework_Assert.html#isFalse" class="">PHPUnit_Framework_Assert</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Framework_Assert.html#isInstanceOf" class="">isInstanceOf($className)</a></td><td>Returns a PHPUnit_Framework_Constraint_IsInstanceOf matcher object. <i>(from <a href="class__PHPUnit_Framework_Assert.html#isInstanceOf" class="">PHPUnit_Framework_Assert</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Framework_Assert.html#isJson" class="">isJson()</a></td><td>Returns a PHPUnit_Framework_Constraint_IsJson matcher object. <i>(from <a href="class__PHPUnit_Framework_Assert.html#isJson" class="">PHPUnit_Framework_Assert</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Framework_Assert.html#isNull" class="">isNull()</a></td><td>Returns a PHPUnit_Framework_Constraint_IsNull matcher object. <i>(from <a href="class__PHPUnit_Framework_Assert.html#isNull" class="">PHPUnit_Framework_Assert</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Framework_Assert.html#isTrue" class="">isTrue()</a></td><td>Returns a PHPUnit_Framework_Constraint_IsTrue matcher object. <i>(from <a href="class__PHPUnit_Framework_Assert.html#isTrue" class="">PHPUnit_Framework_Assert</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Framework_Assert.html#isType" class="">isType($type)</a></td><td>Returns a PHPUnit_Framework_Constraint_IsType matcher object. <i>(from <a href="class__PHPUnit_Framework_Assert.html#isType" class="">PHPUnit_Framework_Assert</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Framework_Assert.html#lessThan" class="">lessThan($value)</a></td><td>Returns a PHPUnit_Framework_Constraint_LessThan matcher object. <i>(from <a href="class__PHPUnit_Framework_Assert.html#lessThan" class="">PHPUnit_Framework_Assert</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Framework_Assert.html#lessThanOrEqual" class="">lessThanOrEqual($value)</a></td><td>Returns a PHPUnit_Framework_Constraint_Or matcher object that wraps a PHPUnit_Framework_Constraint_IsEqual and a PHPUnit_Framework_Constraint_LessThan matcher object. <i>(from <a href="class__PHPUnit_Framework_Assert.html#lessThanOrEqual" class="">PHPUnit_Framework_Assert</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Framework_Assert.html#logicalAnd" class="">logicalAnd()</a></td><td>Returns a PHPUnit_Framework_Constraint_And matcher object. <i>(from <a href="class__PHPUnit_Framework_Assert.html#logicalAnd" class="">PHPUnit_Framework_Assert</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Framework_Assert.html#logicalNot" class="">logicalNot(PHPUnit_Framework_Constraint $constraint)</a></td><td>Returns a PHPUnit_Framework_Constraint_Not matcher object. <i>(from <a href="class__PHPUnit_Framework_Assert.html#logicalNot" class="">PHPUnit_Framework_Assert</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Framework_Assert.html#logicalOr" class="">logicalOr()</a></td><td>Returns a PHPUnit_Framework_Constraint_Or matcher object. <i>(from <a href="class__PHPUnit_Framework_Assert.html#logicalOr" class="">PHPUnit_Framework_Assert</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Framework_Assert.html#logicalXor" class="">logicalXor()</a></td><td>Returns a PHPUnit_Framework_Constraint_Xor matcher object. <i>(from <a href="class__PHPUnit_Framework_Assert.html#logicalXor" class="">PHPUnit_Framework_Assert</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Framework_Assert.html#markTestIncomplete" class="">markTestIncomplete($message = &quot;&quot;)</a></td><td>Mark the test as incomplete. <i>(from <a href="class__PHPUnit_Framework_Assert.html#markTestIncomplete" class="">PHPUnit_Framework_Assert</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Framework_Assert.html#markTestSkipped" class="">markTestSkipped($message = &quot;&quot;)</a></td><td>Mark the test as skipped. <i>(from <a href="class__PHPUnit_Framework_Assert.html#markTestSkipped" class="">PHPUnit_Framework_Assert</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Framework_Assert.html#matches" class="">matches($string)</a></td><td>Returns a PHPUnit_Framework_Constraint_StringMatches matcher object. <i>(from <a href="class__PHPUnit_Framework_Assert.html#matches" class="">PHPUnit_Framework_Assert</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Framework_Assert.html#matchesRegularExpression" class="">matchesRegularExpression($pattern)</a></td><td>Returns a PHPUnit_Framework_Constraint_PCREMatch matcher object. <i>(from <a href="class__PHPUnit_Framework_Assert.html#matchesRegularExpression" class="">PHPUnit_Framework_Assert</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Framework_Assert.html#objectHasAttribute" class="">objectHasAttribute($attributeName)</a></td><td>Returns a PHPUnit_Framework_Constraint_ObjectHasAttribute matcher object. <i>(from <a href="class__PHPUnit_Framework_Assert.html#objectHasAttribute" class="">PHPUnit_Framework_Assert</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Framework_Assert.html#readAttribute" class="">readAttribute($classOrObject, $attributeName)</a></td><td>Returns the value of an attribute of a class or an object. This also works for attributes that are declared protected or private. <i>(from <a href="class__PHPUnit_Framework_Assert.html#readAttribute" class="">PHPUnit_Framework_Assert</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Framework_Assert.html#resetCount" class="">resetCount()</a></td><td>Reset the assertion counter. <i>(from <a href="class__PHPUnit_Framework_Assert.html#resetCount" class="">PHPUnit_Framework_Assert</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Framework_Assert.html#stringContains" class="">stringContains($string, $case = true)</a></td><td>Returns a PHPUnit_Framework_Constraint_StringContains matcher object. <i>(from <a href="class__PHPUnit_Framework_Assert.html#stringContains" class="">PHPUnit_Framework_Assert</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Framework_Assert.html#stringEndsWith" class="">stringEndsWith($suffix)</a></td><td>Returns a PHPUnit_Framework_Constraint_StringEndsWith matcher object. <i>(from <a href="class__PHPUnit_Framework_Assert.html#stringEndsWith" class="">PHPUnit_Framework_Assert</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Framework_Assert.html#stringStartsWith" class="">stringStartsWith($prefix)</a></td><td>Returns a PHPUnit_Framework_Constraint_StringStartsWith matcher object. <i>(from <a href="class__PHPUnit_Framework_Assert.html#stringStartsWith" class="">PHPUnit_Framework_Assert</a>)</i></td></tr>  </tbody>
+</table>
+
+
+
+<hr>
+
+<h3>
+  <small>public function</small>
+  __construct($name = null, array $data = array(), $dataName = "")  <a name="__construct"></a>
+</h3>
+
+<blockquote>
+<p>Constructs a test case with the given name.</p><dl><dt>Parameters:</dt><dd><code>string</code> - $dataName<br><code>array</code> - $data<br></dd><dt>Defaults:</dt><dd><code>name</code> = <code>null</code><br><code>data</code> = array()<br><code>dataName</code> = <code>""</code><br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public function</small>
+  addToAssertionCount($count)  <a name="addToAssertionCount"></a>
+</h3>
+
+<blockquote>
+<p>Adds a value to the assertion counter.</p><dl><dt>Parameters:</dt><dd><code>integer</code> - $count<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public static function</small>
+  any()  <a name="any"></a>
+</h3>
+
+<blockquote>
+<p>Returns a matcher that matches when the method it is evaluated for is executed zero or more times.</p><dl><dt>Returns:</dt><dd>PHPUnit_Framework_MockObject_Matcher_AnyInvokedCount<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>protected function</small>
+  assertPostConditions()  <a name="assertPostConditions"></a>
+</h3>
+
+<blockquote>
+<p>Performs assertions shared by all tests of a test case.</p><p>This method is called before the execution of a test ends and before tearDown() is called.</p><dl></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>protected function</small>
+  assertPreConditions()  <a name="assertPreConditions"></a>
+</h3>
+
+<blockquote>
+<p>Performs assertions shared by all tests of a test case.</p><p>This method is called before the execution of a test starts and after setUp() is called.</p><dl></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public static function</small>
+  at($index)  <a name="at"></a>
+</h3>
+
+<blockquote>
+<p>Returns a matcher that matches when the method it is evaluated for is invoked at the given $index.</p><dl><dt>Parameters:</dt><dd><code>integer</code> - $index<br></dd><dt>Returns:</dt><dd>PHPUnit_Framework_MockObject_Matcher_InvokedAtIndex<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public static function</small>
+  atLeast($requiredInvocations)  <a name="atLeast"></a>
+</h3>
+
+<blockquote>
+<p>Returns a matcher that matches when the method it is evaluated for is executed at least N times.</p><dl><dt>Parameters:</dt><dd><code>integer</code> - $requiredInvocations<br></dd><dt>Returns:</dt><dd>PHPUnit_Framework_MockObject_Matcher_InvokedAtLeastCount<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public static function</small>
+  atLeastOnce()  <a name="atLeastOnce"></a>
+</h3>
+
+<blockquote>
+<p>Returns a matcher that matches when the method it is evaluated for is executed at least once.</p><dl><dt>Returns:</dt><dd>PHPUnit_Framework_MockObject_Matcher_InvokedAtLeastOnce<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public static function</small>
+  atMost($allowedInvocations)  <a name="atMost"></a>
+</h3>
+
+<blockquote>
+<p>Returns a matcher that matches when the method it is evaluated for is executed at most N times.</p><dl><dt>Parameters:</dt><dd><code>integer</code> - $allowedInvocations<br></dd><dt>Returns:</dt><dd>PHPUnit_Framework_MockObject_Matcher_InvokedAtMostCount<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>protected function</small>
+  checkRequirements()  <a name="checkRequirements"></a>
+</h3>
+
+<blockquote>
+<dl></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>private function</small>
+  compareGlobalStateSnapshotPart(array $before, array $after, $header)  <a name="compareGlobalStateSnapshotPart"></a>
+</h3>
+
+<blockquote>
+<dl><dt>Parameters:</dt><dd><code>array</code> - $after<br><code>string</code> - $header<br></dd><dt>Throws:</dt><dd><a href="class__PHPUnit_Framework_RiskyTestError.html" class="">PHPUnit_Framework_RiskyTestError</a><br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>private function</small>
+  compareGlobalStateSnapshots(Snapshot $before, Snapshot $after)  <a name="compareGlobalStateSnapshots"></a>
+</h3>
+
+<blockquote>
+<dl><dt>Parameters:</dt><dd><code>Snapshot</code> - $after<br></dd><dt>Throws:</dt><dd><a href="class__PHPUnit_Framework_RiskyTestError.html" class="">PHPUnit_Framework_RiskyTestError</a><br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public function</small>
+  count()  <a name="count"></a>
+</h3>
+
+<blockquote>
+<p>Counts the number of test cases executed by run(TestResult result).</p><dl><dt>Returns:</dt><dd>integer<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>private function</small>
+  createGlobalStateSnapshot($backupGlobals)  <a name="createGlobalStateSnapshot"></a>
+</h3>
+
+<blockquote>
+<dl><dt>Parameters:</dt><dd><code>boolean</code> - $backupGlobals<br></dd><dt>Returns:</dt><dd>Snapshot<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>protected function</small>
+  createResult()  <a name="createResult"></a>
+</h3>
+
+<blockquote>
+<p>Creates a default TestResult object.</p><dl><dt>Returns:</dt><dd>PHPUnit_Framework_TestResult<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public static function</small>
+  exactly($count)  <a name="exactly"></a>
+</h3>
+
+<blockquote>
+<p>Returns a matcher that matches when the method it is evaluated for is executed exactly $count times.</p><dl><dt>Parameters:</dt><dd><code>integer</code> - $count<br></dd><dt>Returns:</dt><dd>PHPUnit_Framework_MockObject_Matcher_InvokedCount<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public function</small>
+  expectOutputRegex($expectedRegex)  <a name="expectOutputRegex"></a>
+</h3>
+
+<blockquote>
+<dl><dt>Parameters:</dt><dd><code>string</code> - $expectedRegex<br></dd><dt>Throws:</dt><dd><a href="class__PHPUnit_Framework_Exception.html" class="">PHPUnit_Framework_Exception</a><br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public function</small>
+  expectOutputString($expectedString)  <a name="expectOutputString"></a>
+</h3>
+
+<blockquote>
+<dl><dt>Parameters:</dt><dd><code>string</code> - $expectedString<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public function</small>
+  getActualOutput()  <a name="getActualOutput"></a>
+</h3>
+
+<blockquote>
+<dl><dt>Returns:</dt><dd>string<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public function</small>
+  getAnnotations()  <a name="getAnnotations"></a>
+</h3>
+
+<blockquote>
+<p>Returns the annotations for this test.</p><dl><dt>Returns:</dt><dd>array<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>protected function</small>
+  getDataSetAsString($includeData = true)  <a name="getDataSetAsString"></a>
+</h3>
+
+<blockquote>
+<p>Gets the data set description of a TestCase.</p><dl><dt>Parameters:</dt><dd><code>boolean</code> - $includeData<br></dd><dt>Defaults:</dt><dd><code>includeData</code> = <code>true</code><br></dd><dt>Returns:</dt><dd>string<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public function</small>
+  getExpectedException()  <a name="getExpectedException"></a>
+</h3>
+
+<blockquote>
+<dl><dt>Returns:</dt><dd>string<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public function</small>
+  getMock($originalClassName, $methods = array(), array $arguments = array(), $mockClassName = "", $callOriginalConstructor = true, $callOriginalClone = true, $callAutoload = true, $cloneArguments = false, $callOriginalMethods = false)  <a name="getMock"></a>
+</h3>
+
+<blockquote>
+<p>Returns a mock object for the specified class.</p><dl><dt>Parameters:</dt><dd><code>string</code> - $mockClassName Class name for the generated test double class.<br><code>array|null</code> - $methods When provided, only methods whose names are in the array are replaced with a configurable test double. The behavior of the other methods is not changed. Providing null means that no methods will be replaced.<br><code>array</code> - $arguments Parameters to pass to the original class' constructor.<br><code>boolean</code> - $callOriginalMethods<br></dd><dt>Defaults:</dt><dd><code>methods</code> = array()<br><code>arguments</code> = array()<br><code>mockClassName</code> = <code>""</code><br><code>callOriginalConstructor</code> = <code>true</code><br><code>callOriginalClone</code> = <code>true</code><br><code>callAutoload</code> = <code>true</code><br><code>cloneArguments</code> = <code>false</code><br><code>callOriginalMethods</code> = <code>false</code><br></dd><dt>Returns:</dt><dd>PHPUnit_Framework_MockObject_MockObject<br></dd><dt>Throws:</dt><dd><a href="class__PHPUnit_Framework_Exception.html" class="">PHPUnit_Framework_Exception</a><br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public function</small>
+  getMockBuilder($className)  <a name="getMockBuilder"></a>
+</h3>
+
+<blockquote>
+<p>Returns a builder object to create mock objects using a fluent interface.</p><dl><dt>Parameters:</dt><dd><code>string</code> - $className<br></dd><dt>Returns:</dt><dd>PHPUnit_Framework_MockObject_MockBuilder<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>protected function</small>
+  getMockClass($originalClassName, $methods = array(), array $arguments = array(), $mockClassName = "", $callOriginalConstructor = false, $callOriginalClone = true, $callAutoload = true, $cloneArguments = false)  <a name="getMockClass"></a>
+</h3>
+
+<blockquote>
+<p>Mocks the specified class and returns the name of the mocked class.</p><dl><dt>Parameters:</dt><dd><code>string</code> - $mockClassName<br><code>array</code> - $arguments<br><code>boolean</code> - $cloneArguments<br></dd><dt>Defaults:</dt><dd><code>methods</code> = array()<br><code>arguments</code> = array()<br><code>mockClassName</code> = <code>""</code><br><code>callOriginalConstructor</code> = <code>false</code><br><code>callOriginalClone</code> = <code>true</code><br><code>callAutoload</code> = <code>true</code><br><code>cloneArguments</code> = <code>false</code><br></dd><dt>Returns:</dt><dd>string<br></dd><dt>Throws:</dt><dd><a href="class__PHPUnit_Framework_Exception.html" class="">PHPUnit_Framework_Exception</a><br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public function</small>
+  getMockForAbstractClass($originalClassName, array $arguments = array(), $mockClassName = "", $callOriginalConstructor = true, $callOriginalClone = true, $callAutoload = true, $mockedMethods = array(), $cloneArguments = false)  <a name="getMockForAbstractClass"></a>
+</h3>
+
+<blockquote>
+<p>Returns a mock object for the specified abstract class with all abstract methods of the class mocked. Concrete methods are not mocked by default. To mock concrete methods, use the 7th parameter ($mockedMethods).</p><dl><dt>Parameters:</dt><dd><code>string</code> - $mockClassName<br><code>array</code> - $mockedMethods<br><code>boolean</code> - $cloneArguments<br></dd><dt>Defaults:</dt><dd><code>arguments</code> = array()<br><code>mockClassName</code> = <code>""</code><br><code>callOriginalConstructor</code> = <code>true</code><br><code>callOriginalClone</code> = <code>true</code><br><code>callAutoload</code> = <code>true</code><br><code>mockedMethods</code> = array()<br><code>cloneArguments</code> = <code>false</code><br></dd><dt>Returns:</dt><dd>PHPUnit_Framework_MockObject_MockObject<br></dd><dt>Throws:</dt><dd><a href="class__PHPUnit_Framework_Exception.html" class="">PHPUnit_Framework_Exception</a><br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public function</small>
+  getMockForTrait($traitName, array $arguments = array(), $mockClassName = "", $callOriginalConstructor = true, $callOriginalClone = true, $callAutoload = true, $mockedMethods = array(), $cloneArguments = false)  <a name="getMockForTrait"></a>
+</h3>
+
+<blockquote>
+<p>Returns a mock object for the specified trait with all abstract methods of the trait mocked. Concrete methods to mock can be specified with the <code>$mockedMethods</code> parameter.</p><dl><dt>Parameters:</dt><dd><code>string</code> - $mockClassName<br><code>array</code> - $mockedMethods<br><code>boolean</code> - $cloneArguments<br></dd><dt>Defaults:</dt><dd><code>arguments</code> = array()<br><code>mockClassName</code> = <code>""</code><br><code>callOriginalConstructor</code> = <code>true</code><br><code>callOriginalClone</code> = <code>true</code><br><code>callAutoload</code> = <code>true</code><br><code>mockedMethods</code> = array()<br><code>cloneArguments</code> = <code>false</code><br></dd><dt>Returns:</dt><dd>PHPUnit_Framework_MockObject_MockObject<br></dd><dt>Throws:</dt><dd><a href="class__PHPUnit_Framework_Exception.html" class="">PHPUnit_Framework_Exception</a><br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>protected function</small>
+  getMockFromWsdl($wsdlFile, $originalClassName = "", $mockClassName = "", array $methods = array(), $callOriginalConstructor = true, array $options = array())  <a name="getMockFromWsdl"></a>
+</h3>
+
+<blockquote>
+<p>Returns a mock object based on the given WSDL file.</p><dl><dt>Parameters:</dt><dd><code>string</code> - $mockClassName<br><code>array</code> - $options An array of options passed to SOAPClient::_construct<br><code>boolean</code> - $callOriginalConstructor<br></dd><dt>Defaults:</dt><dd><code>originalClassName</code> = <code>""</code><br><code>mockClassName</code> = <code>""</code><br><code>methods</code> = array()<br><code>callOriginalConstructor</code> = <code>true</code><br><code>options</code> = array()<br></dd><dt>Returns:</dt><dd>PHPUnit_Framework_MockObject_MockObject<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>protected function</small>
+  getMockObjectGenerator()  <a name="getMockObjectGenerator"></a>
+</h3>
+
+<blockquote>
+<p>Get the mock object generator, creating it if it doesn't exist.</p><dl><dt>Returns:</dt><dd>PHPUnit_Framework_MockObject_Generator<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public function</small>
+  getName($withDataSet = true)  <a name="getName"></a>
+</h3>
+
+<blockquote>
+<p>Gets the name of a TestCase.</p><dl><dt>Parameters:</dt><dd><code>boolean</code> - $withDataSet<br></dd><dt>Defaults:</dt><dd><code>withDataSet</code> = <code>true</code><br></dd><dt>Returns:</dt><dd>string<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public function</small>
+  getNumAssertions()  <a name="getNumAssertions"></a>
+</h3>
+
+<blockquote>
+<p>Returns the number of assertions performed by this test.</p><dl><dt>Returns:</dt><dd>integer<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>protected function</small>
+  getObjectForTrait($traitName, array $arguments = array(), $traitClassName = "", $callOriginalConstructor = true, $callOriginalClone = true, $callAutoload = true, $cloneArguments = false)  <a name="getObjectForTrait"></a>
+</h3>
+
+<blockquote>
+<p>Returns an object for the specified trait.</p><dl><dt>Parameters:</dt><dd><code>string</code> - $traitClassName<br><code>array</code> - $arguments<br><code>boolean</code> - $cloneArguments<br></dd><dt>Defaults:</dt><dd><code>arguments</code> = array()<br><code>traitClassName</code> = <code>""</code><br><code>callOriginalConstructor</code> = <code>true</code><br><code>callOriginalClone</code> = <code>true</code><br><code>callAutoload</code> = <code>true</code><br><code>cloneArguments</code> = <code>false</code><br></dd><dt>Returns:</dt><dd>object<br></dd><dt>Throws:</dt><dd><a href="class__PHPUnit_Framework_Exception.html" class="">PHPUnit_Framework_Exception</a><br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>private function</small>
+  getProphet()  <a name="getProphet"></a>
+</h3>
+
+<blockquote>
+<dl><dt>Returns:</dt><dd>Prophecy\Prophet<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public function</small>
+  getResult()  <a name="getResult"></a>
+</h3>
+
+<blockquote>
+<dl><dt>Returns:</dt><dd>mixed<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public function</small>
+  getSize()  <a name="getSize"></a>
+</h3>
+
+<blockquote>
+<p>Returns the size of the test.</p><dl><dt>Returns:</dt><dd>integer<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public function</small>
+  getStatus()  <a name="getStatus"></a>
+</h3>
+
+<blockquote>
+<p>Returns the status of this test.</p><dl><dt>Returns:</dt><dd>integer<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public function</small>
+  getStatusMessage()  <a name="getStatusMessage"></a>
+</h3>
+
+<blockquote>
+<p>Returns the status message of this test.</p><dl><dt>Returns:</dt><dd>string<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public function</small>
+  getTestResultObject()  <a name="getTestResultObject"></a>
+</h3>
+
+<blockquote>
+<dl><dt>Returns:</dt><dd>PHPUnit_Framework_TestResult<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>protected function</small>
+  handleDependencies()  <a name="handleDependencies"></a>
+</h3>
+
+<blockquote>
+<dl></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public function</small>
+  hasDependencies()  <a name="hasDependencies"></a>
+</h3>
+
+<blockquote>
+<p>Returns true if the tests has dependencies</p><dl><dt>Returns:</dt><dd>boolean<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public function</small>
+  hasExpectationOnOutput()  <a name="hasExpectationOnOutput"></a>
+</h3>
+
+<blockquote>
+<dl><dt>Returns:</dt><dd>bool<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public function</small>
+  hasFailed()  <a name="hasFailed"></a>
+</h3>
+
+<blockquote>
+<p>Returns whether or not this test has failed.</p><dl><dt>Returns:</dt><dd>boolean<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public function</small>
+  hasOutput()  <a name="hasOutput"></a>
+</h3>
+
+<blockquote>
+<dl><dt>Returns:</dt><dd>boolean<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public function</small>
+  hasPerformedExpectationsOnOutput()  <a name="hasPerformedExpectationsOnOutput"></a>
+</h3>
+
+<blockquote>
+<dl><dt>Returns:</dt><dd>bool<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>protected function</small>
+  iniSet($varName, $newValue)  <a name="iniSet"></a>
+</h3>
+
+<blockquote>
+<p>This method is a wrapper for the ini_set() function that automatically resets the modified php.ini setting to its original value after the test is run.</p><dl><dt>Parameters:</dt><dd><code>string</code> - $newValue<br></dd><dt>Throws:</dt><dd><a href="class__PHPUnit_Framework_Exception.html" class="">PHPUnit_Framework_Exception</a><br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public function</small>
+  isInIsolation()  <a name="isInIsolation"></a>
+</h3>
+
+<blockquote>
+<dl><dt>Returns:</dt><dd>boolean<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public static function</small>
+  never()  <a name="never"></a>
+</h3>
+
+<blockquote>
+<p>Returns a matcher that matches when the method it is evaluated for is never executed.</p><dl><dt>Returns:</dt><dd>PHPUnit_Framework_MockObject_Matcher_InvokedCount<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public static function</small>
+  onConsecutiveCalls()  <a name="onConsecutiveCalls"></a>
+</h3>
+
+<blockquote>
+<dl><dt>Parameters:</dt><dd><code>mixed</code> - $value, ...<br></dd><dt>Returns:</dt><dd>PHPUnit_Framework_MockObject_Stub_ConsecutiveCalls<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>protected function</small>
+  onNotSuccessfulTest(Exception $e)  <a name="onNotSuccessfulTest"></a>
+</h3>
+
+<blockquote>
+<p>This method is called when a test method did not execute successfully.</p><dl><dt>Parameters:</dt><dd><code>Exception</code> - $e<br></dd><dt>Throws:</dt><dd>Exception<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public static function</small>
+  once()  <a name="once"></a>
+</h3>
+
+<blockquote>
+<p>Returns a matcher that matches when the method it is evaluated for is executed exactly once.</p><dl><dt>Returns:</dt><dd>PHPUnit_Framework_MockObject_Matcher_InvokedCount<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>protected function</small>
+  prepareTemplate(Text_Template $template)  <a name="prepareTemplate"></a>
+</h3>
+
+<blockquote>
+<p>Performs custom preparations on the process isolation template.</p><dl><dt>Parameters:</dt><dd><code>Text_Template</code> - $template<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>protected function</small>
+  prophesize($classOrInterface = null)  <a name="prophesize"></a>
+</h3>
+
+<blockquote>
+<dl><dt>Parameters:</dt><dd><code>string|null</code> - $classOrInterface<br></dd><dt>Defaults:</dt><dd><code>classOrInterface</code> = <code>null</code><br></dd><dt>Returns:</dt><dd>\Prophecy\Prophecy\ObjectProphecy<br></dd><dt>Throws:</dt><dd>\LogicException<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>private function</small>
+  restoreGlobalState()  <a name="restoreGlobalState"></a>
+</h3>
+
+<blockquote>
+<dl></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public static function</small>
+  returnArgument($argumentIndex)  <a name="returnArgument"></a>
+</h3>
+
+<blockquote>
+<dl><dt>Parameters:</dt><dd><code>integer</code> - $argumentIndex<br></dd><dt>Returns:</dt><dd>PHPUnit_Framework_MockObject_Stub_ReturnArgument<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public static function</small>
+  returnCallback($callback)  <a name="returnCallback"></a>
+</h3>
+
+<blockquote>
+<dl><dt>Parameters:</dt><dd><code>mixed</code> - $callback<br></dd><dt>Returns:</dt><dd>PHPUnit_Framework_MockObject_Stub_ReturnCallback<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public static function</small>
+  returnSelf()  <a name="returnSelf"></a>
+</h3>
+
+<blockquote>
+<p>Returns the current object.</p><p>This method is useful when mocking a fluent interface.</p><dl><dt>Returns:</dt><dd>PHPUnit_Framework_MockObject_Stub_ReturnSelf<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public static function</small>
+  returnValue($value)  <a name="returnValue"></a>
+</h3>
+
+<blockquote>
+<dl><dt>Parameters:</dt><dd><code>mixed</code> - $value<br></dd><dt>Returns:</dt><dd>PHPUnit_Framework_MockObject_Stub_Return<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public static function</small>
+  returnValueMap(array $valueMap)  <a name="returnValueMap"></a>
+</h3>
+
+<blockquote>
+<dl><dt>Parameters:</dt><dd><code>array</code> - $valueMap<br></dd><dt>Returns:</dt><dd>PHPUnit_Framework_MockObject_Stub_ReturnValueMap<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public function</small>
+  run(<a href="class__PHPUnit_Framework_TestResult.html" class="">PHPUnit_Framework_TestResult</a> $result = null)  <a name="run"></a>
+</h3>
+
+<blockquote>
+<p>Runs the test case and collects the results in a TestResult object. If no TestResult object is passed a new one will be created.</p><dl><dt>Parameters:</dt><dd><code>PHPUnit_Framework_TestResult</code> - $result<br></dd><dt>Defaults:</dt><dd><code>result</code> = <code>null</code><br></dd><dt>Returns:</dt><dd>PHPUnit_Framework_TestResult<br></dd><dt>Throws:</dt><dd><a href="class__PHPUnit_Framework_Exception.html" class="">PHPUnit_Framework_Exception</a><br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public function</small>
+  runBare()  <a name="runBare"></a>
+</h3>
+
+<blockquote>
+<p>Runs the bare test sequence.</p><dl></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>protected function</small>
+  runTest()  <a name="runTest"></a>
+</h3>
+
+<blockquote>
+<p>Override to run the test and assert its state.</p><dl><dt>Returns:</dt><dd>mixed<br></dd><dt>Throws:</dt><dd>Exception|PHPUnit_Framework_Exception<br><a href="class__PHPUnit_Framework_Exception.html" class="">PHPUnit_Framework_Exception</a><br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public function</small>
+  setBackupGlobals($backupGlobals)  <a name="setBackupGlobals"></a>
+</h3>
+
+<blockquote>
+<p>Calling this method in setUp() has no effect!</p><dl><dt>Parameters:</dt><dd><code>boolean</code> - $backupGlobals<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public function</small>
+  setBackupStaticAttributes($backupStaticAttributes)  <a name="setBackupStaticAttributes"></a>
+</h3>
+
+<blockquote>
+<p>Calling this method in setUp() has no effect!</p><dl><dt>Parameters:</dt><dd><code>boolean</code> - $backupStaticAttributes<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public function</small>
+  setDependencies(array $dependencies)  <a name="setDependencies"></a>
+</h3>
+
+<blockquote>
+<p>Sets the dependencies of a TestCase.</p><dl><dt>Parameters:</dt><dd><code>array</code> - $dependencies<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public function</small>
+  setDependencyInput(array $dependencyInput)  <a name="setDependencyInput"></a>
+</h3>
+
+<blockquote>
+<p>Sets</p><dl><dt>Parameters:</dt><dd><code>array</code> - $dependencyInput<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public function</small>
+  setDisallowChangesToGlobalState($disallowChangesToGlobalState)  <a name="setDisallowChangesToGlobalState"></a>
+</h3>
+
+<blockquote>
+<dl><dt>Parameters:</dt><dd><code>boolean</code> - $disallowChangesToGlobalState<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public function</small>
+  setExpectedException($exceptionName, $exceptionMessage = "", $exceptionCode = null)  <a name="setExpectedException"></a>
+</h3>
+
+<blockquote>
+<dl><dt>Parameters:</dt><dd><code>mixed</code> - $exceptionName<br><code>string</code> - $exceptionMessage<br><code>integer</code> - $exceptionCode<br></dd><dt>Defaults:</dt><dd><code>exceptionMessage</code> = <code>""</code><br><code>exceptionCode</code> = <code>null</code><br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>protected function</small>
+  setExpectedExceptionFromAnnotation()  <a name="setExpectedExceptionFromAnnotation"></a>
+</h3>
+
+<blockquote>
+<dl></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public function</small>
+  setExpectedExceptionRegExp($exceptionName, $exceptionMessageRegExp = "", $exceptionCode = null)  <a name="setExpectedExceptionRegExp"></a>
+</h3>
+
+<blockquote>
+<dl><dt>Parameters:</dt><dd><code>mixed</code> - $exceptionName<br><code>string</code> - $exceptionMessageRegExp<br><code>integer</code> - $exceptionCode<br></dd><dt>Defaults:</dt><dd><code>exceptionMessageRegExp</code> = <code>""</code><br><code>exceptionCode</code> = <code>null</code><br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public function</small>
+  setInIsolation($inIsolation)  <a name="setInIsolation"></a>
+</h3>
+
+<blockquote>
+<dl><dt>Parameters:</dt><dd><code>boolean</code> - $inIsolation<br></dd><dt>Throws:</dt><dd><a href="class__PHPUnit_Framework_Exception.html" class="">PHPUnit_Framework_Exception</a><br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>protected function</small>
+  setLocale()  <a name="setLocale"></a>
+</h3>
+
+<blockquote>
+<p>This method is a wrapper for the setlocale() function that automatically resets the locale to its original value after the test is run.</p><dl><dt>Parameters:</dt><dd><code>integer</code> - $category<br><code>string</code> - $locale<br></dd><dt>Throws:</dt><dd><a href="class__PHPUnit_Framework_Exception.html" class="">PHPUnit_Framework_Exception</a><br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public function</small>
+  setName($name)  <a name="setName"></a>
+</h3>
+
+<blockquote>
+<p>Sets the name of a TestCase.</p><dl><dt>Parameters:</dt><dd><code>string</code> - <br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public function</small>
+  setOutputCallback($callback)  <a name="setOutputCallback"></a>
+</h3>
+
+<blockquote>
+<dl><dt>Parameters:</dt><dd><code>callable</code> - $callback<br></dd><dt>Throws:</dt><dd><a href="class__PHPUnit_Framework_Exception.html" class="">PHPUnit_Framework_Exception</a><br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public function</small>
+  setPreserveGlobalState($preserveGlobalState)  <a name="setPreserveGlobalState"></a>
+</h3>
+
+<blockquote>
+<dl><dt>Parameters:</dt><dd><code>boolean</code> - $preserveGlobalState<br></dd><dt>Throws:</dt><dd><a href="class__PHPUnit_Framework_Exception.html" class="">PHPUnit_Framework_Exception</a><br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public function</small>
+  setResult($result)  <a name="setResult"></a>
+</h3>
+
+<blockquote>
+<dl><dt>Parameters:</dt><dd><code>mixed</code> - $result<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public function</small>
+  setRunTestInSeparateProcess($runTestInSeparateProcess)  <a name="setRunTestInSeparateProcess"></a>
+</h3>
+
+<blockquote>
+<dl><dt>Parameters:</dt><dd><code>boolean</code> - $runTestInSeparateProcess<br></dd><dt>Throws:</dt><dd><a href="class__PHPUnit_Framework_Exception.html" class="">PHPUnit_Framework_Exception</a><br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public function</small>
+  setTestResultObject(<a href="class__PHPUnit_Framework_TestResult.html" class="">PHPUnit_Framework_TestResult</a> $result)  <a name="setTestResultObject"></a>
+</h3>
+
+<blockquote>
+<dl><dt>Parameters:</dt><dd><code>PHPUnit_Framework_TestResult</code> - $result<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>protected function</small>
+  setUp()  <a name="setUp"></a>
+</h3>
+
+<blockquote>
+<p>Sets up the fixture, for example, open a network connection. This method is called before a test is executed.</p><dl></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public static function</small>
+  setUpBeforeClass()  <a name="setUpBeforeClass"></a>
+</h3>
+
+<blockquote>
+<p>This method is called before the first test of this test class is run.</p><dl></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public function</small>
+  setUseErrorHandler($useErrorHandler)  <a name="setUseErrorHandler"></a>
+</h3>
+
+<blockquote>
+<dl><dt>Parameters:</dt><dd><code>boolean</code> - $useErrorHandler<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>protected function</small>
+  setUseErrorHandlerFromAnnotation()  <a name="setUseErrorHandlerFromAnnotation"></a>
+</h3>
+
+<blockquote>
+<dl></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>private function</small>
+  snapshotGlobalState()  <a name="snapshotGlobalState"></a>
+</h3>
+
+<blockquote>
+<dl></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>private function</small>
+  startOutputBuffering()  <a name="startOutputBuffering"></a>
+</h3>
+
+<blockquote>
+<dl></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>private function</small>
+  stopOutputBuffering()  <a name="stopOutputBuffering"></a>
+</h3>
+
+<blockquote>
+<dl></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>protected function</small>
+  tearDown()  <a name="tearDown"></a>
+</h3>
+
+<blockquote>
+<p>Tears down the fixture, for example, close a network connection. This method is called after a test is executed.</p><dl></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public static function</small>
+  tearDownAfterClass()  <a name="tearDownAfterClass"></a>
+</h3>
+
+<blockquote>
+<p>This method is called after the last test of this test class is run.</p><dl></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public static function</small>
+  throwException(Exception $exception)  <a name="throwException"></a>
+</h3>
+
+<blockquote>
+<dl><dt>Parameters:</dt><dd><code>Exception</code> - $exception<br></dd><dt>Returns:</dt><dd>PHPUnit_Framework_MockObject_Stub_Exception<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public function</small>
+  toString()  <a name="toString"></a>
+</h3>
+
+<blockquote>
+<p>Returns a string representation of the test case.</p><dl><dt>Returns:</dt><dd>string<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>protected function</small>
+  verifyMockObjects()  <a name="verifyMockObjects"></a>
+</h3>
+
+<blockquote>
+<p>Verifies the mock object expectations.</p><dl></dl></blockquote>
+
+</div>
+
+<div class="footer">
+  Generated by <a href="https://github.com/soundasleep/phpdoc2/" class="github">PHPDoc2</a> Fri, 24 Apr 2015 15:28:57 +1200</div>
+
+</body>
+</html>

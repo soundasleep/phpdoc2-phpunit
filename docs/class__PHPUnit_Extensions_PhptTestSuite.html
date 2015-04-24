@@ -1,0 +1,80 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>PHPDoc2 - PHPUnit</title>
+  <link rel="stylesheet" type="text/css" href="default.css">
+</head>
+<body>
+<nav>
+  <a href="index.html">Root</a>
+</nav>
+
+<div class="content">
+<ul class="class-hierarchy"><li><a href="class__PHPUnit_Framework_TestSuite.html" class="">\PHPUnit_Framework_TestSuite</a><ul><li>\PHPUnit_Extensions_PhptTestSuite</li></ul></li></ul>
+<h1>
+  <small>class</small>
+
+  <a href="namespace_.html" class="">(none)</a>  \
+  <a href="class__PHPUnit_Extensions_PhptTestSuite.html" class="">PHPUnit_Extensions_PhptTestSuite</a></h1>
+
+
+<dl>
+  <dt>All implemented interfaces:</dt>
+  <dd>
+    Countable, <a href="interface__PHPUnit_Framework_Test.html" class="">PHPUnit_Framework_Test</a>, <a href="interface__PHPUnit_Framework_SelfDescribing.html" class="">PHPUnit_Framework_SelfDescribing</a>, IteratorAggregate  </dd>
+</dl>
+
+
+
+
+<hr>
+
+<p>Suite for .phpt test cases.</p><p>Here is an example using the dynamic test definition.</p><p><code> <?php $suite = new PHPUnit_Framework_TestSuite; $suite->addTest(new MathTest('testPass')); ?> </code></p><p>Alternatively, a TestSuite can extract the tests to be run automatically. To do so you pass a ReflectionClass instance for your PHPUnit_Framework_TestCase class to the PHPUnit_Framework_TestSuite constructor.</p><p><code> <?php $suite = new PHPUnit_Framework_TestSuite( new ReflectionClass('MathTest') ); ?> </code></p><p>This constructor creates a suite with all the methods starting with "test" that take no arguments. <i>(from <a href="class__PHPUnit_Framework_TestSuite.html" class="">PHPUnit_Framework_TestSuite</a>)</i></p><dl></dl>
+<hr>
+
+<h2>Method Summary</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+<tr><td><a href="class__PHPUnit_Extensions_PhptTestSuite.html#__construct" class="">__construct($directory)</a></td><td>Constructs a new TestSuite for .phpt test cases.</td></tr>  </tbody>
+</table>
+
+
+<h2>Inherited Method Summary</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+<tr><td><a href="class__PHPUnit_Framework_TestSuite.html#addTest" class="">addTest(PHPUnit_Framework_Test $test, $groups = array())</a></td><td>Adds a test to the suite. <i>(from <a href="class__PHPUnit_Framework_TestSuite.html#addTest" class="">PHPUnit_Framework_TestSuite</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Framework_TestSuite.html#addTestFile" class="">addTestFile($filename)</a></td><td>Wraps both <code>addTest()</code> and <code>addTestSuite</code> as well as the separate import statements for the user's convenience. <i>(from <a href="class__PHPUnit_Framework_TestSuite.html#addTestFile" class="">PHPUnit_Framework_TestSuite</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Framework_TestSuite.html#addTestFiles" class="">addTestFiles($filenames)</a></td><td>Wrapper for addTestFile() that adds multiple test files. <i>(from <a href="class__PHPUnit_Framework_TestSuite.html#addTestFiles" class="">PHPUnit_Framework_TestSuite</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Framework_TestSuite.html#addTestMethod" class="">addTestMethod(ReflectionClass $class, ReflectionMethod $method)</a></td><td> <i>(from <a href="class__PHPUnit_Framework_TestSuite.html#addTestMethod" class="">PHPUnit_Framework_TestSuite</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Framework_TestSuite.html#addTestSuite" class="">addTestSuite($testClass)</a></td><td>Adds the tests from the given class to the suite. <i>(from <a href="class__PHPUnit_Framework_TestSuite.html#addTestSuite" class="">PHPUnit_Framework_TestSuite</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Framework_TestSuite.html#count" class="">count($preferCache = false)</a></td><td>Counts the number of test cases that will be run by this test. <i>(from <a href="class__PHPUnit_Framework_TestSuite.html#count" class="">PHPUnit_Framework_TestSuite</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Framework_TestSuite.html#createResult" class="">createResult()</a></td><td>Creates a default TestResult object. <i>(from <a href="class__PHPUnit_Framework_TestSuite.html#createResult" class="">PHPUnit_Framework_TestSuite</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Framework_TestSuite.html#createTest" class="">createTest(ReflectionClass $theClass, $name)</a></td><td> <i>(from <a href="class__PHPUnit_Framework_TestSuite.html#createTest" class="">PHPUnit_Framework_TestSuite</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Framework_TestSuite.html#getGroupDetails" class="">getGroupDetails()</a></td><td> <i>(from <a href="class__PHPUnit_Framework_TestSuite.html#getGroupDetails" class="">PHPUnit_Framework_TestSuite</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Framework_TestSuite.html#getGroups" class="">getGroups()</a></td><td>Returns the test groups of the suite. <i>(from <a href="class__PHPUnit_Framework_TestSuite.html#getGroups" class="">PHPUnit_Framework_TestSuite</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Framework_TestSuite.html#getIterator" class="">getIterator()</a></td><td>Returns an iterator for this test suite. <i>(from <a href="class__PHPUnit_Framework_TestSuite.html#getIterator" class="">PHPUnit_Framework_TestSuite</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Framework_TestSuite.html#getName" class="">getName()</a></td><td>Returns the name of the suite. <i>(from <a href="class__PHPUnit_Framework_TestSuite.html#getName" class="">PHPUnit_Framework_TestSuite</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Framework_TestSuite.html#incompleteTest" class="">incompleteTest($class, $methodName, $message)</a></td><td> <i>(from <a href="class__PHPUnit_Framework_TestSuite.html#incompleteTest" class="">PHPUnit_Framework_TestSuite</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Framework_TestSuite.html#injectFilter" class="">injectFilter(PHPUnit_Runner_Filter_Factory $filter)</a></td><td> <i>(from <a href="class__PHPUnit_Framework_TestSuite.html#injectFilter" class="">PHPUnit_Framework_TestSuite</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Framework_TestSuite.html#isTestMethod" class="">isTestMethod(ReflectionMethod $method)</a></td><td> <i>(from <a href="class__PHPUnit_Framework_TestSuite.html#isTestMethod" class="">PHPUnit_Framework_TestSuite</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Framework_TestSuite.html#markTestSuiteSkipped" class="">markTestSuiteSkipped($message = &quot;&quot;)</a></td><td>Mark the test suite as skipped. <i>(from <a href="class__PHPUnit_Framework_TestSuite.html#markTestSuiteSkipped" class="">PHPUnit_Framework_TestSuite</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Framework_TestSuite.html#run" class="">run(PHPUnit_Framework_TestResult $result = null)</a></td><td>Runs the tests and collects their result in a TestResult. <i>(from <a href="class__PHPUnit_Framework_TestSuite.html#run" class="">PHPUnit_Framework_TestSuite</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Framework_TestSuite.html#runTest" class="">runTest(PHPUnit_Framework_Test $test, PHPUnit_Framework_TestResult $result)</a></td><td>Runs a test. <i>(from <a href="class__PHPUnit_Framework_TestSuite.html#runTest" class="">PHPUnit_Framework_TestSuite</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Framework_TestSuite.html#setBackupGlobals" class="">setBackupGlobals($backupGlobals)</a></td><td> <i>(from <a href="class__PHPUnit_Framework_TestSuite.html#setBackupGlobals" class="">PHPUnit_Framework_TestSuite</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Framework_TestSuite.html#setBackupStaticAttributes" class="">setBackupStaticAttributes($backupStaticAttributes)</a></td><td> <i>(from <a href="class__PHPUnit_Framework_TestSuite.html#setBackupStaticAttributes" class="">PHPUnit_Framework_TestSuite</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Framework_TestSuite.html#setDisallowChangesToGlobalState" class="">setDisallowChangesToGlobalState($disallowChangesToGlobalState)</a></td><td> <i>(from <a href="class__PHPUnit_Framework_TestSuite.html#setDisallowChangesToGlobalState" class="">PHPUnit_Framework_TestSuite</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Framework_TestSuite.html#setGroupDetails" class="">setGroupDetails(array $groups)</a></td><td>Set tests groups of the test case <i>(from <a href="class__PHPUnit_Framework_TestSuite.html#setGroupDetails" class="">PHPUnit_Framework_TestSuite</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Framework_TestSuite.html#setName" class="">setName($name)</a></td><td>Sets the name of the suite. <i>(from <a href="class__PHPUnit_Framework_TestSuite.html#setName" class="">PHPUnit_Framework_TestSuite</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Framework_TestSuite.html#setRunTestInSeparateProcess" class="">setRunTestInSeparateProcess($runTestInSeparateProcess)</a></td><td> <i>(from <a href="class__PHPUnit_Framework_TestSuite.html#setRunTestInSeparateProcess" class="">PHPUnit_Framework_TestSuite</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Framework_TestSuite.html#setTests" class="">setTests(array $tests)</a></td><td>Set tests of the test suite <i>(from <a href="class__PHPUnit_Framework_TestSuite.html#setTests" class="">PHPUnit_Framework_TestSuite</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Framework_TestSuite.html#setUp" class="">setUp()</a></td><td>Template Method that is called before the tests of this test suite are run. <i>(from <a href="class__PHPUnit_Framework_TestSuite.html#setUp" class="">PHPUnit_Framework_TestSuite</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Framework_TestSuite.html#skipTest" class="">skipTest($class, $methodName, $message)</a></td><td> <i>(from <a href="class__PHPUnit_Framework_TestSuite.html#skipTest" class="">PHPUnit_Framework_TestSuite</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Framework_TestSuite.html#tearDown" class="">tearDown()</a></td><td>Template Method that is called after the tests of this test suite have finished running. <i>(from <a href="class__PHPUnit_Framework_TestSuite.html#tearDown" class="">PHPUnit_Framework_TestSuite</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Framework_TestSuite.html#testAt" class="">testAt($index)</a></td><td>Returns the test at the given index. <i>(from <a href="class__PHPUnit_Framework_TestSuite.html#testAt" class="">PHPUnit_Framework_TestSuite</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Framework_TestSuite.html#tests" class="">tests()</a></td><td>Returns the tests as an enumeration. <i>(from <a href="class__PHPUnit_Framework_TestSuite.html#tests" class="">PHPUnit_Framework_TestSuite</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Framework_TestSuite.html#toString" class="">toString()</a></td><td>Returns a string representation of the test suite. <i>(from <a href="class__PHPUnit_Framework_TestSuite.html#toString" class="">PHPUnit_Framework_TestSuite</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Framework_TestSuite.html#warning" class="">warning($message)</a></td><td> <i>(from <a href="class__PHPUnit_Framework_TestSuite.html#warning" class="">PHPUnit_Framework_TestSuite</a>)</i></td></tr>  </tbody>
+</table>
+
+
+
+<hr>
+
+<h3>
+  <small>public function</small>
+  __construct($directory)  <a name="__construct"></a>
+</h3>
+
+<blockquote>
+<p>Constructs a new TestSuite for .phpt test cases.</p><p>- PHPUnit_Framework_TestSuite() constructs an empty TestSuite.</p><p>- PHPUnit_Framework_TestSuite(ReflectionClass) constructs a TestSuite from the given class.</p><p>- PHPUnit_Framework_TestSuite(ReflectionClass, String) constructs a TestSuite from the given class with the given name.</p><p>- PHPUnit_Framework_TestSuite(String) either constructs a TestSuite from the given class (if the passed string is the name of an existing class) or constructs an empty TestSuite with the given name. <i>(from <a href="class__PHPUnit_Framework_TestSuite.html#__construct" class="">__construct</a>)</i></p><dl><dt>Overrides:</dt><dd><a href="class__PHPUnit_Framework_TestSuite.html#__construct" class="">__construct($theClass = &quot;&quot;, $name = &quot;&quot;)</a></dd><dt>Parameters:</dt><dd><code>string</code> - $directory<br></dd><dt>Throws:</dt><dd><a href="class__PHPUnit_Framework_Exception.html" class="">PHPUnit_Framework_Exception</a><br></dd></dl></blockquote>
+
+</div>
+
+<div class="footer">
+  Generated by <a href="https://github.com/soundasleep/phpdoc2/" class="github">PHPDoc2</a> Fri, 24 Apr 2015 15:28:55 +1200</div>
+
+</body>
+</html>

@@ -1,0 +1,191 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>PHPDoc2 - PHPUnit</title>
+  <link rel="stylesheet" type="text/css" href="default.css">
+</head>
+<body>
+<nav>
+  <a href="index.html">Root</a>
+</nav>
+
+<div class="content">
+<ul><li>\PHPUnit_Util_XML</li></ul>
+<h1>
+  <small>class</small>
+
+  <a href="namespace_.html" class="">(none)</a>  \
+  <a href="class__PHPUnit_Util_XML.html" class="">PHPUnit_Util_XML</a></h1>
+
+
+
+
+<hr>
+
+<p>XML helpers.</p><dl></dl>
+<hr>
+
+<h2>Method Summary</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+<tr><td><a href="class__PHPUnit_Util_XML.html#assertValidKeys" class="">assertValidKeys(array $hash, array $validKeys)</a></td><td>Validate list of keys in the associative array.</td></tr><tr><td><a href="class__PHPUnit_Util_XML.html#convertSelectToTag" class="">convertSelectToTag($selector, $content = true)</a></td><td>Parse a CSS selector into an associative array suitable for use with findNodes().</td></tr><tr><td><a href="class__PHPUnit_Util_XML.html#cssSelect" class="">cssSelect($selector, $content, $actual, $isHtml = true)</a></td><td>Parse an $actual document and return an array of DOMNodes matching the CSS $selector. If an error occurs, it will return false.</td></tr><tr><td><a href="class__PHPUnit_Util_XML.html#findNodes" class="">findNodes(DOMDocument $dom, array $options, $isHtml = true)</a></td><td>Parse out the options from the tag using DOM object tree.</td></tr><tr><td><a href="class__PHPUnit_Util_XML.html#getDescendants" class="">getDescendants(DOMNode $node)</a></td><td>Recursively get flat array of all descendants of this node.</td></tr><tr><td><a href="class__PHPUnit_Util_XML.html#getElementsByCaseInsensitiveTagName" class="">getElementsByCaseInsensitiveTagName(DOMDocument $dom, $tag)</a></td><td>Gets elements by case insensitive tagname.</td></tr><tr><td><a href="class__PHPUnit_Util_XML.html#getNodeText" class="">getNodeText(DOMNode $node)</a></td><td>Get the text value of this node's child text node.</td></tr><tr><td><a href="class__PHPUnit_Util_XML.html#load" class="">load($actual, $isHtml = false, $filename = &quot;&quot;, $xinclude = false, $strict = false)</a></td><td>Load an $actual document into a DOMDocument. This is called from the selector assertions.</td></tr><tr><td><a href="class__PHPUnit_Util_XML.html#loadFile" class="">loadFile($filename, $isHtml = false, $xinclude = false, $strict = false)</a></td><td>Loads an XML (or HTML) file into a DOMDocument object.</td></tr><tr><td><a href="class__PHPUnit_Util_XML.html#nodeToText" class="">nodeToText(DOMNode $node)</a></td><td></td></tr><tr><td><a href="class__PHPUnit_Util_XML.html#prepareString" class="">prepareString($string)</a></td><td>Escapes a string for the use in XML documents Any Unicode character is allowed, excluding the surrogate blocks, FFFE, and FFFF (not even as character reference). See http://www.w3.org/TR/xml/#charsets</td></tr><tr><td><a href="class__PHPUnit_Util_XML.html#removeCharacterDataNodes" class="">removeCharacterDataNodes(DOMNode $node)</a></td><td></td></tr><tr><td><a href="class__PHPUnit_Util_XML.html#xmlToVariable" class="">xmlToVariable(DOMElement $element)</a></td><td>"Convert" a DOMElement object into a PHP variable.</td></tr>  </tbody>
+</table>
+
+
+
+<hr>
+
+<h3>
+  <small>public static function</small>
+  assertValidKeys(array $hash, array $validKeys)  <a name="assertValidKeys"></a>
+</h3>
+
+<blockquote>
+<p>Validate list of keys in the associative array.</p><dl><dt>Parameters:</dt><dd><code>array</code> - $validKeys<br></dd><dt>Returns:</dt><dd>array<br></dd><dt>Throws:</dt><dd><a href="class__PHPUnit_Framework_Exception.html" class="">PHPUnit_Framework_Exception</a><br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public static function</small>
+  convertSelectToTag($selector, $content = true)  <a name="convertSelectToTag"></a>
+</h3>
+
+<blockquote>
+<p>Parse a CSS selector into an associative array suitable for use with findNodes().</p><dl><dt>Parameters:</dt><dd><code>string</code> - $selector<br><code>mixed</code> - $content<br></dd><dt>Defaults:</dt><dd><code>content</code> = <code>true</code><br></dd><dt>Returns:</dt><dd>array<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public static function</small>
+  cssSelect($selector, $content, $actual, $isHtml = true)  <a name="cssSelect"></a>
+</h3>
+
+<blockquote>
+<p>Parse an $actual document and return an array of DOMNodes matching the CSS $selector. If an error occurs, it will return false.</p><p>To only return nodes containing a certain content, give the $content to match as a string. Otherwise, setting $content to true will return all nodes matching $selector.</p><p>The $actual document may be a DOMDocument or a string containing XML or HTML, identified by $isHtml.</p><dl><dt>Parameters:</dt><dd><code>array</code> - $selector<br><code>string</code> - $content<br><code>mixed</code> - $actual<br><code>boolean</code> - $isHtml<br></dd><dt>Defaults:</dt><dd><code>isHtml</code> = <code>true</code><br></dd><dt>Returns:</dt><dd>boolean|array<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public static function</small>
+  findNodes(DOMDocument $dom, array $options, $isHtml = true)  <a name="findNodes"></a>
+</h3>
+
+<blockquote>
+<p>Parse out the options from the tag using DOM object tree.</p><dl><dt>Parameters:</dt><dd><code>DOMDocument</code> - $dom<br><code>array</code> - $options<br><code>boolean</code> - $isHtml<br></dd><dt>Defaults:</dt><dd><code>isHtml</code> = <code>true</code><br></dd><dt>Returns:</dt><dd>array<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>protected static function</small>
+  getDescendants(DOMNode $node)  <a name="getDescendants"></a>
+</h3>
+
+<blockquote>
+<p>Recursively get flat array of all descendants of this node.</p><dl><dt>Parameters:</dt><dd><code>DOMNode</code> - $node<br></dd><dt>Returns:</dt><dd>array<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>protected static function</small>
+  getElementsByCaseInsensitiveTagName(DOMDocument $dom, $tag)  <a name="getElementsByCaseInsensitiveTagName"></a>
+</h3>
+
+<blockquote>
+<p>Gets elements by case insensitive tagname.</p><dl><dt>Parameters:</dt><dd><code>DOMDocument</code> - $dom<br><code>string</code> - $tag<br></dd><dt>Returns:</dt><dd>DOMNodeList<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>protected static function</small>
+  getNodeText(DOMNode $node)  <a name="getNodeText"></a>
+</h3>
+
+<blockquote>
+<p>Get the text value of this node's child text node.</p><dl><dt>Parameters:</dt><dd><code>DOMNode</code> - $node<br></dd><dt>Returns:</dt><dd>string<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public static function</small>
+  load($actual, $isHtml = false, $filename = "", $xinclude = false, $strict = false)  <a name="load"></a>
+</h3>
+
+<blockquote>
+<p>Load an $actual document into a DOMDocument. This is called from the selector assertions.</p><p>If $actual is already a DOMDocument, it is returned with no changes. Otherwise, $actual is loaded into a new DOMDocument as either HTML or XML, depending on the value of $isHtml. If $isHtml is false and $xinclude is true, xinclude is performed on the loaded DOMDocument.</p><p>Note: prior to PHPUnit 3.3.0, this method loaded a file and not a string as it currently does. To load a file into a DOMDocument, use loadFile() instead.</p><dl><dt>Parameters:</dt><dd><code>string|DOMDocument</code> - $actual<br><code>boolean</code> - $strict<br><code>string</code> - $filename<br></dd><dt>Defaults:</dt><dd><code>isHtml</code> = <code>false</code><br><code>filename</code> = <code>""</code><br><code>xinclude</code> = <code>false</code><br><code>strict</code> = <code>false</code><br></dd><dt>Returns:</dt><dd>DOMDocument<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public static function</small>
+  loadFile($filename, $isHtml = false, $xinclude = false, $strict = false)  <a name="loadFile"></a>
+</h3>
+
+<blockquote>
+<p>Loads an XML (or HTML) file into a DOMDocument object.</p><dl><dt>Parameters:</dt><dd><code>string</code> - $filename<br><code>boolean</code> - $strict<br></dd><dt>Defaults:</dt><dd><code>isHtml</code> = <code>false</code><br><code>xinclude</code> = <code>false</code><br><code>strict</code> = <code>false</code><br></dd><dt>Returns:</dt><dd>DOMDocument<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public static function</small>
+  nodeToText(DOMNode $node)  <a name="nodeToText"></a>
+</h3>
+
+<blockquote>
+<dl><dt>Parameters:</dt><dd><code>DOMNode</code> - $node<br></dd><dt>Returns:</dt><dd>string<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public static function</small>
+  prepareString($string)  <a name="prepareString"></a>
+</h3>
+
+<blockquote>
+<p>Escapes a string for the use in XML documents Any Unicode character is allowed, excluding the surrogate blocks, FFFE, and FFFF (not even as character reference). See http://www.w3.org/TR/xml/#charsets</p><dl><dt>Parameters:</dt><dd><code>string</code> - $string<br></dd><dt>Returns:</dt><dd>string<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public static function</small>
+  removeCharacterDataNodes(DOMNode $node)  <a name="removeCharacterDataNodes"></a>
+</h3>
+
+<blockquote>
+<dl><dt>Parameters:</dt><dd><code>DOMNode</code> - $node<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public static function</small>
+  xmlToVariable(DOMElement $element)  <a name="xmlToVariable"></a>
+</h3>
+
+<blockquote>
+<p>"Convert" a DOMElement object into a PHP variable.</p><dl><dt>Parameters:</dt><dd><code>DOMElement</code> - $element<br></dd><dt>Returns:</dt><dd>mixed<br></dd></dl></blockquote>
+
+</div>
+
+<div class="footer">
+  Generated by <a href="https://github.com/soundasleep/phpdoc2/" class="github">PHPDoc2</a> Fri, 24 Apr 2015 15:28:59 +1200</div>
+
+</body>
+</html>

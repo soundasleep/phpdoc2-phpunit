@@ -1,0 +1,176 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>PHPDoc2 - PHPUnit</title>
+  <link rel="stylesheet" type="text/css" href="default.css">
+</head>
+<body>
+<nav>
+  <a href="index.html">Root</a>
+</nav>
+
+<div class="content">
+<ul><li>\PHPUnit_Extensions_TicketListener</li></ul>
+<h1>
+  <small>abstract class</small>
+
+  <a href="namespace_.html" class="">(none)</a>  \
+  <a href="class__PHPUnit_Extensions_TicketListener.html" class="">PHPUnit_Extensions_TicketListener</a></h1>
+
+
+<dl>
+  <dt>All implemented interfaces:</dt>
+  <dd>
+    <a href="interface__PHPUnit_Framework_TestListener.html" class="">PHPUnit_Framework_TestListener</a>  </dd>
+</dl>
+
+
+
+
+<hr>
+
+<p>Base class for test listeners that interact with an issue tracker.</p><dl></dl>
+<hr>
+
+<h2>Method Summary</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+<tr><td><a href="class__PHPUnit_Extensions_TicketListener.html#addError" class="">addError(PHPUnit_Framework_Test $test, Exception $e, $time)</a></td><td>An error occurred.</td></tr><tr><td><a href="class__PHPUnit_Extensions_TicketListener.html#addFailure" class="">addFailure(PHPUnit_Framework_Test $test, PHPUnit_Framework_AssertionFailedError $e, $time)</a></td><td>A failure occurred.</td></tr><tr><td><a href="class__PHPUnit_Extensions_TicketListener.html#addIncompleteTest" class="">addIncompleteTest(PHPUnit_Framework_Test $test, Exception $e, $time)</a></td><td>Incomplete test.</td></tr><tr><td><a href="class__PHPUnit_Extensions_TicketListener.html#addRiskyTest" class="">addRiskyTest(PHPUnit_Framework_Test $test, Exception $e, $time)</a></td><td>Risky test.</td></tr><tr><td><a href="class__PHPUnit_Extensions_TicketListener.html#addSkippedTest" class="">addSkippedTest(PHPUnit_Framework_Test $test, Exception $e, $time)</a></td><td>Skipped test.</td></tr><tr><td><a href="class__PHPUnit_Extensions_TicketListener.html#endTest" class="">endTest(PHPUnit_Framework_Test $test, $time)</a></td><td>A test ended.</td></tr><tr><td><a href="class__PHPUnit_Extensions_TicketListener.html#endTestSuite" class="">endTestSuite(PHPUnit_Framework_TestSuite $suite)</a></td><td>A test suite ended.</td></tr><tr><td><a href="class__PHPUnit_Extensions_TicketListener.html#getTicketInfo" class="">getTicketInfo($ticketId = null)</a></td><td></td></tr><tr><td><a href="class__PHPUnit_Extensions_TicketListener.html#startTest" class="">startTest(PHPUnit_Framework_Test $test)</a></td><td>A test started.</td></tr><tr><td><a href="class__PHPUnit_Extensions_TicketListener.html#startTestSuite" class="">startTestSuite(PHPUnit_Framework_TestSuite $suite)</a></td><td>A test suite started.</td></tr><tr><td><a href="class__PHPUnit_Extensions_TicketListener.html#updateTicket" class="">updateTicket($ticketId, $newStatus, $message, $resolution)</a></td><td></td></tr>  </tbody>
+</table>
+
+
+
+<hr>
+
+<h3>
+  <small>public function</small>
+  addError(<a href="interface__PHPUnit_Framework_Test.html" class="">PHPUnit_Framework_Test</a> $test, Exception $e, $time)  <a name="addError"></a>
+</h3>
+
+<blockquote>
+<p>An error occurred.</p><dl><dt>Parameters:</dt><dd><code>PHPUnit_Framework_Test</code> - $test<br><code>Exception</code> - $e<br><code>float</code> - $time<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public function</small>
+  addFailure(<a href="interface__PHPUnit_Framework_Test.html" class="">PHPUnit_Framework_Test</a> $test, <a href="class__PHPUnit_Framework_AssertionFailedError.html" class="">PHPUnit_Framework_AssertionFailedError</a> $e, $time)  <a name="addFailure"></a>
+</h3>
+
+<blockquote>
+<p>A failure occurred.</p><dl><dt>Parameters:</dt><dd><code>PHPUnit_Framework_Test</code> - $test<br><code>PHPUnit_Framework_AssertionFailedError</code> - $e<br><code>float</code> - $time<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public function</small>
+  addIncompleteTest(<a href="interface__PHPUnit_Framework_Test.html" class="">PHPUnit_Framework_Test</a> $test, Exception $e, $time)  <a name="addIncompleteTest"></a>
+</h3>
+
+<blockquote>
+<p>Incomplete test.</p><dl><dt>Parameters:</dt><dd><code>PHPUnit_Framework_Test</code> - $test<br><code>Exception</code> - $e<br><code>float</code> - $time<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public function</small>
+  addRiskyTest(<a href="interface__PHPUnit_Framework_Test.html" class="">PHPUnit_Framework_Test</a> $test, Exception $e, $time)  <a name="addRiskyTest"></a>
+</h3>
+
+<blockquote>
+<p>Risky test.</p><dl><dt>Parameters:</dt><dd><code>PHPUnit_Framework_Test</code> - $test<br><code>Exception</code> - $e<br><code>float</code> - $time<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public function</small>
+  addSkippedTest(<a href="interface__PHPUnit_Framework_Test.html" class="">PHPUnit_Framework_Test</a> $test, Exception $e, $time)  <a name="addSkippedTest"></a>
+</h3>
+
+<blockquote>
+<p>Skipped test.</p><dl><dt>Parameters:</dt><dd><code>PHPUnit_Framework_Test</code> - $test<br><code>Exception</code> - $e<br><code>float</code> - $time<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public function</small>
+  endTest(<a href="interface__PHPUnit_Framework_Test.html" class="">PHPUnit_Framework_Test</a> $test, $time)  <a name="endTest"></a>
+</h3>
+
+<blockquote>
+<p>A test ended.</p><dl><dt>Parameters:</dt><dd><code>PHPUnit_Framework_Test</code> - $test<br><code>float</code> - $time<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public function</small>
+  endTestSuite(<a href="class__PHPUnit_Framework_TestSuite.html" class="">PHPUnit_Framework_TestSuite</a> $suite)  <a name="endTestSuite"></a>
+</h3>
+
+<blockquote>
+<p>A test suite ended.</p><dl><dt>Parameters:</dt><dd><code>PHPUnit_Framework_TestSuite</code> - $suite<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>protected abstract function</small>
+  getTicketInfo($ticketId = null)  <a name="getTicketInfo"></a>
+</h3>
+
+<blockquote>
+<dl><dt>Parameters:</dt><dd><code>mixed</code> - $ticketId<br></dd><dt>Defaults:</dt><dd><code>ticketId</code> = <code>null</code><br></dd><dt>Returns:</dt><dd>mixed<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public function</small>
+  startTest(<a href="interface__PHPUnit_Framework_Test.html" class="">PHPUnit_Framework_Test</a> $test)  <a name="startTest"></a>
+</h3>
+
+<blockquote>
+<p>A test started.</p><dl><dt>Parameters:</dt><dd><code>PHPUnit_Framework_Test</code> - $test<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public function</small>
+  startTestSuite(<a href="class__PHPUnit_Framework_TestSuite.html" class="">PHPUnit_Framework_TestSuite</a> $suite)  <a name="startTestSuite"></a>
+</h3>
+
+<blockquote>
+<p>A test suite started.</p><dl><dt>Parameters:</dt><dd><code>PHPUnit_Framework_TestSuite</code> - $suite<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>protected abstract function</small>
+  updateTicket($ticketId, $newStatus, $message, $resolution)  <a name="updateTicket"></a>
+</h3>
+
+<blockquote>
+<dl><dt>Parameters:</dt><dd><code>string</code> - $resolution<br></dd></dl></blockquote>
+
+</div>
+
+<div class="footer">
+  Generated by <a href="https://github.com/soundasleep/phpdoc2/" class="github">PHPDoc2</a> Fri, 24 Apr 2015 15:28:55 +1200</div>
+
+</body>
+</html>

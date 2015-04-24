@@ -1,0 +1,8 @@
+{
+  "project_name": "PHPUnit",
+  "ignore": [
+    "/vendor/",
+    "/test/",
+    "/tests/"
+  ]
+}

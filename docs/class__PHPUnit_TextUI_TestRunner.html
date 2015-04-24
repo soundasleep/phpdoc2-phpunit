@@ -1,0 +1,205 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>PHPDoc2 - PHPUnit</title>
+  <link rel="stylesheet" type="text/css" href="default.css">
+</head>
+<body>
+<nav>
+  <a href="index.html">Root</a>
+</nav>
+
+<div class="content">
+<ul class="class-hierarchy"><li><a href="class__PHPUnit_Runner_BaseTestRunner.html" class="">\PHPUnit_Runner_BaseTestRunner</a><ul><li>\PHPUnit_TextUI_TestRunner</li></ul></li></ul>
+<h1>
+  <small>class</small>
+
+  <a href="namespace_.html" class="">(none)</a>  \
+  <a href="class__PHPUnit_TextUI_TestRunner.html" class="">PHPUnit_TextUI_TestRunner</a></h1>
+
+
+
+
+<hr>
+
+<p>A TestRunner for the Command Line Interface (CLI) PHP SAPI Module.</p><dl></dl>
+<hr>
+
+<h2>Method Summary</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+<tr><td><a href="class__PHPUnit_TextUI_TestRunner.html#__construct" class="">__construct(PHPUnit_Runner_TestSuiteLoader $loader = null, PHP_CodeCoverage_Filter $filter = null)</a></td><td></td></tr><tr><td><a href="class__PHPUnit_TextUI_TestRunner.html#createTestResult" class="">createTestResult()</a></td><td></td></tr><tr><td><a href="class__PHPUnit_TextUI_TestRunner.html#doRun" class="">doRun(PHPUnit_Framework_Test $suite, array $arguments = array())</a></td><td></td></tr><tr><td><a href="class__PHPUnit_TextUI_TestRunner.html#getCodeCoverageFilter" class="">getCodeCoverageFilter()</a></td><td></td></tr><tr><td><a href="class__PHPUnit_TextUI_TestRunner.html#getLoader" class="">getLoader()</a></td><td>Returns the loader to be used.</td></tr><tr><td><a href="class__PHPUnit_TextUI_TestRunner.html#handleConfiguration" class="">handleConfiguration(array $arguments)</a></td><td></td></tr><tr><td><a href="class__PHPUnit_TextUI_TestRunner.html#processSuiteFilters" class="">processSuiteFilters(PHPUnit_Framework_TestSuite $suite, array $arguments)</a></td><td></td></tr><tr><td><a href="class__PHPUnit_TextUI_TestRunner.html#run" class="">run($test, array $arguments = array())</a></td><td></td></tr><tr><td><a href="class__PHPUnit_TextUI_TestRunner.html#runFailed" class="">runFailed($message)</a></td><td>Override to define how to handle a failed loading of a test suite.</td></tr><tr><td><a href="class__PHPUnit_TextUI_TestRunner.html#setPrinter" class="">setPrinter(PHPUnit_TextUI_ResultPrinter $resultPrinter)</a></td><td></td></tr><tr><td><a href="class__PHPUnit_TextUI_TestRunner.html#showExtensionNotLoadedMessage" class="">showExtensionNotLoadedMessage($extension, $message = &quot;&quot;)</a></td><td></td></tr><tr><td><a href="class__PHPUnit_TextUI_TestRunner.html#showMessage" class="">showMessage($message, $exit = false)</a></td><td>Shows a message.</td></tr><tr><td><a href="class__PHPUnit_TextUI_TestRunner.html#write" class="">write($buffer)</a></td><td></td></tr>  </tbody>
+</table>
+
+
+<h2>Inherited Method Summary</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+<tr><td><a href="class__PHPUnit_Runner_BaseTestRunner.html#clearStatus" class="">clearStatus()</a></td><td>Clears the status message. <i>(from <a href="class__PHPUnit_Runner_BaseTestRunner.html#clearStatus" class="">PHPUnit_Runner_BaseTestRunner</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Runner_BaseTestRunner.html#getTest" class="">getTest($suiteClassName, $suiteClassFile = &quot;&quot;, $suffixes = &quot;&quot;)</a></td><td>Returns the Test corresponding to the given suite. This is a template method, subclasses override the runFailed() and clearStatus() methods. <i>(from <a href="class__PHPUnit_Runner_BaseTestRunner.html#getTest" class="">PHPUnit_Runner_BaseTestRunner</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Runner_BaseTestRunner.html#loadSuiteClass" class="">loadSuiteClass($suiteClassName, $suiteClassFile = &quot;&quot;)</a></td><td>Returns the loaded ReflectionClass for a suite name. <i>(from <a href="class__PHPUnit_Runner_BaseTestRunner.html#loadSuiteClass" class="">PHPUnit_Runner_BaseTestRunner</a>)</i></td></tr>  </tbody>
+</table>
+
+
+
+<hr>
+
+<h3>
+  <small>public function</small>
+  __construct(<a href="interface__PHPUnit_Runner_TestSuiteLoader.html" class="">PHPUnit_Runner_TestSuiteLoader</a> $loader = null, PHP_CodeCoverage_Filter $filter = null)  <a name="__construct"></a>
+</h3>
+
+<blockquote>
+<dl><dt>Parameters:</dt><dd><code>PHPUnit_Runner_TestSuiteLoader</code> - $loader<br><code>PHP_CodeCoverage_Filter</code> - $filter<br></dd><dt>Defaults:</dt><dd><code>loader</code> = <code>null</code><br><code>filter</code> = <code>null</code><br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>protected function</small>
+  createTestResult()  <a name="createTestResult"></a>
+</h3>
+
+<blockquote>
+<dl><dt>Returns:</dt><dd>PHPUnit_Framework_TestResult<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public function</small>
+  doRun(<a href="interface__PHPUnit_Framework_Test.html" class="">PHPUnit_Framework_Test</a> $suite, array $arguments = array())  <a name="doRun"></a>
+</h3>
+
+<blockquote>
+<dl><dt>Parameters:</dt><dd><code>PHPUnit_Framework_Test</code> - $suite<br><code>array</code> - $arguments<br></dd><dt>Defaults:</dt><dd><code>arguments</code> = array()<br></dd><dt>Returns:</dt><dd>PHPUnit_Framework_TestResult<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>private function</small>
+  getCodeCoverageFilter()  <a name="getCodeCoverageFilter"></a>
+</h3>
+
+<blockquote>
+<dl><dt>Returns:</dt><dd>PHP_CodeCoverage_Filter<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public function</small>
+  getLoader()  <a name="getLoader"></a>
+</h3>
+
+<blockquote>
+<p>Returns the loader to be used.</p><dl><dt>Overrides:</dt><dd><a href="class__PHPUnit_Runner_BaseTestRunner.html#getLoader" class="">getLoader()</a></dd><dt>Returns:</dt><dd>PHPUnit_Runner_TestSuiteLoader<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>protected function</small>
+  handleConfiguration(array $arguments)  <a name="handleConfiguration"></a>
+</h3>
+
+<blockquote>
+<dl><dt>Parameters:</dt><dd><code>array</code> - $arguments<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>private function</small>
+  processSuiteFilters(<a href="class__PHPUnit_Framework_TestSuite.html" class="">PHPUnit_Framework_TestSuite</a> $suite, array $arguments)  <a name="processSuiteFilters"></a>
+</h3>
+
+<blockquote>
+<dl></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public static function</small>
+  run($test, array $arguments = array())  <a name="run"></a>
+</h3>
+
+<blockquote>
+<dl><dt>Parameters:</dt><dd><code>PHPUnit_Framework_Test|ReflectionClass</code> - $test<br><code>array</code> - $arguments<br></dd><dt>Defaults:</dt><dd><code>arguments</code> = array()<br></dd><dt>Returns:</dt><dd>PHPUnit_Framework_TestResult<br></dd><dt>Throws:</dt><dd><a href="class__PHPUnit_Framework_Exception.html" class="">PHPUnit_Framework_Exception</a><br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>protected function</small>
+  runFailed($message)  <a name="runFailed"></a>
+</h3>
+
+<blockquote>
+<p>Override to define how to handle a failed loading of a test suite.</p><dl><dt>Overrides:</dt><dd><a href="class__PHPUnit_Runner_BaseTestRunner.html#runFailed" class="">runFailed($message)</a></dd><dt>Parameters:</dt><dd><code>string</code> - $message<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public function</small>
+  setPrinter(<a href="class__PHPUnit_TextUI_ResultPrinter.html" class="">PHPUnit_TextUI_ResultPrinter</a> $resultPrinter)  <a name="setPrinter"></a>
+</h3>
+
+<blockquote>
+<dl><dt>Parameters:</dt><dd><code>PHPUnit_TextUI_ResultPrinter</code> - $resultPrinter<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>private function</small>
+  showExtensionNotLoadedMessage($extension, $message = "")  <a name="showExtensionNotLoadedMessage"></a>
+</h3>
+
+<blockquote>
+<dl><dt>Parameters:</dt><dd><code>$extension</code> - <br><code>string</code> - $message<br></dd><dt>Defaults:</dt><dd><code>message</code> = <code>""</code><br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>private function</small>
+  showMessage($message, $exit = false)  <a name="showMessage"></a>
+</h3>
+
+<blockquote>
+<p>Shows a message.</p><dl><dt>Parameters:</dt><dd><code>string</code> - $message<br><code>boolean</code> - $exit<br></dd><dt>Defaults:</dt><dd><code>exit</code> = <code>false</code><br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>protected function</small>
+  write($buffer)  <a name="write"></a>
+</h3>
+
+<blockquote>
+<dl><dt>Parameters:</dt><dd><code>string</code> - $buffer<br></dd></dl></blockquote>
+
+</div>
+
+<div class="footer">
+  Generated by <a href="https://github.com/soundasleep/phpdoc2/" class="github">PHPDoc2</a> Fri, 24 Apr 2015 15:28:58 +1200</div>
+
+</body>
+</html>

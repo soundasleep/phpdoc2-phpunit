@@ -1,0 +1,627 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>PHPDoc2 - PHPUnit</title>
+  <link rel="stylesheet" type="text/css" href="default.css">
+</head>
+<body>
+<nav>
+  <a href="index.html">Root</a>
+</nav>
+
+<div class="content">
+<ul><li>\PHPUnit_Framework_TestResult</li></ul>
+<h1>
+  <small>class</small>
+
+  <a href="namespace_.html" class="">(none)</a>  \
+  <a href="class__PHPUnit_Framework_TestResult.html" class="">PHPUnit_Framework_TestResult</a></h1>
+
+
+<dl>
+  <dt>All implemented interfaces:</dt>
+  <dd>
+    Countable  </dd>
+</dl>
+
+
+
+
+<hr>
+
+<p>A TestResult collects the results of executing a test case.</p><dl></dl>
+<hr>
+
+<h2>Method Summary</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+<tr><td><a href="class__PHPUnit_Framework_TestResult.html#addError" class="">addError(PHPUnit_Framework_Test $test, Exception $e, $time)</a></td><td>Adds an error to the list of errors.</td></tr><tr><td><a href="class__PHPUnit_Framework_TestResult.html#addFailure" class="">addFailure(PHPUnit_Framework_Test $test, PHPUnit_Framework_AssertionFailedError $e, $time)</a></td><td>Adds a failure to the list of failures. The passed in exception caused the failure.</td></tr><tr><td><a href="class__PHPUnit_Framework_TestResult.html#addListener" class="">addListener(PHPUnit_Framework_TestListener $listener)</a></td><td>Registers a TestListener.</td></tr><tr><td><a href="class__PHPUnit_Framework_TestResult.html#allCompletelyImplemented" class="">allCompletelyImplemented()</a></td><td>Returns true if no incomplete test occurred.</td></tr><tr><td><a href="class__PHPUnit_Framework_TestResult.html#allHarmless" class="">allHarmless()</a></td><td>Returns true if no risky test occurred.</td></tr><tr><td><a href="class__PHPUnit_Framework_TestResult.html#beStrictAboutOutputDuringTests" class="">beStrictAboutOutputDuringTests($flag)</a></td><td></td></tr><tr><td><a href="class__PHPUnit_Framework_TestResult.html#beStrictAboutTestSize" class="">beStrictAboutTestSize($flag)</a></td><td></td></tr><tr><td><a href="class__PHPUnit_Framework_TestResult.html#beStrictAboutTestsThatDoNotTestAnything" class="">beStrictAboutTestsThatDoNotTestAnything($flag)</a></td><td></td></tr><tr><td><a href="class__PHPUnit_Framework_TestResult.html#beStrictAboutTodoAnnotatedTests" class="">beStrictAboutTodoAnnotatedTests($flag)</a></td><td></td></tr><tr><td><a href="class__PHPUnit_Framework_TestResult.html#convertErrorsToExceptions" class="">convertErrorsToExceptions($flag)</a></td><td>Enables or disables the error-to-exception conversion.</td></tr><tr><td><a href="class__PHPUnit_Framework_TestResult.html#count" class="">count()</a></td><td>Gets the number of run tests.</td></tr><tr><td><a href="class__PHPUnit_Framework_TestResult.html#endTest" class="">endTest(PHPUnit_Framework_Test $test, $time)</a></td><td>Informs the result that a test was completed.</td></tr><tr><td><a href="class__PHPUnit_Framework_TestResult.html#endTestSuite" class="">endTestSuite(PHPUnit_Framework_TestSuite $suite)</a></td><td>Informs the result that a testsuite was completed.</td></tr><tr><td><a href="class__PHPUnit_Framework_TestResult.html#errorCount" class="">errorCount()</a></td><td>Gets the number of detected errors.</td></tr><tr><td><a href="class__PHPUnit_Framework_TestResult.html#errors" class="">errors()</a></td><td>Returns an Enumeration for the errors.</td></tr><tr><td><a href="class__PHPUnit_Framework_TestResult.html#failureCount" class="">failureCount()</a></td><td>Gets the number of detected failures.</td></tr><tr><td><a href="class__PHPUnit_Framework_TestResult.html#failures" class="">failures()</a></td><td>Returns an Enumeration for the failures.</td></tr><tr><td><a href="class__PHPUnit_Framework_TestResult.html#flushListeners" class="">flushListeners()</a></td><td>Flushes all flushable TestListeners.</td></tr><tr><td><a href="class__PHPUnit_Framework_TestResult.html#getCodeCoverage" class="">getCodeCoverage()</a></td><td>Returns the PHP_CodeCoverage object.</td></tr><tr><td><a href="class__PHPUnit_Framework_TestResult.html#getCollectCodeCoverageInformation" class="">getCollectCodeCoverageInformation()</a></td><td>Returns whether code coverage information should be collected.</td></tr><tr><td><a href="class__PHPUnit_Framework_TestResult.html#getConvertErrorsToExceptions" class="">getConvertErrorsToExceptions()</a></td><td>Returns the error-to-exception conversion setting.</td></tr><tr><td><a href="class__PHPUnit_Framework_TestResult.html#getHierarchy" class="">getHierarchy($className, $asReflectionObjects = false)</a></td><td>Returns the class hierarchy for a given class.</td></tr><tr><td><a href="class__PHPUnit_Framework_TestResult.html#isStrictAboutOutputDuringTests" class="">isStrictAboutOutputDuringTests()</a></td><td></td></tr><tr><td><a href="class__PHPUnit_Framework_TestResult.html#isStrictAboutTestSize" class="">isStrictAboutTestSize()</a></td><td></td></tr><tr><td><a href="class__PHPUnit_Framework_TestResult.html#isStrictAboutTestsThatDoNotTestAnything" class="">isStrictAboutTestsThatDoNotTestAnything()</a></td><td></td></tr><tr><td><a href="class__PHPUnit_Framework_TestResult.html#isStrictAboutTodoAnnotatedTests" class="">isStrictAboutTodoAnnotatedTests()</a></td><td></td></tr><tr><td><a href="class__PHPUnit_Framework_TestResult.html#noneSkipped" class="">noneSkipped()</a></td><td>Returns true if no test has been skipped.</td></tr><tr><td><a href="class__PHPUnit_Framework_TestResult.html#notImplemented" class="">notImplemented()</a></td><td>Returns an Enumeration for the incomplete tests.</td></tr><tr><td><a href="class__PHPUnit_Framework_TestResult.html#notImplementedCount" class="">notImplementedCount()</a></td><td>Gets the number of incomplete tests.</td></tr><tr><td><a href="class__PHPUnit_Framework_TestResult.html#passed" class="">passed()</a></td><td>Returns the names of the tests that have passed.</td></tr><tr><td><a href="class__PHPUnit_Framework_TestResult.html#removeListener" class="">removeListener(PHPUnit_Framework_TestListener $listener)</a></td><td>Unregisters a TestListener.</td></tr><tr><td><a href="class__PHPUnit_Framework_TestResult.html#risky" class="">risky()</a></td><td>Returns an Enumeration for the risky tests.</td></tr><tr><td><a href="class__PHPUnit_Framework_TestResult.html#riskyCount" class="">riskyCount()</a></td><td>Gets the number of risky tests.</td></tr><tr><td><a href="class__PHPUnit_Framework_TestResult.html#run" class="">run(PHPUnit_Framework_Test $test)</a></td><td>Runs a TestCase.</td></tr><tr><td><a href="class__PHPUnit_Framework_TestResult.html#setCodeCoverage" class="">setCodeCoverage(PHP_CodeCoverage $codeCoverage)</a></td><td>Sets the PHP_CodeCoverage object.</td></tr><tr><td><a href="class__PHPUnit_Framework_TestResult.html#setTimeoutForLargeTests" class="">setTimeoutForLargeTests($timeout)</a></td><td>Sets the timeout for large tests.</td></tr><tr><td><a href="class__PHPUnit_Framework_TestResult.html#setTimeoutForMediumTests" class="">setTimeoutForMediumTests($timeout)</a></td><td>Sets the timeout for medium tests.</td></tr><tr><td><a href="class__PHPUnit_Framework_TestResult.html#setTimeoutForSmallTests" class="">setTimeoutForSmallTests($timeout)</a></td><td>Sets the timeout for small tests.</td></tr><tr><td><a href="class__PHPUnit_Framework_TestResult.html#shouldStop" class="">shouldStop()</a></td><td>Checks whether the test run should stop.</td></tr><tr><td><a href="class__PHPUnit_Framework_TestResult.html#skipped" class="">skipped()</a></td><td>Returns an Enumeration for the skipped tests.</td></tr><tr><td><a href="class__PHPUnit_Framework_TestResult.html#skippedCount" class="">skippedCount()</a></td><td>Gets the number of skipped tests.</td></tr><tr><td><a href="class__PHPUnit_Framework_TestResult.html#startTest" class="">startTest(PHPUnit_Framework_Test $test)</a></td><td>Informs the result that a test will be started.</td></tr><tr><td><a href="class__PHPUnit_Framework_TestResult.html#startTestSuite" class="">startTestSuite(PHPUnit_Framework_TestSuite $suite)</a></td><td>Informs the result that a testsuite will be started.</td></tr><tr><td><a href="class__PHPUnit_Framework_TestResult.html#stop" class="">stop()</a></td><td>Marks that the test run should stop.</td></tr><tr><td><a href="class__PHPUnit_Framework_TestResult.html#stopOnError" class="">stopOnError($flag)</a></td><td>Enables or disables the stopping when an error occurs.</td></tr><tr><td><a href="class__PHPUnit_Framework_TestResult.html#stopOnFailure" class="">stopOnFailure($flag)</a></td><td>Enables or disables the stopping when a failure occurs.</td></tr><tr><td><a href="class__PHPUnit_Framework_TestResult.html#stopOnIncomplete" class="">stopOnIncomplete($flag)</a></td><td>Enables or disables the stopping for incomplete tests.</td></tr><tr><td><a href="class__PHPUnit_Framework_TestResult.html#stopOnRisky" class="">stopOnRisky($flag)</a></td><td>Enables or disables the stopping for risky tests.</td></tr><tr><td><a href="class__PHPUnit_Framework_TestResult.html#stopOnSkipped" class="">stopOnSkipped($flag)</a></td><td>Enables or disables the stopping for skipped tests.</td></tr><tr><td><a href="class__PHPUnit_Framework_TestResult.html#time" class="">time()</a></td><td>Returns the time spent running the tests.</td></tr><tr><td><a href="class__PHPUnit_Framework_TestResult.html#topTestSuite" class="">topTestSuite()</a></td><td>Returns the (top) test suite.</td></tr><tr><td><a href="class__PHPUnit_Framework_TestResult.html#wasSuccessful" class="">wasSuccessful()</a></td><td>Returns whether the entire test was successful or not.</td></tr>  </tbody>
+</table>
+
+
+
+<hr>
+
+<h3>
+  <small>public function</small>
+  addError(<a href="interface__PHPUnit_Framework_Test.html" class="">PHPUnit_Framework_Test</a> $test, Exception $e, $time)  <a name="addError"></a>
+</h3>
+
+<blockquote>
+<p>Adds an error to the list of errors.</p><dl><dt>Parameters:</dt><dd><code>PHPUnit_Framework_Test</code> - $test<br><code>Exception</code> - $e<br><code>float</code> - $time<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public function</small>
+  addFailure(<a href="interface__PHPUnit_Framework_Test.html" class="">PHPUnit_Framework_Test</a> $test, <a href="class__PHPUnit_Framework_AssertionFailedError.html" class="">PHPUnit_Framework_AssertionFailedError</a> $e, $time)  <a name="addFailure"></a>
+</h3>
+
+<blockquote>
+<p>Adds a failure to the list of failures. The passed in exception caused the failure.</p><dl><dt>Parameters:</dt><dd><code>PHPUnit_Framework_Test</code> - $test<br><code>PHPUnit_Framework_AssertionFailedError</code> - $e<br><code>float</code> - $time<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public function</small>
+  addListener(<a href="interface__PHPUnit_Framework_TestListener.html" class="">PHPUnit_Framework_TestListener</a> $listener)  <a name="addListener"></a>
+</h3>
+
+<blockquote>
+<p>Registers a TestListener.</p><dl><dt>Parameters:</dt><dd><code>PHPUnit_Framework_TestListener</code> - <br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public function</small>
+  allCompletelyImplemented()  <a name="allCompletelyImplemented"></a>
+</h3>
+
+<blockquote>
+<p>Returns true if no incomplete test occurred.</p><dl><dt>Returns:</dt><dd>boolean<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public function</small>
+  allHarmless()  <a name="allHarmless"></a>
+</h3>
+
+<blockquote>
+<p>Returns true if no risky test occurred.</p><dl><dt>Returns:</dt><dd>boolean<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public function</small>
+  beStrictAboutOutputDuringTests($flag)  <a name="beStrictAboutOutputDuringTests"></a>
+</h3>
+
+<blockquote>
+<dl><dt>Parameters:</dt><dd><code>boolean</code> - $flag<br></dd><dt>Throws:</dt><dd><a href="class__PHPUnit_Framework_Exception.html" class="">PHPUnit_Framework_Exception</a><br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public function</small>
+  beStrictAboutTestSize($flag)  <a name="beStrictAboutTestSize"></a>
+</h3>
+
+<blockquote>
+<dl><dt>Parameters:</dt><dd><code>boolean</code> - $flag<br></dd><dt>Throws:</dt><dd><a href="class__PHPUnit_Framework_Exception.html" class="">PHPUnit_Framework_Exception</a><br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public function</small>
+  beStrictAboutTestsThatDoNotTestAnything($flag)  <a name="beStrictAboutTestsThatDoNotTestAnything"></a>
+</h3>
+
+<blockquote>
+<dl><dt>Parameters:</dt><dd><code>boolean</code> - $flag<br></dd><dt>Throws:</dt><dd><a href="class__PHPUnit_Framework_Exception.html" class="">PHPUnit_Framework_Exception</a><br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public function</small>
+  beStrictAboutTodoAnnotatedTests($flag)  <a name="beStrictAboutTodoAnnotatedTests"></a>
+</h3>
+
+<blockquote>
+<dl><dt>Parameters:</dt><dd><code>boolean</code> - $flag<br></dd><dt>Throws:</dt><dd><a href="class__PHPUnit_Framework_Exception.html" class="">PHPUnit_Framework_Exception</a><br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public function</small>
+  convertErrorsToExceptions($flag)  <a name="convertErrorsToExceptions"></a>
+</h3>
+
+<blockquote>
+<p>Enables or disables the error-to-exception conversion.</p><dl><dt>Parameters:</dt><dd><code>boolean</code> - $flag<br></dd><dt>Throws:</dt><dd><a href="class__PHPUnit_Framework_Exception.html" class="">PHPUnit_Framework_Exception</a><br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public function</small>
+  count()  <a name="count"></a>
+</h3>
+
+<blockquote>
+<p>Gets the number of run tests.</p><dl><dt>Returns:</dt><dd>integer<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public function</small>
+  endTest(<a href="interface__PHPUnit_Framework_Test.html" class="">PHPUnit_Framework_Test</a> $test, $time)  <a name="endTest"></a>
+</h3>
+
+<blockquote>
+<p>Informs the result that a test was completed.</p><dl><dt>Parameters:</dt><dd><code>PHPUnit_Framework_Test</code> - $test<br><code>float</code> - $time<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public function</small>
+  endTestSuite(<a href="class__PHPUnit_Framework_TestSuite.html" class="">PHPUnit_Framework_TestSuite</a> $suite)  <a name="endTestSuite"></a>
+</h3>
+
+<blockquote>
+<p>Informs the result that a testsuite was completed.</p><dl><dt>Parameters:</dt><dd><code>PHPUnit_Framework_TestSuite</code> - $suite<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public function</small>
+  errorCount()  <a name="errorCount"></a>
+</h3>
+
+<blockquote>
+<p>Gets the number of detected errors.</p><dl><dt>Returns:</dt><dd>integer<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public function</small>
+  errors()  <a name="errors"></a>
+</h3>
+
+<blockquote>
+<p>Returns an Enumeration for the errors.</p><dl><dt>Returns:</dt><dd>array<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public function</small>
+  failureCount()  <a name="failureCount"></a>
+</h3>
+
+<blockquote>
+<p>Gets the number of detected failures.</p><dl><dt>Returns:</dt><dd>integer<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public function</small>
+  failures()  <a name="failures"></a>
+</h3>
+
+<blockquote>
+<p>Returns an Enumeration for the failures.</p><dl><dt>Returns:</dt><dd>array<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public function</small>
+  flushListeners()  <a name="flushListeners"></a>
+</h3>
+
+<blockquote>
+<p>Flushes all flushable TestListeners.</p><dl></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public function</small>
+  getCodeCoverage()  <a name="getCodeCoverage"></a>
+</h3>
+
+<blockquote>
+<p>Returns the PHP_CodeCoverage object.</p><dl><dt>Returns:</dt><dd>PHP_CodeCoverage<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public function</small>
+  getCollectCodeCoverageInformation()  <a name="getCollectCodeCoverageInformation"></a>
+</h3>
+
+<blockquote>
+<p>Returns whether code coverage information should be collected.</p><dl><dt>Returns:</dt><dd>boolean If code coverage should be collected<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public function</small>
+  getConvertErrorsToExceptions()  <a name="getConvertErrorsToExceptions"></a>
+</h3>
+
+<blockquote>
+<p>Returns the error-to-exception conversion setting.</p><dl><dt>Returns:</dt><dd>boolean<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>protected function</small>
+  getHierarchy($className, $asReflectionObjects = false)  <a name="getHierarchy"></a>
+</h3>
+
+<blockquote>
+<p>Returns the class hierarchy for a given class.</p><dl><dt>Parameters:</dt><dd><code>string</code> - $className<br><code>boolean</code> - $asReflectionObjects<br></dd><dt>Defaults:</dt><dd><code>asReflectionObjects</code> = <code>false</code><br></dd><dt>Returns:</dt><dd>array<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public function</small>
+  isStrictAboutOutputDuringTests()  <a name="isStrictAboutOutputDuringTests"></a>
+</h3>
+
+<blockquote>
+<dl><dt>Returns:</dt><dd>boolean<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public function</small>
+  isStrictAboutTestSize()  <a name="isStrictAboutTestSize"></a>
+</h3>
+
+<blockquote>
+<dl><dt>Returns:</dt><dd>boolean<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public function</small>
+  isStrictAboutTestsThatDoNotTestAnything()  <a name="isStrictAboutTestsThatDoNotTestAnything"></a>
+</h3>
+
+<blockquote>
+<dl><dt>Returns:</dt><dd>boolean<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public function</small>
+  isStrictAboutTodoAnnotatedTests()  <a name="isStrictAboutTodoAnnotatedTests"></a>
+</h3>
+
+<blockquote>
+<dl><dt>Returns:</dt><dd>boolean<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public function</small>
+  noneSkipped()  <a name="noneSkipped"></a>
+</h3>
+
+<blockquote>
+<p>Returns true if no test has been skipped.</p><dl><dt>Returns:</dt><dd>boolean<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public function</small>
+  notImplemented()  <a name="notImplemented"></a>
+</h3>
+
+<blockquote>
+<p>Returns an Enumeration for the incomplete tests.</p><dl><dt>Returns:</dt><dd>array<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public function</small>
+  notImplementedCount()  <a name="notImplementedCount"></a>
+</h3>
+
+<blockquote>
+<p>Gets the number of incomplete tests.</p><dl><dt>Returns:</dt><dd>integer<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public function</small>
+  passed()  <a name="passed"></a>
+</h3>
+
+<blockquote>
+<p>Returns the names of the tests that have passed.</p><dl><dt>Returns:</dt><dd>array<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public function</small>
+  removeListener(<a href="interface__PHPUnit_Framework_TestListener.html" class="">PHPUnit_Framework_TestListener</a> $listener)  <a name="removeListener"></a>
+</h3>
+
+<blockquote>
+<p>Unregisters a TestListener.</p><dl><dt>Parameters:</dt><dd><code>PHPUnit_Framework_TestListener</code> - $listener<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public function</small>
+  risky()  <a name="risky"></a>
+</h3>
+
+<blockquote>
+<p>Returns an Enumeration for the risky tests.</p><dl><dt>Returns:</dt><dd>array<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public function</small>
+  riskyCount()  <a name="riskyCount"></a>
+</h3>
+
+<blockquote>
+<p>Gets the number of risky tests.</p><dl><dt>Returns:</dt><dd>integer<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public function</small>
+  run(<a href="interface__PHPUnit_Framework_Test.html" class="">PHPUnit_Framework_Test</a> $test)  <a name="run"></a>
+</h3>
+
+<blockquote>
+<p>Runs a TestCase.</p><dl><dt>Parameters:</dt><dd><code>PHPUnit_Framework_Test</code> - $test<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public function</small>
+  setCodeCoverage(PHP_CodeCoverage $codeCoverage)  <a name="setCodeCoverage"></a>
+</h3>
+
+<blockquote>
+<p>Sets the PHP_CodeCoverage object.</p><dl><dt>Parameters:</dt><dd><code>PHP_CodeCoverage</code> - $codeCoverage<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public function</small>
+  setTimeoutForLargeTests($timeout)  <a name="setTimeoutForLargeTests"></a>
+</h3>
+
+<blockquote>
+<p>Sets the timeout for large tests.</p><dl><dt>Parameters:</dt><dd><code>integer</code> - $timeout<br></dd><dt>Throws:</dt><dd><a href="class__PHPUnit_Framework_Exception.html" class="">PHPUnit_Framework_Exception</a><br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public function</small>
+  setTimeoutForMediumTests($timeout)  <a name="setTimeoutForMediumTests"></a>
+</h3>
+
+<blockquote>
+<p>Sets the timeout for medium tests.</p><dl><dt>Parameters:</dt><dd><code>integer</code> - $timeout<br></dd><dt>Throws:</dt><dd><a href="class__PHPUnit_Framework_Exception.html" class="">PHPUnit_Framework_Exception</a><br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public function</small>
+  setTimeoutForSmallTests($timeout)  <a name="setTimeoutForSmallTests"></a>
+</h3>
+
+<blockquote>
+<p>Sets the timeout for small tests.</p><dl><dt>Parameters:</dt><dd><code>integer</code> - $timeout<br></dd><dt>Throws:</dt><dd><a href="class__PHPUnit_Framework_Exception.html" class="">PHPUnit_Framework_Exception</a><br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public function</small>
+  shouldStop()  <a name="shouldStop"></a>
+</h3>
+
+<blockquote>
+<p>Checks whether the test run should stop.</p><dl><dt>Returns:</dt><dd>boolean<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public function</small>
+  skipped()  <a name="skipped"></a>
+</h3>
+
+<blockquote>
+<p>Returns an Enumeration for the skipped tests.</p><dl><dt>Returns:</dt><dd>array<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public function</small>
+  skippedCount()  <a name="skippedCount"></a>
+</h3>
+
+<blockquote>
+<p>Gets the number of skipped tests.</p><dl><dt>Returns:</dt><dd>integer<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public function</small>
+  startTest(<a href="interface__PHPUnit_Framework_Test.html" class="">PHPUnit_Framework_Test</a> $test)  <a name="startTest"></a>
+</h3>
+
+<blockquote>
+<p>Informs the result that a test will be started.</p><dl><dt>Parameters:</dt><dd><code>PHPUnit_Framework_Test</code> - $test<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public function</small>
+  startTestSuite(<a href="class__PHPUnit_Framework_TestSuite.html" class="">PHPUnit_Framework_TestSuite</a> $suite)  <a name="startTestSuite"></a>
+</h3>
+
+<blockquote>
+<p>Informs the result that a testsuite will be started.</p><dl><dt>Parameters:</dt><dd><code>PHPUnit_Framework_TestSuite</code> - $suite<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public function</small>
+  stop()  <a name="stop"></a>
+</h3>
+
+<blockquote>
+<p>Marks that the test run should stop.</p><dl></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public function</small>
+  stopOnError($flag)  <a name="stopOnError"></a>
+</h3>
+
+<blockquote>
+<p>Enables or disables the stopping when an error occurs.</p><dl><dt>Parameters:</dt><dd><code>boolean</code> - $flag<br></dd><dt>Throws:</dt><dd><a href="class__PHPUnit_Framework_Exception.html" class="">PHPUnit_Framework_Exception</a><br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public function</small>
+  stopOnFailure($flag)  <a name="stopOnFailure"></a>
+</h3>
+
+<blockquote>
+<p>Enables or disables the stopping when a failure occurs.</p><dl><dt>Parameters:</dt><dd><code>boolean</code> - $flag<br></dd><dt>Throws:</dt><dd><a href="class__PHPUnit_Framework_Exception.html" class="">PHPUnit_Framework_Exception</a><br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public function</small>
+  stopOnIncomplete($flag)  <a name="stopOnIncomplete"></a>
+</h3>
+
+<blockquote>
+<p>Enables or disables the stopping for incomplete tests.</p><dl><dt>Parameters:</dt><dd><code>boolean</code> - $flag<br></dd><dt>Throws:</dt><dd><a href="class__PHPUnit_Framework_Exception.html" class="">PHPUnit_Framework_Exception</a><br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public function</small>
+  stopOnRisky($flag)  <a name="stopOnRisky"></a>
+</h3>
+
+<blockquote>
+<p>Enables or disables the stopping for risky tests.</p><dl><dt>Parameters:</dt><dd><code>boolean</code> - $flag<br></dd><dt>Throws:</dt><dd><a href="class__PHPUnit_Framework_Exception.html" class="">PHPUnit_Framework_Exception</a><br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public function</small>
+  stopOnSkipped($flag)  <a name="stopOnSkipped"></a>
+</h3>
+
+<blockquote>
+<p>Enables or disables the stopping for skipped tests.</p><dl><dt>Parameters:</dt><dd><code>boolean</code> - $flag<br></dd><dt>Throws:</dt><dd><a href="class__PHPUnit_Framework_Exception.html" class="">PHPUnit_Framework_Exception</a><br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public function</small>
+  time()  <a name="time"></a>
+</h3>
+
+<blockquote>
+<p>Returns the time spent running the tests.</p><dl><dt>Returns:</dt><dd>float<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public function</small>
+  topTestSuite()  <a name="topTestSuite"></a>
+</h3>
+
+<blockquote>
+<p>Returns the (top) test suite.</p><dl><dt>Returns:</dt><dd>PHPUnit_Framework_TestSuite<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public function</small>
+  wasSuccessful()  <a name="wasSuccessful"></a>
+</h3>
+
+<blockquote>
+<p>Returns whether the entire test was successful or not.</p><dl><dt>Returns:</dt><dd>boolean<br></dd></dl></blockquote>
+
+</div>
+
+<div class="footer">
+  Generated by <a href="https://github.com/soundasleep/phpdoc2/" class="github">PHPDoc2</a> Fri, 24 Apr 2015 15:28:58 +1200</div>
+
+</body>
+</html>

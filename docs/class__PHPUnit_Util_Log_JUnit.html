@@ -1,0 +1,212 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>PHPDoc2 - PHPUnit</title>
+  <link rel="stylesheet" type="text/css" href="default.css">
+</head>
+<body>
+<nav>
+  <a href="index.html">Root</a>
+</nav>
+
+<div class="content">
+<ul class="class-hierarchy"><li><a href="class__PHPUnit_Util_Printer.html" class="">\PHPUnit_Util_Printer</a><ul><li>\PHPUnit_Util_Log_JUnit</li></ul></li></ul>
+<h1>
+  <small>class</small>
+
+  <a href="namespace_.html" class="">(none)</a>  \
+  <a href="class__PHPUnit_Util_Log_JUnit.html" class="">PHPUnit_Util_Log_JUnit</a></h1>
+
+
+<dl>
+  <dt>All implemented interfaces:</dt>
+  <dd>
+    <a href="interface__PHPUnit_Framework_TestListener.html" class="">PHPUnit_Framework_TestListener</a>  </dd>
+</dl>
+
+
+
+
+<hr>
+
+<p>A TestListener that generates a logfile of the test execution in XML markup.</p><p>The XML markup used is the same as the one that is used by the JUnit Ant task.</p><dl></dl>
+<hr>
+
+<h2>Method Summary</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+<tr><td><a href="class__PHPUnit_Util_Log_JUnit.html#__construct" class="">__construct($out = null, $logIncompleteSkipped = false)</a></td><td>Constructor.</td></tr><tr><td><a href="class__PHPUnit_Util_Log_JUnit.html#addError" class="">addError(PHPUnit_Framework_Test $test, Exception $e, $time)</a></td><td>An error occurred.</td></tr><tr><td><a href="class__PHPUnit_Util_Log_JUnit.html#addFailure" class="">addFailure(PHPUnit_Framework_Test $test, PHPUnit_Framework_AssertionFailedError $e, $time)</a></td><td>A failure occurred.</td></tr><tr><td><a href="class__PHPUnit_Util_Log_JUnit.html#addIncompleteTest" class="">addIncompleteTest(PHPUnit_Framework_Test $test, Exception $e, $time)</a></td><td>Incomplete test.</td></tr><tr><td><a href="class__PHPUnit_Util_Log_JUnit.html#addRiskyTest" class="">addRiskyTest(PHPUnit_Framework_Test $test, Exception $e, $time)</a></td><td>Risky test.</td></tr><tr><td><a href="class__PHPUnit_Util_Log_JUnit.html#addSkippedTest" class="">addSkippedTest(PHPUnit_Framework_Test $test, Exception $e, $time)</a></td><td>Skipped test.</td></tr><tr><td><a href="class__PHPUnit_Util_Log_JUnit.html#endTest" class="">endTest(PHPUnit_Framework_Test $test, $time)</a></td><td>A test ended.</td></tr><tr><td><a href="class__PHPUnit_Util_Log_JUnit.html#endTestSuite" class="">endTestSuite(PHPUnit_Framework_TestSuite $suite)</a></td><td>A testsuite ended.</td></tr><tr><td><a href="class__PHPUnit_Util_Log_JUnit.html#flush" class="">flush()</a></td><td>Flush buffer and close output.</td></tr><tr><td><a href="class__PHPUnit_Util_Log_JUnit.html#getXML" class="">getXML()</a></td><td>Returns the XML as a string.</td></tr><tr><td><a href="class__PHPUnit_Util_Log_JUnit.html#setWriteDocument" class="">setWriteDocument($flag)</a></td><td>Enables or disables the writing of the document in flush().</td></tr><tr><td><a href="class__PHPUnit_Util_Log_JUnit.html#startTest" class="">startTest(PHPUnit_Framework_Test $test)</a></td><td>A test started.</td></tr><tr><td><a href="class__PHPUnit_Util_Log_JUnit.html#startTestSuite" class="">startTestSuite(PHPUnit_Framework_TestSuite $suite)</a></td><td>A testsuite started.</td></tr>  </tbody>
+</table>
+
+
+<h2>Inherited Method Summary</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+<tr><td><a href="class__PHPUnit_Util_Printer.html#getAutoFlush" class="">getAutoFlush()</a></td><td>Check auto-flush mode. <i>(from <a href="class__PHPUnit_Util_Printer.html#getAutoFlush" class="">PHPUnit_Util_Printer</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Util_Printer.html#incrementalFlush" class="">incrementalFlush()</a></td><td>Performs a safe, incremental flush. <i>(from <a href="class__PHPUnit_Util_Printer.html#incrementalFlush" class="">PHPUnit_Util_Printer</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Util_Printer.html#setAutoFlush" class="">setAutoFlush($autoFlush)</a></td><td>Set auto-flushing mode. <i>(from <a href="class__PHPUnit_Util_Printer.html#setAutoFlush" class="">PHPUnit_Util_Printer</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Util_Printer.html#write" class="">write($buffer)</a></td><td> <i>(from <a href="class__PHPUnit_Util_Printer.html#write" class="">PHPUnit_Util_Printer</a>)</i></td></tr>  </tbody>
+</table>
+
+
+
+<hr>
+
+<h3>
+  <small>public function</small>
+  __construct($out = null, $logIncompleteSkipped = false)  <a name="__construct"></a>
+</h3>
+
+<blockquote>
+<p>Constructor.</p><dl><dt>Overrides:</dt><dd><a href="class__PHPUnit_Util_Printer.html#__construct" class="">__construct($out = null)</a></dd><dt>Parameters:</dt><dd><code>mixed</code> - $out<br><code>boolean</code> - $logIncompleteSkipped<br></dd><dt>Defaults:</dt><dd><code>out</code> = <code>null</code><br><code>logIncompleteSkipped</code> = <code>false</code><br></dd><dt>Throws:</dt><dd><a href="class__PHPUnit_Framework_Exception.html" class="">PHPUnit_Framework_Exception</a><br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public function</small>
+  addError(<a href="interface__PHPUnit_Framework_Test.html" class="">PHPUnit_Framework_Test</a> $test, Exception $e, $time)  <a name="addError"></a>
+</h3>
+
+<blockquote>
+<p>An error occurred.</p><dl><dt>Parameters:</dt><dd><code>PHPUnit_Framework_Test</code> - $test<br><code>Exception</code> - $e<br><code>float</code> - $time<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public function</small>
+  addFailure(<a href="interface__PHPUnit_Framework_Test.html" class="">PHPUnit_Framework_Test</a> $test, <a href="class__PHPUnit_Framework_AssertionFailedError.html" class="">PHPUnit_Framework_AssertionFailedError</a> $e, $time)  <a name="addFailure"></a>
+</h3>
+
+<blockquote>
+<p>A failure occurred.</p><dl><dt>Parameters:</dt><dd><code>PHPUnit_Framework_Test</code> - $test<br><code>PHPUnit_Framework_AssertionFailedError</code> - $e<br><code>float</code> - $time<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public function</small>
+  addIncompleteTest(<a href="interface__PHPUnit_Framework_Test.html" class="">PHPUnit_Framework_Test</a> $test, Exception $e, $time)  <a name="addIncompleteTest"></a>
+</h3>
+
+<blockquote>
+<p>Incomplete test.</p><dl><dt>Parameters:</dt><dd><code>PHPUnit_Framework_Test</code> - $test<br><code>Exception</code> - $e<br><code>float</code> - $time<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public function</small>
+  addRiskyTest(<a href="interface__PHPUnit_Framework_Test.html" class="">PHPUnit_Framework_Test</a> $test, Exception $e, $time)  <a name="addRiskyTest"></a>
+</h3>
+
+<blockquote>
+<p>Risky test.</p><dl><dt>Parameters:</dt><dd><code>PHPUnit_Framework_Test</code> - $test<br><code>Exception</code> - $e<br><code>float</code> - $time<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public function</small>
+  addSkippedTest(<a href="interface__PHPUnit_Framework_Test.html" class="">PHPUnit_Framework_Test</a> $test, Exception $e, $time)  <a name="addSkippedTest"></a>
+</h3>
+
+<blockquote>
+<p>Skipped test.</p><dl><dt>Parameters:</dt><dd><code>PHPUnit_Framework_Test</code> - $test<br><code>Exception</code> - $e<br><code>float</code> - $time<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public function</small>
+  endTest(<a href="interface__PHPUnit_Framework_Test.html" class="">PHPUnit_Framework_Test</a> $test, $time)  <a name="endTest"></a>
+</h3>
+
+<blockquote>
+<p>A test ended.</p><dl><dt>Parameters:</dt><dd><code>PHPUnit_Framework_Test</code> - $test<br><code>float</code> - $time<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public function</small>
+  endTestSuite(<a href="class__PHPUnit_Framework_TestSuite.html" class="">PHPUnit_Framework_TestSuite</a> $suite)  <a name="endTestSuite"></a>
+</h3>
+
+<blockquote>
+<p>A testsuite ended.</p><dl><dt>Parameters:</dt><dd><code>PHPUnit_Framework_TestSuite</code> - $suite<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public function</small>
+  flush()  <a name="flush"></a>
+</h3>
+
+<blockquote>
+<p>Flush buffer and close output.</p><dl><dt>Overrides:</dt><dd><a href="class__PHPUnit_Util_Printer.html#flush" class="">flush()</a></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public function</small>
+  getXML()  <a name="getXML"></a>
+</h3>
+
+<blockquote>
+<p>Returns the XML as a string.</p><dl><dt>Returns:</dt><dd>string<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public function</small>
+  setWriteDocument($flag)  <a name="setWriteDocument"></a>
+</h3>
+
+<blockquote>
+<p>Enables or disables the writing of the document in flush().</p><p>This is a "hack" needed for the integration of PHPUnit with Phing.</p><dl><dt>Returns:</dt><dd>string<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public function</small>
+  startTest(<a href="interface__PHPUnit_Framework_Test.html" class="">PHPUnit_Framework_Test</a> $test)  <a name="startTest"></a>
+</h3>
+
+<blockquote>
+<p>A test started.</p><dl><dt>Parameters:</dt><dd><code>PHPUnit_Framework_Test</code> - $test<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public function</small>
+  startTestSuite(<a href="class__PHPUnit_Framework_TestSuite.html" class="">PHPUnit_Framework_TestSuite</a> $suite)  <a name="startTestSuite"></a>
+</h3>
+
+<blockquote>
+<p>A testsuite started.</p><dl><dt>Parameters:</dt><dd><code>PHPUnit_Framework_TestSuite</code> - $suite<br></dd></dl></blockquote>
+
+</div>
+
+<div class="footer">
+  Generated by <a href="https://github.com/soundasleep/phpdoc2/" class="github">PHPDoc2</a> Fri, 24 Apr 2015 15:28:59 +1200</div>
+
+</body>
+</html>

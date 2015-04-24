@@ -1,0 +1,109 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>PHPDoc2 - PHPUnit</title>
+  <link rel="stylesheet" type="text/css" href="default.css">
+</head>
+<body>
+<nav>
+  <a href="index.html">Root</a>
+</nav>
+
+<div class="content">
+<ul class="class-hierarchy"><li><a href="class__PHPUnit_Framework_Constraint.html" class="">\PHPUnit_Framework_Constraint</a><ul><li>\PHPUnit_Framework_Constraint_PCREMatch</li></ul></li></ul>
+<h1>
+  <small>class</small>
+
+  <a href="namespace_.html" class="">(none)</a>  \
+  <a href="class__PHPUnit_Framework_Constraint_PCREMatch.html" class="">PHPUnit_Framework_Constraint_PCREMatch</a></h1>
+
+
+<dl>
+  <dt>All implemented interfaces:</dt>
+  <dd>
+    Countable, <a href="interface__PHPUnit_Framework_SelfDescribing.html" class="">PHPUnit_Framework_SelfDescribing</a>  </dd>
+</dl>
+
+
+
+
+<dl>
+  <dt>All known direct subclasses:</dt>
+  <dd>
+    <a href="class__PHPUnit_Framework_Constraint_StringMatches.html" class="">PHPUnit_Framework_Constraint_StringMatches</a>  </dd>
+</dl>
+
+
+<hr>
+
+<p>Constraint that asserts that the string it is evaluated for matches a regular expression.</p><p>Checks a given value using the Perl Compatible Regular Expression extension in PHP. The pattern is matched by executing preg_match().</p><p>The pattern string passed in the constructor.</p><dl></dl>
+<hr>
+
+<h2>Method Summary</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+<tr><td><a href="class__PHPUnit_Framework_Constraint_PCREMatch.html#__construct" class="">__construct($pattern)</a></td><td></td></tr><tr><td><a href="class__PHPUnit_Framework_Constraint_PCREMatch.html#matches" class="">matches($other)</a></td><td>Evaluates the constraint for parameter $other. Returns true if the constraint is met, false otherwise.</td></tr><tr><td><a href="class__PHPUnit_Framework_Constraint_PCREMatch.html#toString" class="">toString()</a></td><td>Returns a string representation of the constraint.</td></tr>  </tbody>
+</table>
+
+
+<h2>Inherited Method Summary</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+<tr><td><a href="class__PHPUnit_Framework_Constraint.html#additionalFailureDescription" class="">additionalFailureDescription($other)</a></td><td>Return additional failure description where needed <i>(from <a href="class__PHPUnit_Framework_Constraint.html#additionalFailureDescription" class="">PHPUnit_Framework_Constraint</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Framework_Constraint.html#count" class="">count()</a></td><td>Counts the number of constraint elements. <i>(from <a href="class__PHPUnit_Framework_Constraint.html#count" class="">PHPUnit_Framework_Constraint</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Framework_Constraint.html#evaluate" class="">evaluate($other, $description = &quot;&quot;, $returnResult = false)</a></td><td>Evaluates the constraint for parameter $other <i>(from <a href="class__PHPUnit_Framework_Constraint.html#evaluate" class="">PHPUnit_Framework_Constraint</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Framework_Constraint.html#fail" class="">fail($other, $description, ComparisonFailure $comparisonFailure = null)</a></td><td>Throws an exception for the given compared value and test description <i>(from <a href="class__PHPUnit_Framework_Constraint.html#fail" class="">PHPUnit_Framework_Constraint</a>)</i></td></tr><tr><td><a href="class__PHPUnit_Framework_Constraint.html#failureDescription" class="">failureDescription($other)</a></td><td>Returns the description of the failure <i>(from <a href="class__PHPUnit_Framework_Constraint.html#failureDescription" class="">PHPUnit_Framework_Constraint</a>)</i></td></tr>  </tbody>
+</table>
+
+
+
+<hr>
+
+<h3>
+  <small>public function</small>
+  __construct($pattern)  <a name="__construct"></a>
+</h3>
+
+<blockquote>
+<dl><dt>Overrides:</dt><dd><a href="class__PHPUnit_Framework_Constraint.html#__construct" class="">__construct()</a></dd><dt>Parameters:</dt><dd><code>string</code> - $pattern<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>protected function</small>
+  matches($other)  <a name="matches"></a>
+</h3>
+
+<blockquote>
+<p>Evaluates the constraint for parameter $other. Returns true if the constraint is met, false otherwise.</p><p>This method can be overridden to implement the evaluation algorithm. <i>(from <a href="class__PHPUnit_Framework_Constraint.html#matches" class="">matches</a>)</i></p><dl><dt>Overrides:</dt><dd><a href="class__PHPUnit_Framework_Constraint.html#matches" class="">matches($other)</a></dd><dt>Parameters:</dt><dd><code>mixed</code> - $other Value or object to evaluate.<br></dd><dt>Returns:</dt><dd>bool<br></dd></dl></blockquote>
+
+
+<hr>
+
+<h3>
+  <small>public function</small>
+  toString()  <a name="toString"></a>
+</h3>
+
+<blockquote>
+<p>Returns a string representation of the constraint.</p><dl><dt>Returns:</dt><dd>string<br></dd></dl></blockquote>
+
+</div>
+
+<div class="footer">
+  Generated by <a href="https://github.com/soundasleep/phpdoc2/" class="github">PHPDoc2</a> Fri, 24 Apr 2015 15:28:56 +1200</div>
+
+</body>
+</html>
